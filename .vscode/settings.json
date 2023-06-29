@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "mcmanus"
+    ],
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.associations": {
+        "*.css": "tailwindcss"
+      }
+}
