@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
-        "mcmanus"
+        "mcmanus",
+        "ruleset"
     ],
     "typescript.tsdk": "node_modules/typescript/lib",
     "files.associations": {

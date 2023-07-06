@@ -1,6 +1,7 @@
-import './globals.css';
-import { Nav } from '@/components/Nav';
+import type { ReactNode } from 'react';
 import { Manrope } from 'next/font/google';
+import './globals.css';
+import { Nav } from '@/app/Nav';
 
 const manrope = Manrope({ subsets: ['latin'] });
 
@@ -9,11 +10,7 @@ export const metadata = {
   description: "Kate McManus' portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
