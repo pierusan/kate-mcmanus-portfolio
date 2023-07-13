@@ -5,6 +5,7 @@
   "extends": [
     // Not part of next, so adding it here
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
 
@@ -28,7 +29,9 @@
           "camelCase": true, // Regular TS
           "pascalCase": true // Components
       }}
-    ]
+    ],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "unicorn/no-null": "off"
   },
   "overrides": [
     {
@@ -38,5 +41,6 @@
         "unicorn/prefer-module": [ "off" ]
       }
     }
-  ]
+  ],
+  "plugins": ["@typescript-eslint"]
 }

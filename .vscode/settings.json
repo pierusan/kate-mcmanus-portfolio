@@ -1,10 +1,16 @@
 {
     "cSpell.words": [
+        "glyphhanger",
+        "Hoverable",
+        "Lekton",
         "mcmanus",
-        "ruleset"
+        "Meie",
+        "Monoton",
+        "Parisienne",
+        "Pirata",
+        "Qwigley",
+        "ruleset",
+        "Staatliches"
     ],
     "typescript.tsdk": "node_modules/typescript/lib",
-    "files.associations": {
-        "*.css": "tailwindcss"
-      },
 }

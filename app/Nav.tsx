@@ -9,8 +9,8 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="mb-14">
-      <ol className="flex flex-row gap-5 uppercase text-base tracking-[0.1875rem]">
+    <nav>
+      <ol className="flex flex-row gap-5 uppercase tracking-[0.1875rem]">
         {Object.entries(navLinks).map(([linkName, linkPath]) => {
           const isActive = pathname === linkPath;
           return (

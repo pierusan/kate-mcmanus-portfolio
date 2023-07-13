@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-7xl;
+    @apply font-extrabold;
+    margin-bottom: 1.875rem;
+  }
+
+  h2 {
+    @apply text-4xl;
+    @apply font-bold;
+  }
+}
