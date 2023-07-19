@@ -4,11 +4,13 @@
 
 @layer base {
   h1 {
-    @apply text-7xl;
-    @apply font-extrabold;
-    margin-bottom: 1.875rem;
+    @apply text-[3.5rem];
+    @apply font-bold;
+    @apply mb-[1.875rem];
+    @apply leading-[1.375];
   }
 
+  /* TODO: Apply major mono display with a font-mono and css variables */
   h2 {
     @apply text-4xl;
     @apply font-bold;

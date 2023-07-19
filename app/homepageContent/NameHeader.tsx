@@ -7,9 +7,10 @@ import {
   staatliches,
 } from '../fontSubsets';
 
-export function NameHeader() {
+export function NameHeader({ className }: { className?: string }) {
   return (
-    <h1>
+    // Tweak first gap
+    <h1 className={`${className}`}>
       <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
         K
       </HoverableSpan>
@@ -25,8 +26,7 @@ export function NameHeader() {
         classNameOnceHovered={`${majorMonoDisplay.className} uppercase`}
       >
         e
-      </HoverableSpan>
-      <br />
+      </HoverableSpan>{' '}
       <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
         M
       </HoverableSpan>

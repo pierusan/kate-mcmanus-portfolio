@@ -42,9 +42,9 @@ export function RelocationParagraph() {
         s
       </HoverableSpan>
       <HoverableSpan classNameOnceHovered={`${bethEllen.className}`}>
-        ,{' '}
+        ,
       </HoverableSpan>
-      s
+      <br />s
       <HoverableSpan
         classNameOnceHovered={`${meieScript.className} text-[4.078125rem]`}
       >

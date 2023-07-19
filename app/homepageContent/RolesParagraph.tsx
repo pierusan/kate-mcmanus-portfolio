@@ -54,7 +54,8 @@ export function RolesParagraph() {
       </HoverableSpan>
       <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
         r
-      </HoverableSpan>{' '}
+      </HoverableSpan>
+      <br />
       <HoverableSpan
         classNameOnceHovered={`${majorMonoDisplay.className}`}
         childrenOnceHovered="&&"
@@ -122,7 +123,8 @@ export function RolesParagraph() {
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         m
       </HoverableSpan>
-      y pro
+      y<br />
+      pro
       <HoverableSpan
         classNameOnceHovered={`${meieScript.className} text-[4.078125rem]`}
       >
@@ -145,7 +147,8 @@ export function RolesParagraph() {
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         d
       </HoverableSpan>
-      ed{' '}
+      ed
+      <br />
       <HoverableSpan
         classNameOnceHovered={`${lekton.className} text-[2.53125rem] font-normal`}
       >
@@ -244,8 +247,8 @@ export function RolesParagraph() {
       or
       <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
         e
-      </HoverableSpan>{' '}
-      r
+      </HoverableSpan>
+      <br />r
       <HoverableSpan
         classNameOnceHovered={`${meieScript.className} text-[4.078125rem]`}
       >

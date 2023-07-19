@@ -36,7 +36,8 @@ export function EducationParagraph() {
       <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
         o
       </HoverableSpan>
-      f{' '}
+      f
+      <br />
       <HoverableSpan
         classNameOnceHovered={`${tourney.className} text-[3.09375rem]`}
       >
@@ -161,7 +162,8 @@ export function EducationParagraph() {
         classNameOnceHovered={`${vT323.className} text-[3.09375rem]`}
       >
         n
-      </HoverableSpan>{' '}
+      </HoverableSpan>
+      <br />
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         f
       </HoverableSpan>

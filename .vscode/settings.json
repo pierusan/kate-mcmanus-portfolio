@@ -10,7 +10,8 @@
         "Pirata",
         "Qwigley",
         "ruleset",
-        "Staatliches"
+        "Staatliches",
+        "svgr"
     ],
     "typescript.tsdk": "node_modules/typescript/lib",
 }

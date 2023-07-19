@@ -1,34 +1,61 @@
-import styles from './contactInfo.module.css';
+import { HoverableSpan } from '../HoverableSpan';
+import { lekton, parisienne, staatliches, vT323 } from '../fontSubsets';
 
-const contactLinks = [
+const contactItems = [
+  {
+    name: 'Email',
+    // TODO: Update email treatment based on new designs
+    url: '#',
+    width: '140px',
+    classNameOnceHovered: `${vT323.className} text-[3.09375rem]`,
+  },
   {
     name: 'Resume',
     // TODO: Self host instead
     url: 'http://katestrykermcmanus.com/content/home/KateStrykerMcManusResume.pdf',
+    width: '182px',
+    classNameOnceHovered: `${staatliches.className} text-[2.8125rem]`,
   },
   {
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/kate-mcmanus-9440944a/',
+    width: '202px',
+    classNameOnceHovered: `${lekton.className} text-[2.53125rem] font-normal`,
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/katemcmanus.design/',
-  },
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/katestrykermcm',
+    width: '221px',
+    classNameOnceHovered: `${parisienne.className} text-[3.09375rem]`,
   },
 ];
 
-export function ContactInfo() {
+export function ContactInfo({ className }: { className?: string }) {
   return (
-    <address className="flex flex-col gap-[0.625rem] not-italic">
-      <p>katestrykermcm@gmail.com</p>
-      <ul className="flex">
-        {contactLinks.map(({ name, url }) => (
-          <li key={name} className={`${styles.contactInfoItem}`}>
-            <a target="_blank" rel="noreferrer" href={url}>
-              {name}
+    <address className={`text-4xl font-bold not-italic ${className}`}>
+      <ul className="flex gap-5">
+        {contactItems.map(({ name, url, width, classNameOnceHovered }) => (
+          <li className="flex" key={name}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={url}
+              className={
+                'border border-black py-5 text-center ' +
+                // Reveal border on hover
+                'border-opacity-0 hover:border-opacity-100'
+              }
+              style={{ width }}
+            >
+              {/* eslint-disable-next-line unicorn/prefer-spread */}
+              {name.split('').map((char, index) => (
+                <HoverableSpan
+                  key={index}
+                  classNameOnceHovered={classNameOnceHovered}
+                >
+                  {char}
+                </HoverableSpan>
+              ))}
             </a>
           </li>
         ))}

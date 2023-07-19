@@ -55,7 +55,8 @@ export function CareerParagraph() {
       i
       <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
         n
-      </HoverableSpan>{' '}
+      </HoverableSpan>
+      <br />
       <HoverableSpan
         classNameOnceHovered={`${bangers.className} text-[2.09375rem] tracking-[0.07rem]`}
       >
@@ -146,7 +147,8 @@ export function CareerParagraph() {
       <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
         a
       </HoverableSpan>
-      t{' '}
+      t
+      <br />
       <HoverableSpan
         classNameOnceHovered={`${tourney.className} text-[3.09375rem]`}
       >
