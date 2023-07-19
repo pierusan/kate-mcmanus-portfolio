@@ -10,7 +10,15 @@ module.exports = {
       lg: '1100px',
       '2xl': '200px',
     },
-    extend: {},
+    extend: {
+      colors: {
+        'border-action-subtle': '#d7d7d7',
+      },
+      fontFamily: {
+        sans: ['var(--font-manrope)'],
+        mono: ['var(--font-major-mono-display)'],
+      },
+    },
   },
   plugins: [],
 };

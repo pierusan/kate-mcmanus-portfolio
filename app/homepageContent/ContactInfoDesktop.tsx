@@ -30,9 +30,17 @@ const contactItems = [
   },
 ];
 
-export function ContactInfo({ className }: { className?: string }) {
+export function ContactInfoDesktop({ className }: { className?: string }) {
   return (
-    <address className={`text-4xl font-bold not-italic ${className}`}>
+    <address
+      className={
+        'absolute right-5 top-5 z-50 ' +
+        'text-4xl font-bold not-italic ' +
+        // Rotate vertically
+        '[transform-origin:left_top] [transform:translateX(100%)_rotate(90deg)] ' +
+        `${className}`
+      }
+    >
       <ul className="flex gap-5">
         {contactItems.map(({ name, url, width, classNameOnceHovered }) => (
           <li className="flex" key={name}>

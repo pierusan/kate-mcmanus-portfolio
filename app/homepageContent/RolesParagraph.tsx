@@ -1,7 +1,6 @@
 import { HoverableSpan } from '../HoverableSpan';
 import {
   lekton,
-  majorMonoDisplay,
   meieScript,
   parisienne,
   pirataOne,
@@ -25,39 +24,19 @@ export function RolesParagraph() {
         x
       </HoverableSpan>
       perienced{' '}
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        U
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        X
-      </HoverableSpan>{' '}
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        D
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        e
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        s
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        i
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        g
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        n
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        e
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        r
-      </HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>U</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>X</HoverableSpan>{' '}
+      <HoverableSpan classNameOnceHovered={`font-mono`}>D</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>e</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>s</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>i</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>g</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>n</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>e</HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>r</HoverableSpan>
       <br />
       <HoverableSpan
-        classNameOnceHovered={`${majorMonoDisplay.className}`}
+        classNameOnceHovered={`font-mono`}
         childrenOnceHovered="&&"
       >
         and
@@ -135,10 +114,7 @@ export function RolesParagraph() {
       >
         e
       </HoverableSpan>
-      cts h
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        a
-      </HoverableSpan>
+      cts h<HoverableSpan classNameOnceHovered={`font-mono`}>a</HoverableSpan>
       ve{' '}
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         a
@@ -245,9 +221,7 @@ export function RolesParagraph() {
         m
       </HoverableSpan>
       or
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        e
-      </HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>e</HoverableSpan>
       <br />r
       <HoverableSpan
         classNameOnceHovered={`${meieScript.className} text-[4.078125rem]`}

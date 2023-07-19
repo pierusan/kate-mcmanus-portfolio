@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import './globals.css';
-import { manrope } from './fonts';
+import { manrope, majorMonoDisplay } from './fonts';
 
 export const metadata = {
   title: 'Kate McManus',
@@ -9,7 +9,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${manrope.className} text-base`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${majorMonoDisplay.variable} text-base`}
+    >
       <body>{children}</body>
     </html>
   );

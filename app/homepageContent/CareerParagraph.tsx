@@ -1,7 +1,6 @@
 import { HoverableSpan } from '../HoverableSpan';
 import {
   bangers,
-  majorMonoDisplay,
   meieScript,
   monoton,
   pirataOne,
@@ -12,11 +11,7 @@ import {
 export function CareerParagraph() {
   return (
     <p>
-      F
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        o
-      </HoverableSpan>
-      r t
+      F<HoverableSpan classNameOnceHovered={`font-mono`}>o</HoverableSpan>r t
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         h
       </HoverableSpan>
@@ -40,10 +35,7 @@ export function CareerParagraph() {
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         s
       </HoverableSpan>
-      ,{' '}
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        I
-      </HoverableSpan>
+      , <HoverableSpan classNameOnceHovered={`font-mono`}>I</HoverableSpan>
       &apos;v
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         e
@@ -52,10 +44,7 @@ export function CareerParagraph() {
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         d
       </HoverableSpan>{' '}
-      i
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        n
-      </HoverableSpan>
+      i<HoverableSpan classNameOnceHovered={`font-mono`}>n</HoverableSpan>
       <br />
       <HoverableSpan
         classNameOnceHovered={`${bangers.className} text-[2.09375rem] tracking-[0.07rem]`}
@@ -143,10 +132,7 @@ export function CareerParagraph() {
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         k
       </HoverableSpan>
-      ed{' '}
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        a
-      </HoverableSpan>
+      ed <HoverableSpan classNameOnceHovered={`font-mono`}>a</HoverableSpan>
       t
       <br />
       <HoverableSpan

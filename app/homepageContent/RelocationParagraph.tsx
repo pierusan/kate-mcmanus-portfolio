@@ -2,7 +2,6 @@ import { HoverableSpan } from '../HoverableSpan';
 import {
   bethEllen,
   harmattan,
-  majorMonoDisplay,
   meieScript,
   pirataOne,
   qwigley,
@@ -113,9 +112,7 @@ export function RelocationParagraph() {
         l
       </HoverableSpan>
       oy
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        m
-      </HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>m</HoverableSpan>
       en
       <HoverableSpan
         classNameOnceHovered={`${harmattan.className}`}

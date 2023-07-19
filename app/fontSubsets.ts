@@ -4,7 +4,6 @@ import {
   Graduate,
   Harmattan,
   Lekton,
-  Major_Mono_Display,
   Meie_Script,
   Monoton,
   Parisienne,
@@ -30,10 +29,6 @@ const bethEllen = Beth_Ellen({ subsets: ['latin'], weight: '400' });
 const graduate = Graduate({ subsets: ['latin'], weight: '400' });
 const harmattan = Harmattan({ subsets: ['latin'], weight: '400' });
 const lekton = Lekton({ subsets: ['latin'], weight: ['400', '700'] });
-const majorMonoDisplay = Major_Mono_Display({
-  subsets: ['latin'],
-  weight: '400',
-});
 const meieScript = Meie_Script({ subsets: ['latin'], weight: '400' });
 const monoton = Monoton({ subsets: ['latin'], weight: '400' });
 const parisienne = Parisienne({ subsets: ['latin'], weight: '400' });
@@ -52,7 +47,6 @@ export {
   harmattan,
   lekton,
   meieScript,
-  majorMonoDisplay,
   monoton,
   parisienne,
   pirataOne,

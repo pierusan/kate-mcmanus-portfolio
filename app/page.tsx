@@ -1,4 +1,3 @@
-import { ContactInfo } from './homepageContent/ContactInfo';
 import { NameHeader } from './homepageContent/NameHeader';
 import { RolesParagraph } from './homepageContent/RolesParagraph';
 import { CareerParagraph } from './homepageContent/CareerParagraph';
@@ -6,7 +5,8 @@ import { EducationParagraph } from './homepageContent/EducationParagraph';
 import { RelocationParagraph } from './homepageContent/RelocationParagraph';
 import { CharacterCountProvider } from './CharacterCountProvider';
 import { BgFromCharacterHover } from './BgFromCharacterHover';
-import { ProjectsNav } from './ProjectsNav';
+import { NavDesktop } from './NavDesktop';
+import { NavMobile } from './NavMobile';
 
 export default function HomePage() {
   return (
@@ -14,11 +14,12 @@ export default function HomePage() {
       <BgFromCharacterHover
         className={
           'grid py-10 pl-10 ' +
-          'grid-cols-[auto] grid-rows-[auto_1fr] ' +
+          'grid-cols-[auto] grid-rows-[auto] ' +
+          'md:grid-cols-[auto] md:grid-rows-[auto_1fr] ' +
           'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
-          '[grid-template-areas:"description"_"projects"] ' +
-          'lg:[grid-template-areas:"description_projects"] ' +
-          'relative'
+          '[grid-template-areas:"description"] ' +
+          'md:[grid-template-areas:"description"_"projects"] ' +
+          'lg:[grid-template-areas:"description_projects"] '
         }
       >
         <main
@@ -38,14 +39,9 @@ export default function HomePage() {
           <CareerParagraph />
           <EducationParagraph />
           <RelocationParagraph />
-          <ContactInfo
-            className={
-              'absolute right-5 top-5 z-50 ' +
-              '[transform-origin:left_top] [transform:translateX(100%)_rotate(90deg)]'
-            }
-          />
         </main>
-        <ProjectsNav className="[grid-area:projects]" />
+        <NavDesktop className="hidden [grid-area:projects] md:[display:unset]" />
+        <NavMobile className="md:hidden" />
       </BgFromCharacterHover>
     </CharacterCountProvider>
   );

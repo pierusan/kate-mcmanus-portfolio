@@ -3,7 +3,6 @@ import {
   graduate,
   harmattan,
   lekton,
-  majorMonoDisplay,
   pirataOne,
   tourney,
   vT323,
@@ -19,9 +18,7 @@ export function EducationParagraph() {
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         u
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        s
-      </HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>s</HoverableSpan>
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         l
       </HoverableSpan>
@@ -29,13 +26,8 @@ export function EducationParagraph() {
       <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
         a
       </HoverableSpan>{' '}
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        M
-      </HoverableSpan>
-      aster{' '}
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        o
-      </HoverableSpan>
+      <HoverableSpan classNameOnceHovered={`font-mono`}>M</HoverableSpan>
+      aster <HoverableSpan classNameOnceHovered={`font-mono`}>o</HoverableSpan>
       f
       <br />
       <HoverableSpan
