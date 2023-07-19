@@ -65,7 +65,7 @@ export function BgFromCharacterHover({
 
   return (
     <div
-      className={`${className} min-h-[100dvh] w-screen`}
+      className={`min-h-[100dvh] w-screen ${className}`}
       style={{
         // TODO: Fix for old versions of Safari
         background: `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`,

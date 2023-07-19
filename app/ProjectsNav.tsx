@@ -3,7 +3,7 @@ import MissionAssuranceCard from './projectCardSvgs/ProjectCard_MissionAssurance
 
 export function ProjectsNav({ className }: { className?: string }) {
   return (
-    <nav className={`${className} relative`}>
+    <nav className={`relative ${className}`}>
       <Link href="project" className="absolute left-[4rem] top-[4rem]">
         <MissionAssuranceCard />
       </Link>
