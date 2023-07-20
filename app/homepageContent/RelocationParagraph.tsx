@@ -1,121 +1,97 @@
 import { HoverableSpan } from '../HoverableSpan';
 import {
-  bethEllen,
-  harmattan,
-  meieScript,
-  pirataOne,
-  qwigley,
-  staatliches,
+  bethEllenStyle,
+  harmattanStyle,
+  meieScriptStyle,
+  pirataOneStyle,
+  qwigleyStyle,
+  staatlichesStyle,
 } from '../fontSubsets';
 
 export function RelocationParagraph() {
   return (
     <p>
-      <HoverableSpan classNameOnceHovered={`${harmattan.className}`}>
+      <HoverableSpan classNameOnceHovered={`${harmattanStyle}`}>
         I
       </HoverableSpan>
       &apos;m{' '}
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
+      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
         r
       </HoverableSpan>
       elocatin
-      <HoverableSpan
-        classNameOnceHovered={`${qwigley.className} text-[4.21875rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${qwigleyStyle}`}>
         g
       </HoverableSpan>{' '}
       to{' '}
-      <HoverableSpan classNameOnceHovered={`${bethEllen.className}`}>
+      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
         P
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllen.className}`}>
+      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
         a
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllen.className}`}>
+      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
         r
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllen.className}`}>
+      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
         i
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllen.className}`}>
+      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
         s
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllen.className}`}>
+      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
         ,
       </HoverableSpan>
       <br />s
-      <HoverableSpan
-        classNameOnceHovered={`${meieScript.className} text-[4.078125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${meieScriptStyle}`}>
         e
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${meieScript.className} text-[4.078125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${meieScriptStyle}`}>
         e
       </HoverableSpan>
       ki
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
+      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
         n
       </HoverableSpan>
       g{' '}
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         f
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         u
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         l
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         l
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         -
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         t
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         i
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         m
       </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${staatliches.className} text-[2.8125rem]`}
-      >
+      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
         e
       </HoverableSpan>{' '}
       em
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
+      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
         p
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
+      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
         l
       </HoverableSpan>
       oy
       <HoverableSpan classNameOnceHovered={`font-mono`}>m</HoverableSpan>
       en
       <HoverableSpan
-        classNameOnceHovered={`${harmattan.className}`}
+        classNameOnceHovered={`${harmattanStyle}`}
         childrenOnceHovered="T!"
       >
         t.

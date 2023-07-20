@@ -1,5 +1,10 @@
 import Link from 'next/link';
-import { monoton, parisienne, pirataOne, staatliches } from './fontSubsets';
+import {
+  monotonHeaderStyle,
+  parisienneHeaderStyle,
+  pirataOneHeaderStyle,
+  staatlichesHeaderStyle,
+} from './fontSubsets';
 
 export function HomeButton({ className }: { className?: string }) {
   return (
@@ -7,16 +12,16 @@ export function HomeButton({ className }: { className?: string }) {
     // close the dialog
     <Link href="/" className={`text-[1.375rem] ${className}`}>
       <span className={`font-mono`}>K</span>
-      <span className={`${staatliches.className}`}>a</span>
+      <span className={`${staatlichesHeaderStyle}`}>a</span>
       <span className={`font-mono`}>T</span>
       <span className={`font-mono`}>E</span>{' '}
       <span className={`font-mono`}>M</span>
-      <span className={`${parisienne.className}`}>c</span>
-      <span className={`${pirataOne.className}`}>M</span>
-      <span className={`${monoton.className}`}>a</span>
-      <span className={`${staatliches.className}`}>n</span>
+      <span className={`${parisienneHeaderStyle}`}>c</span>
+      <span className={`${pirataOneHeaderStyle}`}>M</span>
+      <span className={`${monotonHeaderStyle}`}>a</span>
+      <span className={`${staatlichesHeaderStyle}`}>n</span>
       <span className={`font-mono`}>u</span>
-      <span className={`${pirataOne.className}`}>S</span>
+      <span className={`${pirataOneHeaderStyle}`}>S</span>
     </Link>
   );
 }

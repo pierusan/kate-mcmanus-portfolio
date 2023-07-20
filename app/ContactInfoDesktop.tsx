@@ -1,5 +1,10 @@
 import { HoverableSpan } from './HoverableSpan';
-import { lekton, parisienne, staatliches, vT323 } from './fontSubsets';
+import {
+  lektonStyle,
+  parisienneStyle,
+  staatlichesStyle,
+  vT323Style,
+} from './fontSubsets';
 
 const contactItems = [
   {
@@ -7,26 +12,26 @@ const contactItems = [
     // TODO: Update email treatment based on new designs
     url: '#',
     width: '140px',
-    classNameOnceHovered: `${vT323.className} text-[3.09375rem]`,
+    classNameOnceHovered: `${vT323Style}`,
   },
   {
     name: 'Resume',
     // TODO: Self host instead
     url: 'http://katestrykermcmanus.com/content/home/KateStrykerMcManusResume.pdf',
     width: '182px',
-    classNameOnceHovered: `${staatliches.className} text-[2.8125rem]`,
+    classNameOnceHovered: `${staatlichesStyle}`,
   },
   {
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/kate-mcmanus-9440944a/',
     width: '202px',
-    classNameOnceHovered: `${lekton.className} text-[2.53125rem] font-normal`,
+    classNameOnceHovered: `${lektonStyle}`,
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/katemcmanus.design/',
     width: '221px',
-    classNameOnceHovered: `${parisienne.className} text-[3.09375rem]`,
+    classNameOnceHovered: `${parisienneStyle}`,
   },
 ];
 

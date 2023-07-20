@@ -28,7 +28,7 @@ const bangers = Bangers({ subsets: ['latin'], weight: '400' });
 const bethEllen = Beth_Ellen({ subsets: ['latin'], weight: '400' });
 const graduate = Graduate({ subsets: ['latin'], weight: '400' });
 const harmattan = Harmattan({ subsets: ['latin'], weight: '400' });
-const lekton = Lekton({ subsets: ['latin'], weight: ['400', '700'] });
+const lekton = Lekton({ subsets: ['latin'], weight: '400' });
 const meieScript = Meie_Script({ subsets: ['latin'], weight: '400' });
 const monoton = Monoton({ subsets: ['latin'], weight: '400' });
 const parisienne = Parisienne({ subsets: ['latin'], weight: '400' });
@@ -40,19 +40,45 @@ const staatliches = Staatliches({ subsets: ['latin'], weight: '400' });
 const tourney = Tourney({ subsets: ['latin'], weight: '400' });
 const vT323 = VT323({ subsets: ['latin'], weight: '400' });
 
+// Add common classnames used with these
+const bangersStyle = `${bangers.className} text-[0.9375em] tracking-[0.031111em]`;
+const bethEllenStyle = `${bethEllen.className}`;
+const graduateStyle = `${graduate.className} text-[0.75em]`;
+const harmattanStyle = `${harmattan.className}`;
+const lektonStyle = `${lekton.className} text-[1.125em]`;
+const meieScriptStyle = `${meieScript.className} text-[1.8125em]`;
+const monotonStyle = `${monoton.className} text-[1.25em]`;
+const parisienneStyle = `${parisienne.className} text-[1.375em]`;
+const pirataOneStyle = `${pirataOne.className}`;
+const qwigleyStyle = `${qwigley.className} text-[1.875em]`;
+const rubikMonoOneStyle = `${rubikMonoOne.className} text-[1.25em]`;
+const staatlichesStyle = `${staatliches.className} text-[1.25em]`;
+const tourneyStyle = `${tourney.className} text-[1.375em]`;
+const vT323Style = `${vT323.className} text-[1.375em]`;
+
+// For headers we use different font sizes
+const monotonHeaderStyle = `${monoton.className}`;
+const parisienneHeaderStyle = `${parisienne.className}`;
+const pirataOneHeaderStyle = `${pirataOne.className}`;
+const staatlichesHeaderStyle = `${staatliches.className}`;
+
 export {
-  bangers,
-  bethEllen,
-  graduate,
-  harmattan,
-  lekton,
-  meieScript,
-  monoton,
-  parisienne,
-  pirataOne,
-  qwigley,
-  rubikMonoOne,
-  staatliches,
-  tourney,
-  vT323,
+  bangersStyle,
+  bethEllenStyle,
+  graduateStyle,
+  harmattanStyle,
+  lektonStyle,
+  meieScriptStyle,
+  monotonStyle,
+  monotonHeaderStyle,
+  parisienneStyle,
+  parisienneHeaderStyle,
+  pirataOneStyle,
+  pirataOneHeaderStyle,
+  qwigleyStyle,
+  rubikMonoOneStyle,
+  staatlichesStyle,
+  staatlichesHeaderStyle,
+  tourneyStyle,
+  vT323Style,
 };

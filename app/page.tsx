@@ -28,12 +28,16 @@ export default function HomePage() {
         <main
           className={
             'w-[37.5rem] [grid-area:description] ' +
-            'flex flex-col gap-10 ' +
-            '[&>p]:text-4xl [&>p]:font-bold ' +
+            'flex flex-col gap-10 font-bold ' +
+            // On small screens have the text shrink with the width of the page
+            // TODO: Find a way to still use a rem unit here?
+            '[&>h1]:text-[calc(100vw*56/768)] [&>p]:text-[calc(100vw*36/768)] ' +
+            'md:[&>h1]:text-[3.5rem] md:[&>p]:text-[2.25rem] ' +
             // Prevent wrapping. We manually set line breaks
             'whitespace-nowrap ' +
-            // Remove line heights for the descendant to prevent layout shift
-            // when changing font on hover
+            // Set explicit line height to prevent layout shift when changing
+            // font on hover
+            '[&>h1]:[line-height:1.1em] [&>p]:[line-height:1.36611em] ' +
             '[&>h1>*]:[line-height:0] [&>p>*]:[line-height:0]'
           }
         >

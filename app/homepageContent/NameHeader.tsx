@@ -1,12 +1,17 @@
 import { HoverableSpan } from '../HoverableSpan';
-import { monoton, parisienne, pirataOne, staatliches } from '../fontSubsets';
+import {
+  monotonHeaderStyle,
+  parisienneHeaderStyle,
+  pirataOneHeaderStyle,
+  staatlichesHeaderStyle,
+} from '../fontSubsets';
 
 export function NameHeader({ className }: { className?: string }) {
   return (
     // Tweak first gap
-    <h1 className={`${className}`}>
+    <h1 className={`[line-height:1] ${className}`}>
       <HoverableSpan classNameOnceHovered={`font-mono`}>K</HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatliches.className}`}>
+      <HoverableSpan classNameOnceHovered={`${staatlichesHeaderStyle}`}>
         a
       </HoverableSpan>
       <HoverableSpan classNameOnceHovered={`font-mono uppercase`}>
@@ -15,21 +20,22 @@ export function NameHeader({ className }: { className?: string }) {
       <HoverableSpan classNameOnceHovered={`font-mono uppercase`}>
         e
       </HoverableSpan>{' '}
+      <br className="md:hidden" />
       <HoverableSpan classNameOnceHovered={`font-mono`}>M</HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${parisienne.className}`}>
+      <HoverableSpan classNameOnceHovered={`${parisienneHeaderStyle}`}>
         c
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
+      <HoverableSpan classNameOnceHovered={`${pirataOneHeaderStyle}`}>
         M
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${monoton.className}`}>
+      <HoverableSpan classNameOnceHovered={`${monotonHeaderStyle}`}>
         a
       </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatliches.className}`}>
+      <HoverableSpan classNameOnceHovered={`${staatlichesHeaderStyle}`}>
         n
       </HoverableSpan>
       <HoverableSpan classNameOnceHovered={`font-mono`}>u</HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className} uppercase`}>
+      <HoverableSpan classNameOnceHovered={`${pirataOneHeaderStyle} uppercase`}>
         s
       </HoverableSpan>
     </h1>
