@@ -19,7 +19,9 @@ export default function HomePage() {
         'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
         '[grid-template-areas:"description"] ' +
         'md:[grid-template-areas:"description"_"projects"] ' +
-        'lg:[grid-template-areas:"description_projects"] '
+        'lg:[grid-template-areas:"description_projects"] ' +
+        // Add side margins on very wide screens
+        'relative max-w-screen-2xl 2xl:mx-auto'
       }
     >
       <CharacterCountProvider>

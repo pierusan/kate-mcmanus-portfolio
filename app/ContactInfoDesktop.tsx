@@ -34,7 +34,7 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
   return (
     <address
       className={
-        'fixed right-5 top-5 z-50 ' +
+        'absolute right-5 top-5 z-50 ' +
         'text-4xl font-bold not-italic ' +
         // Rotate vertically
         '[transform-origin:left_top] [transform:translateX(100%)_rotate(90deg)] ' +
