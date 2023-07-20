@@ -4,24 +4,25 @@ import { CareerParagraph } from './homepageContent/CareerParagraph';
 import { EducationParagraph } from './homepageContent/EducationParagraph';
 import { RelocationParagraph } from './homepageContent/RelocationParagraph';
 import { CharacterCountProvider } from './CharacterCountProvider';
-import { BgFromCharacterHover } from './BgFromCharacterHover';
+import { BodyBgFromCharacterHover } from './BodyBgFromCharacterHover';
 import { NavDesktop } from './NavDesktop';
 import { NavMobile } from './NavMobile';
 
 export default function HomePage() {
   return (
-    <CharacterCountProvider>
-      <BgFromCharacterHover
-        className={
-          'grid py-10 pl-10 ' +
-          'grid-cols-[auto] grid-rows-[auto] ' +
-          'md:grid-cols-[auto] md:grid-rows-[auto_1fr] ' +
-          'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
-          '[grid-template-areas:"description"] ' +
-          'md:[grid-template-areas:"description"_"projects"] ' +
-          'lg:[grid-template-areas:"description_projects"] '
-        }
-      >
+    <body
+      className={
+        'min-h-[100dvh] w-screen overflow-scroll ' +
+        'grid py-10 pl-10 ' +
+        'grid-cols-[auto] grid-rows-[auto] ' +
+        'md:grid-cols-[auto] md:grid-rows-[auto_1fr] ' +
+        'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
+        '[grid-template-areas:"description"] ' +
+        'md:[grid-template-areas:"description"_"projects"] ' +
+        'lg:[grid-template-areas:"description_projects"] '
+      }
+    >
+      <CharacterCountProvider>
         <main
           className={
             'w-[37.5rem] [grid-area:description] ' +
@@ -42,7 +43,8 @@ export default function HomePage() {
         </main>
         <NavDesktop className="hidden [grid-area:projects] md:[display:unset]" />
         <NavMobile className="md:hidden" />
-      </BgFromCharacterHover>
-    </CharacterCountProvider>
+        <BodyBgFromCharacterHover />
+      </CharacterCountProvider>
+    </body>
   );
 }

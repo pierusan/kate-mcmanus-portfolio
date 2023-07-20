@@ -1,5 +1,5 @@
 'use client';
-import { useContext, type ReactNode } from 'react';
+import { useContext } from 'react';
 import { CharacterCountContext } from './CharacterCountContext';
 
 type ColorHex = `#${string}`;
@@ -49,13 +49,7 @@ function getProgressColorInfo(
   };
 }
 
-export function BgFromCharacterHover({
-  className,
-  children,
-}: {
-  className?: string;
-  children: ReactNode;
-}) {
+export function BodyBgFromCharacterHover() {
   const { percentHovered } = useContext(CharacterCountContext);
 
   const { color1, color2, percentageMix } = getProgressColorInfo(
@@ -63,15 +57,11 @@ export function BgFromCharacterHover({
     gradientStops
   );
 
-  return (
-    <div
-      className={`min-h-[100dvh] w-screen ${className}`}
-      style={{
-        // TODO: Fix for old versions of Safari
-        background: `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`,
-      }}
-    >
-      {children}
-    </div>
-  );
+  // Here we style the body background instead of say, a div, because the
+  // background color will be preserved even when the user scrolls outside the
+  // page
+  // TODO: Fix for old versions of Safari
+  document.body.style.backgroundColor = `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
+
+  return <></>;
 }

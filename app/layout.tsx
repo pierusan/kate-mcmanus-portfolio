@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang="en"
       className={`${manrope.variable} ${majorMonoDisplay.variable} text-base`}
     >
-      <body>{children}</body>
+      {children}
     </html>
   );
 }
