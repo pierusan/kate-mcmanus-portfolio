@@ -1,5 +1,5 @@
-import { HoverableSpan } from '../HoverableSpan';
-import { lekton, parisienne, staatliches, vT323 } from '../fontSubsets';
+import { HoverableSpan } from './HoverableSpan';
+import { lekton, parisienne, staatliches, vT323 } from './fontSubsets';
 
 const contactItems = [
   {
@@ -34,7 +34,7 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
   return (
     <address
       className={
-        'absolute right-5 top-5 z-50 ' +
+        'fixed right-5 top-5 z-50 ' +
         'text-4xl font-bold not-italic ' +
         // Rotate vertically
         '[transform-origin:left_top] [transform:translateX(100%)_rotate(90deg)] ' +

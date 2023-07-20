@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       colors: {
         'border-action-subtle': '#d7d7d7',
+        'bg-surface': '#f5f5f5',
       },
       fontFamily: {
         sans: ['var(--font-manrope)'],
