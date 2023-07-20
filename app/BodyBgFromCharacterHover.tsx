@@ -1,4 +1,5 @@
 'use client';
+
 import { useContext } from 'react';
 import { CharacterCountContext } from './CharacterCountContext';
 
@@ -49,6 +50,8 @@ function getProgressColorInfo(
   };
 }
 
+let didRenderOnce = false;
+
 export function BodyBgFromCharacterHover() {
   const { percentHovered } = useContext(CharacterCountContext);
 
@@ -57,11 +60,14 @@ export function BodyBgFromCharacterHover() {
     gradientStops
   );
 
-  // Here we style the body background instead of say, a div, because the
-  // background color will be preserved even when the user scrolls outside the
-  // page
-  // TODO: Fix for old versions of Safari
-  document.body.style.backgroundColor = `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
+  // document is only available in the browser so we only use it after hydration
+  if (didRenderOnce) {
+    document.body.style.backgroundColor = `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
+  }
+
+  if (!didRenderOnce) {
+    didRenderOnce = true;
+  }
 
   return <></>;
 }
