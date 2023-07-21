@@ -5,7 +5,7 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
   return (
     <ul className={`relative ${className}`}>
       <li className="absolute left-[4rem] top-[4rem]">
-        <Link href="project">
+        <Link href="project/journey-finder">
           <MissionAssuranceCard />
         </Link>
       </li>

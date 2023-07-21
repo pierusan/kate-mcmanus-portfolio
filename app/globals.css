@@ -10,9 +10,11 @@
     @apply leading-[1.375];
   }
 
-  /* TODO: Apply major mono display with a font-mono and css variables */
   h2 {
-    @apply text-4xl;
-    @apply font-bold;
+    @apply text-base;
+    @apply font-mono;
+    @apply lowercase;
+    @apply mb-2.5;
+    @apply tracking-[0.125em];
   }
 }
