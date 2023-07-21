@@ -13,7 +13,7 @@ export default function HomePage() {
     <body
       className={
         'min-h-[100dvh] w-screen overflow-scroll ' +
-        'grid py-10 pl-10 ' +
+        'grid py-5 pl-5 md:py-10 md:pl-10 ' +
         'grid-cols-[auto] grid-rows-[auto] ' +
         'md:grid-cols-[auto] md:grid-rows-[auto_1fr] ' +
         'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
