@@ -27,12 +27,12 @@ export default function HomePage() {
       <CharacterCountProvider>
         <main
           className={
-            'w-[37.5rem] [grid-area:description] ' +
+            '[grid-area:description] ' +
             'flex flex-col gap-10 font-bold ' +
             // On small screens have the text shrink with the width of the page
             // TODO: Find a way to still use a rem unit here?
             '[&>h1]:text-[calc(100vw*56/768)] [&>p]:text-[calc(100vw*36/768)] ' +
-            'md:[&>h1]:text-[3.5rem] md:[&>p]:text-[2.25rem] ' +
+            'md:w-[37.5rem] md:[&>h1]:text-[3.5rem] md:[&>p]:text-[2.25rem] ' +
             // Prevent wrapping. We manually set line breaks
             'whitespace-nowrap ' +
             // Set explicit line height to prevent layout shift when changing
