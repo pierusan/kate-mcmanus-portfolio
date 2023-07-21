@@ -25,7 +25,8 @@ export default function JourneyFinderPage() {
       {/* PAGE LARGE */}
       <div
         className={
-          'fixed inset-0 hidden min-h-screen lg:grid ' +
+          'hidden lg:grid ' +
+          'fixed inset-0 min-h-screen ' +
           'grid-cols-1 grid-rows-[auto_minmax(0,1fr)] ' +
           'mx-auto max-w-screen-2xl items-center p-5'
         }
@@ -68,11 +69,15 @@ export default function JourneyFinderPage() {
       </div>
 
       {/* PAGE MOBILE */}
-      <main className="grid grid-cols-2 gap-x-6 gap-y-10 p-10 lg:hidden">
+      <main
+        className={
+          'grid lg:hidden ' + 'p-5 md:p-10 ' + 'grid-cols-2 gap-x-6 gap-y-10'
+        }
+      >
         <ProjectHeader />
         <MainImage />
         {/* TODO: If the divs stay like this with as 3 different sections I can probably  */}
-        <div className="col-span-full w-[70%]">
+        <div className="col-span-full max-w-[37.5rem]">
           <Title />
           <Tags />
           <Summary />
@@ -80,13 +85,13 @@ export default function JourneyFinderPage() {
         </div>
         <ImageRight1 />
         <ImageFull1 />
-        <div className="col-span-full">
+        <div className="col-span-full max-w-[37.5rem]">
           <Context />
           <Goal />
         </div>
         <ImagePair1 />
         <ImageFull2 />
-        <div className="col-span-full">
+        <div className="col-span-full max-w-[37.5rem]">
           <Process />
           <Takeaways />
         </div>
