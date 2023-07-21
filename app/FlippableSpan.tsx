@@ -6,41 +6,41 @@ import { CharacterCountContext } from './CharacterCountContext';
 
 const charactersInReactNode = (node: ReactNode) => node?.toString().length ?? 0;
 
-export function HoverableSpan({
+export function FlippableSpan({
   children,
-  classNameOnceHovered,
-  childrenOnceHovered,
+  classNameOnceFlipped,
+  childrenOnceFlipped,
 }: {
   children: ReactNode;
-  classNameOnceHovered: string;
-  childrenOnceHovered?: ReactNode;
+  classNameOnceFlipped: string;
+  childrenOnceFlipped?: ReactNode;
 }) {
   const [wasEverHovered, setWasEverHovered] = useState(false);
-  const { addTotalCharacters, addHoveredCharacters } = useContext(
+  const { addFlippableCharacters, addFlippedCharacters } = useContext(
     CharacterCountContext
   );
 
   // Sync number of characters in the <span> with the context keeping track of
-  // all hoverable characters in the app
+  // all flippable characters in the app
   useEffect(() => {
-    addTotalCharacters(charactersInReactNode(children));
+    addFlippableCharacters(charactersInReactNode(children));
     return () => {
-      addTotalCharacters(charactersInReactNode(children) * -1);
+      addFlippableCharacters(charactersInReactNode(children) * -1);
       // TODO: Use React Experimental's useEffectEvent to remove the number of
       // characters hovered
     };
-  }, [children, addTotalCharacters]);
+  }, [children, addFlippableCharacters]);
 
   // Use mousemove instead of mouseover to change the style only when the user
   // moves the mouse around, regardless of where the mouse started on page load∑
   const onMove = useCallback(() => {
     setWasEverHovered(true);
-    addHoveredCharacters(charactersInReactNode(children));
-  }, [children, addHoveredCharacters]);
+    addFlippedCharacters(charactersInReactNode(children));
+  }, [children, addFlippedCharacters]);
 
   return wasEverHovered ? (
-    <span className={classNameOnceHovered}>
-      {childrenOnceHovered ?? children}
+    <span className={classNameOnceFlipped}>
+      {childrenOnceFlipped ?? children}
     </span>
   ) : (
     <span onMouseMove={onMove}>{children}</span>

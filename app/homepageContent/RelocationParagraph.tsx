@@ -1,4 +1,4 @@
-import { HoverableSpan } from '../HoverableSpan';
+import { FlippableSpan } from '../FlippableSpan';
 import {
   bethEllenStyle,
   harmattanStyle,
@@ -11,91 +11,91 @@ import {
 export function RelocationParagraph() {
   return (
     <p>
-      <HoverableSpan classNameOnceHovered={`${harmattanStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${harmattanStyle}`}>
         I
-      </HoverableSpan>
+      </FlippableSpan>
       &apos;m{' '}
-      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneStyle}`}>
         r
-      </HoverableSpan>
+      </FlippableSpan>
       elocatin
-      <HoverableSpan classNameOnceHovered={`${qwigleyStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${qwigleyStyle}`}>
         g
-      </HoverableSpan>{' '}
+      </FlippableSpan>{' '}
       to{' '}
-      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${bethEllenStyle}`}>
         P
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${bethEllenStyle}`}>
         a
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${bethEllenStyle}`}>
         r
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${bethEllenStyle}`}>
         i
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${bethEllenStyle}`}>
         s
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${bethEllenStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${bethEllenStyle}`}>
         ,
-      </HoverableSpan>
+      </FlippableSpan>
       <br />s
-      <HoverableSpan classNameOnceHovered={`${meieScriptStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${meieScriptStyle}`}>
         e
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${meieScriptStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${meieScriptStyle}`}>
         e
-      </HoverableSpan>
+      </FlippableSpan>
       ki
-      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneStyle}`}>
         n
-      </HoverableSpan>
+      </FlippableSpan>
       g{' '}
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         f
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         u
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         l
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         l
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         -
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         t
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         i
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         m
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesStyle}`}>
         e
-      </HoverableSpan>{' '}
+      </FlippableSpan>{' '}
       em
-      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneStyle}`}>
         p
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOneStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneStyle}`}>
         l
-      </HoverableSpan>
+      </FlippableSpan>
       oy
-      <HoverableSpan classNameOnceHovered={`font-mono`}>m</HoverableSpan>
+      <FlippableSpan classNameOnceFlipped={`font-mono`}>m</FlippableSpan>
       en
-      <HoverableSpan
-        classNameOnceHovered={`${harmattanStyle}`}
-        childrenOnceHovered="T!"
+      <FlippableSpan
+        classNameOnceFlipped={`${harmattanStyle}`}
+        childrenOnceFlipped="T!"
       >
         t.
-      </HoverableSpan>
+      </FlippableSpan>
     </p>
   );
 }

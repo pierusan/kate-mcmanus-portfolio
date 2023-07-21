@@ -22,7 +22,7 @@ const gradientStops: ColorHex[] = [
 /**
  * Convert a total progress into a color value on a gradient
  *
- * @param progress total progress in hovering characters on the page
+ * @param progress total progress in flipping characters on the page
  * @param colorStops colors stops on the gradient to progress along
  * @returns color mix information
  */
@@ -50,23 +50,24 @@ function getProgressColorInfo(
   };
 }
 
-let didRenderOnce = false;
+let didRenderInBrowserOnce = false;
 
-export function BodyBgFromCharacterHover() {
-  const { percentHovered } = useContext(CharacterCountContext);
+export function BodyBgFromCharactersFlipped() {
+  const { percentFlipped } = useContext(CharacterCountContext);
 
   const { color1, color2, percentageMix } = getProgressColorInfo(
-    percentHovered,
+    percentFlipped,
     gradientStops
   );
 
-  // document is only available in the browser so we only use it after hydration
-  if (didRenderOnce) {
+  // document is only available in the browser so we only use this style update
+  // after hydration
+  if (didRenderInBrowserOnce) {
     document.body.style.backgroundColor = `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
   }
 
-  if (!didRenderOnce) {
-    didRenderOnce = true;
+  if (typeof window !== undefined) {
+    didRenderInBrowserOnce = true;
   }
 
   return <></>;

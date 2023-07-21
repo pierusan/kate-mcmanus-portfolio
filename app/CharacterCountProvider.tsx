@@ -4,30 +4,30 @@ import { CharacterCountContext } from './CharacterCountContext';
 
 export function CharacterCountProvider({ children }: { children: ReactNode }) {
   const [nTotalCharacters, setNTotalCharacters] = useState(0);
-  const [nHoveredCharacters, setNHoveredCharacters] = useState(0);
+  const [nFlippedCharacters, setNFlippedCharacters] = useState(0);
 
   if (nTotalCharacters < 0) {
     console.error(
       `Total number of characters should never be negative (here ${nTotalCharacters}). Something went wrong.`
     );
   }
-  if (nHoveredCharacters < 0) {
+  if (nFlippedCharacters < 0) {
     console.error(
-      `Total number of hovered characters should never be negative (here ${nHoveredCharacters}). Something went wrong.`
+      `Total number of flipped characters should never be negative (here ${nFlippedCharacters}). Something went wrong.`
     );
   }
 
-  const percentHovered =
-    nTotalCharacters > 0 ? nHoveredCharacters / nTotalCharacters : 0;
+  const percentFlipped =
+    nTotalCharacters > 0 ? nFlippedCharacters / nTotalCharacters : 0;
 
   return (
     <CharacterCountContext.Provider
       value={{
-        addTotalCharacters: (newChars) =>
+        addFlippableCharacters: (newChars) =>
           setNTotalCharacters((previous) => previous + newChars),
-        addHoveredCharacters: (newChars) =>
-          setNHoveredCharacters((previous) => previous + newChars),
-        percentHovered,
+        addFlippedCharacters: (newChars) =>
+          setNFlippedCharacters((previous) => previous + newChars),
+        percentFlipped,
       }}
     >
       {children}

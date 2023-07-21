@@ -1,4 +1,4 @@
-import { HoverableSpan } from './HoverableSpan';
+import { FlippableSpan } from './FlippableSpan';
 import {
   lektonStyle,
   parisienneStyle,
@@ -12,26 +12,26 @@ const contactItems = [
     // TODO: Update email treatment based on new designs
     url: '#',
     width: '140px',
-    classNameOnceHovered: `${vT323Style}`,
+    classNameOnceFlipped: `${vT323Style}`,
   },
   {
     name: 'Resume',
     // TODO: Self host instead
     url: 'http://katestrykermcmanus.com/content/home/KateStrykerMcManusResume.pdf',
     width: '182px',
-    classNameOnceHovered: `${staatlichesStyle}`,
+    classNameOnceFlipped: `${staatlichesStyle}`,
   },
   {
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/kate-mcmanus-9440944a/',
     width: '202px',
-    classNameOnceHovered: `${lektonStyle}`,
+    classNameOnceFlipped: `${lektonStyle}`,
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/katemcmanus.design/',
     width: '221px',
-    classNameOnceHovered: `${parisienneStyle}`,
+    classNameOnceFlipped: `${parisienneStyle}`,
   },
 ];
 
@@ -47,7 +47,7 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
       }
     >
       <ul className="flex gap-5">
-        {contactItems.map(({ name, url, width, classNameOnceHovered }) => (
+        {contactItems.map(({ name, url, width, classNameOnceFlipped }) => (
           <li className="flex" key={name}>
             <a
               target="_blank"
@@ -62,12 +62,12 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
             >
               {/* eslint-disable-next-line unicorn/prefer-spread */}
               {name.split('').map((char, index) => (
-                <HoverableSpan
+                <FlippableSpan
                   key={index}
-                  classNameOnceHovered={classNameOnceHovered}
+                  classNameOnceFlipped={classNameOnceFlipped}
                 >
                   {char}
-                </HoverableSpan>
+                </FlippableSpan>
               ))}
             </a>
           </li>

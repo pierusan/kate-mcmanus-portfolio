@@ -1,15 +1,15 @@
 import { createContext } from 'react';
 
 export const CharacterCountContext = createContext<{
-  addTotalCharacters: (previousCount: number) => void;
-  addHoveredCharacters: (previousCount: number) => void;
-  percentHovered: number;
+  addFlippableCharacters: (previousCount: number) => void;
+  addFlippedCharacters: (previousCount: number) => void;
+  percentFlipped: number;
 }>({
-  addTotalCharacters: () => {
+  addFlippableCharacters: () => {
     throw 'Should be implemented';
   },
-  addHoveredCharacters: () => {
+  addFlippedCharacters: () => {
     throw 'Should be implemented';
   },
-  percentHovered: 0,
+  percentFlipped: 0,
 });

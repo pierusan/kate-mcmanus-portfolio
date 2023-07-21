@@ -4,7 +4,7 @@ import { CareerParagraph } from './homepageContent/CareerParagraph';
 import { EducationParagraph } from './homepageContent/EducationParagraph';
 import { RelocationParagraph } from './homepageContent/RelocationParagraph';
 import { CharacterCountProvider } from './CharacterCountProvider';
-import { BodyBgFromCharacterHover } from './BodyBgFromCharacterHover';
+import { BodyBgFromCharactersFlipped } from './BodyBgFromCharactersFlipped';
 import { NavDesktop } from './NavDesktop';
 import { NavMobile } from './NavMobile';
 
@@ -36,7 +36,7 @@ export default function HomePage() {
             // Prevent wrapping. We manually set line breaks
             'whitespace-nowrap ' +
             // Set explicit line height to prevent layout shift when changing
-            // font on hover
+            // font on flip
             '[&>h1]:[line-height:1.1em] [&>p]:[line-height:1.36611em] ' +
             '[&>h1>*]:[line-height:0] [&>p>*]:[line-height:0]'
           }
@@ -49,7 +49,7 @@ export default function HomePage() {
         </main>
         <NavDesktop className="hidden [grid-area:projects] md:[display:unset]" />
         <NavMobile className="md:hidden" />
-        <BodyBgFromCharacterHover />
+        <BodyBgFromCharactersFlipped />
       </CharacterCountProvider>
     </body>
   );

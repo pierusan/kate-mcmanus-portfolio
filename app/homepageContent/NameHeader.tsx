@@ -1,4 +1,4 @@
-import { HoverableSpan } from '../HoverableSpan';
+import { FlippableSpan } from '../FlippableSpan';
 import {
   monotonHeaderStyle,
   parisienneHeaderStyle,
@@ -10,34 +10,34 @@ export function NameHeader({ className }: { className?: string }) {
   return (
     // Tweak first gap
     <h1 className={`[line-height:1] ${className}`}>
-      <HoverableSpan classNameOnceHovered={`font-mono`}>K</HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesHeaderStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`font-mono`}>K</FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesHeaderStyle}`}>
         a
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`font-mono uppercase`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`font-mono uppercase`}>
         t
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`font-mono uppercase`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`font-mono uppercase`}>
         e
-      </HoverableSpan>{' '}
+      </FlippableSpan>{' '}
       <br className="md:hidden" />
-      <HoverableSpan classNameOnceHovered={`font-mono`}>M</HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${parisienneHeaderStyle}`}>
+      <FlippableSpan classNameOnceFlipped={`font-mono`}>M</FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${parisienneHeaderStyle}`}>
         c
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOneHeaderStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneHeaderStyle}`}>
         M
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${monotonHeaderStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${monotonHeaderStyle}`}>
         a
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatlichesHeaderStyle}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesHeaderStyle}`}>
         n
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`font-mono`}>u</HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOneHeaderStyle} uppercase`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`font-mono`}>u</FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneHeaderStyle} uppercase`}>
         s
-      </HoverableSpan>
+      </FlippableSpan>
     </h1>
   );
 }
