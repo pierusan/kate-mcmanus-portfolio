@@ -5,10 +5,15 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    future: {
+      // TODO: Dive into this a bit more
+      hoverOnlyWhenSupported: true,
+    },
     screens: {
       md: '768px',
       lg: '1100px',
       '2xl': '2000px',
+      coarse: { raw: '(pointer: coarse)' },
     },
     extend: {
       colors: {

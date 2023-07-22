@@ -62,7 +62,7 @@ export function BodyBgFromCharactersFlipped() {
 
   // document is only available in the browser so we only use this style update
   // after hydration
-  if (didRenderInBrowserOnce) {
+  if (didRenderInBrowserOnce && typeof window !== 'undefined') {
     document.body.style.backgroundColor = `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
   }
 

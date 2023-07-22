@@ -1,3 +1,7 @@
+'use client';
+
+import { useContext } from 'react';
+import { CharacterCountContext } from '../CharacterCountContext';
 import { FlippableSpan } from '../FlippableSpan';
 import {
   monotonHeaderStyle,
@@ -7,9 +11,20 @@ import {
 } from '../fontSubsets';
 
 export function NameHeader({ className }: { className?: string }) {
+  // TODO: Check if we really need a re-render when pointer is not coarse
+
+  // Control rotation on touch screen based on how many characters have been
+  // flipped
+  const { percentFlipped, isPointerCoarse } = useContext(CharacterCountContext);
+  const rotation = percentFlipped * 360;
+
   return (
-    // Tweak first gap
-    <h1 className={`[line-height:1] ${className}`}>
+    <h1
+      className={`leading-[1] coarse:origin-center coarse:self-start ${className}`}
+      style={
+        isPointerCoarse ? { transform: `rotate(${rotation}deg)` } : undefined
+      }
+    >
       <FlippableSpan classNameOnceFlipped={`font-mono`}>K</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${staatlichesHeaderStyle}`}>
         a

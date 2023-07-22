@@ -7,14 +7,15 @@ import { CharacterCountProvider } from './CharacterCountProvider';
 import { BodyBgFromCharactersFlipped } from './BodyBgFromCharactersFlipped';
 import { NavDesktop } from './NavDesktop';
 import { NavMobile } from './NavMobile';
+import { ScrollDivMobile } from './ScrollDivMobile';
 
 export default function HomePage() {
   return (
     <body
       className={
         'min-h-[100dvh] w-screen overflow-scroll ' +
-        'grid py-5 pl-5 md:py-10 md:pl-10 ' +
-        'grid-cols-[auto] grid-rows-[auto] ' +
+        'py-5 pl-5 md:py-10 md:pl-10 ' +
+        'grid grid-cols-[auto] grid-rows-[auto] ' +
         'md:grid-cols-[auto] md:grid-rows-[auto_1fr] ' +
         'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
         '[grid-template-areas:"description"] ' +
@@ -28,6 +29,7 @@ export default function HomePage() {
         <main
           className={
             '[grid-area:description] ' +
+            'coarse:fixed coarse:inset-5 ' +
             'flex flex-col gap-10 font-bold ' +
             // On small screens have the text shrink with the width of the page
             // TODO: Find a way to still use a rem unit here?
@@ -48,6 +50,7 @@ export default function HomePage() {
           <RelocationParagraph />
         </main>
         <NavDesktop className="hidden [grid-area:projects] md:[display:unset]" />
+        <ScrollDivMobile />
         <NavMobile className="md:hidden" />
         <BodyBgFromCharactersFlipped />
       </CharacterCountProvider>

@@ -16,9 +16,8 @@ export function FlippableSpan({
   childrenOnceFlipped?: ReactNode;
 }) {
   const [wasEverHovered, setWasEverHovered] = useState(false);
-  const { addFlippableCharacters, addFlippedCharacters } = useContext(
-    CharacterCountContext
-  );
+  const { addFlippableCharacters, addFlippedCharacters, isPointerCoarse } =
+    useContext(CharacterCountContext);
 
   // Sync number of characters in the <span> with the context keeping track of
   // all flippable characters in the app
@@ -43,6 +42,7 @@ export function FlippableSpan({
       {childrenOnceFlipped ?? children}
     </span>
   ) : (
-    <span onMouseMove={onMove}>{children}</span>
+    // Only add mouse move event handler on desktop devices for performance
+    <span onMouseMove={isPointerCoarse ? undefined : onMove}>{children}</span>
   );
 }
