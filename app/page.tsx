@@ -16,9 +16,9 @@ export default function HomePage() {
         'min-h-[100dvh] w-screen overflow-scroll ' +
         'py-5 pl-5 md:py-10 md:pl-10 ' +
         // Grid layout at different screen sizes
-        'grid grid-cols-[auto] grid-rows-[auto] ' +
-        'md:grid-cols-[auto] md:grid-rows-[auto_1fr] ' +
-        'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
+        'grid grid-cols-[1fr] grid-rows-[1fr] ' +
+        'md:grid-cols-[1fr] md:grid-rows-[auto_1fr] ' +
+        'lg:grid-cols-[37.5rem_1fr] lg:grid-rows-[auto] ' +
         '[grid-template-areas:"description"] ' +
         'md:[grid-template-areas:"description"_"projects"] ' +
         'lg:[grid-template-areas:"description_projects"] ' +
@@ -31,11 +31,14 @@ export default function HomePage() {
           className={
             '[grid-area:description] ' +
             'coarse:fixed coarse:inset-5 ' +
-            'flex flex-col gap-10 font-bold ' +
+            'flex flex-col font-bold ' +
             // On small screens have the text shrink with the width of the page
             // TODO: Find a way to still use a rem unit here?
-            '[&>h1]:text-[calc(100vw*56/768)] [&>p]:text-[calc(100vw*36/768)] ' +
-            'md:w-[37.5rem] md:[&>h1]:text-[3.5rem] md:[&>p]:text-[2.25rem] ' +
+            'text-[clamp(0px,_100vw_*_36_/_768,_2.25rem)] ' +
+            '[&>h1]:text-[calc(56em/36)] ' +
+            // Also calculate the gap between paragraphs based on the screen
+            // size (aka on font size here)
+            'gap-[calc(40em_/_36)] [&>h1]:mb-[calc(-17em/56)] ' +
             // Prevent wrapping. We manually set line breaks
             'whitespace-nowrap ' +
             // Set explicit line height to prevent layout shift when changing
@@ -44,7 +47,7 @@ export default function HomePage() {
             '[&>h1>*]:[line-height:0] [&>p>*]:[line-height:0]'
           }
         >
-          <NameHeader className="mb-[-1.0625rem]" />
+          <NameHeader />
           <RolesParagraph />
           <CareerParagraph />
           <EducationParagraph />
