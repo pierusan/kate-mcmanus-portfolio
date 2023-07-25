@@ -18,6 +18,7 @@ import {
   ImageRight1,
   MainImage,
 } from './Images';
+import { NavMobile } from '@/app/NavMobile';
 
 export default function JourneyFinderPage() {
   return (
@@ -71,7 +72,12 @@ export default function JourneyFinderPage() {
       {/* PAGE MOBILE */}
       <main
         className={
-          'grid lg:hidden ' + 'p-5 md:p-10 ' + 'grid-cols-2 gap-x-6 gap-y-10'
+          'grid lg:hidden ' +
+          'p-5 md:p-10 ' +
+          // Add bottom margin on small screens to reveal Next/Prev buttons
+          // above fixed bottom nav
+          'mb-20 md:mb-0 ' +
+          'grid-cols-2 gap-x-6 gap-y-10'
         }
       >
         <ProjectHeader />
@@ -98,6 +104,8 @@ export default function JourneyFinderPage() {
         <ImageLeft1 />
         <ProjectFooter />
       </main>
+      {/* Only show bottom nav on small screens like for the homepage */}
+      <NavMobile className="md:hidden" />
     </>
   );
 }
