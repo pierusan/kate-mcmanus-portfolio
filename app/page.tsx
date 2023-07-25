@@ -7,7 +7,7 @@ import { CharacterCountProvider } from './CharacterCountProvider';
 import { BodyBgFromCharactersFlipped } from './BodyBgFromCharactersFlipped';
 import { NavDesktop } from './NavDesktop';
 import { NavMobile } from './NavMobile';
-import { ScrollDivMobile } from './ScrollDivMobile';
+import { ScrollDivTouchScreen } from './ScrollDivTouchScreen';
 
 export default function HomePage() {
   return (
@@ -15,6 +15,7 @@ export default function HomePage() {
       className={
         'min-h-[100dvh] w-screen overflow-scroll ' +
         'py-5 pl-5 md:py-10 md:pl-10 ' +
+        // Grid layout at different screen sizes
         'grid grid-cols-[auto] grid-rows-[auto] ' +
         'md:grid-cols-[auto] md:grid-rows-[auto_1fr] ' +
         'lg:grid-cols-[auto_1fr] lg:grid-rows-[auto] ' +
@@ -50,7 +51,7 @@ export default function HomePage() {
           <RelocationParagraph />
         </main>
         <NavDesktop className="hidden [grid-area:projects] md:[display:unset]" />
-        <ScrollDivMobile />
+        <ScrollDivTouchScreen />
         <NavMobile className="md:hidden" />
         <BodyBgFromCharactersFlipped />
       </CharacterCountProvider>

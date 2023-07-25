@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import { lektonStyle, parisienneStyle, pirataOneStyle } from '../fontSubsets';
 
 export function ProjectTitle({ children }: { children: ReactNode }) {
@@ -40,10 +40,10 @@ export function ProjectTeamSection({ lines }: { lines: string[] }) {
       <p className="font-extrabold">
         {lines.map((line, index) => {
           return (
-            <>
+            <Fragment key={line}>
               {line}
               {index < lines.length - 1 ? <br /> : null}
-            </>
+            </Fragment>
           );
         })}
       </p>

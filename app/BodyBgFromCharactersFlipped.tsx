@@ -1,7 +1,6 @@
 'use client';
 
-import { useContext } from 'react';
-import { CharacterCountContext } from './CharacterCountContext';
+import { usePercentCharactersFlipped } from './usePercentCharactersFlipped';
 
 type ColorHex = `#${string}`;
 interface ColorMix {
@@ -53,7 +52,7 @@ function getProgressColorInfo(
 let didRenderInBrowserOnce = false;
 
 export function BodyBgFromCharactersFlipped() {
-  const { percentFlipped } = useContext(CharacterCountContext);
+  const percentFlipped = usePercentCharactersFlipped();
 
   const { color1, color2, percentageMix } = getProgressColorInfo(
     percentFlipped,

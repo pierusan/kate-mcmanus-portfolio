@@ -1,90 +1,73 @@
 'use client';
-import { useState, type ReactNode, useEffect } from 'react';
-import { CharacterCountContext } from './CharacterCountContext';
+import { useState, useCallback, useEffect, type ReactNode } from 'react';
+import { useIsPointerCoarse } from './useIsPointerCoarse';
+import {
+  type FlipState,
+  type FlipID,
+  CharacterCountContext,
+} from './CharacterCountContext';
 
 export function CharacterCountProvider({ children }: { children: ReactNode }) {
-  const [nTotalCharacters, setNTotalCharacters] = useState(0);
+  const [flipState, setFlipState] = useState<FlipState>([]);
 
-  // Our way to finding whether this is a touchscreen, in sync with CSS media
-  // queries used
-  const [isPointerCoarse, setIsPointerCoarse] = useState(false);
-
-  // Only for desktop, where characters are flipped manually based on hover
-  const [nFlippedCharacters, setNFlippedCharacters] = useState(0);
-
-  // Only for touch devices, where characters are flipped based on scroll
-  const [scrollPercentage, setScrollPercentage] = useState(0);
-
-  // Sync pointer coarse capability with React. Helpful in development where we
-  // might switch between desktop and mobile devices
-  useEffect(() => {
-    const mql = window.matchMedia('(pointer: coarse)');
-
-    setIsPointerCoarse(mql.matches);
-    const handlePointerChange = (event: MediaQueryListEvent) => {
-      setIsPointerCoarse(event.matches);
-    };
-    mql.addEventListener('change', handlePointerChange);
-
-    return () => {
-      mql.removeEventListener('change', handlePointerChange);
-    };
+  const addFlippableElement = useCallback((id: FlipID, nChars: number) => {
+    setFlipState((previous) => [...previous, { id, nChars, flipped: false }]);
   }, []);
 
-  // Sync scroll state with react when touch screen
+  const removeFlippableElement = useCallback((id: FlipID) => {
+    setFlipState((previous) =>
+      previous.filter(({ id: currentId }) => id !== currentId)
+    );
+  }, []);
+
+  const forceFlip = useCallback((id: FlipID, flip: boolean) => {
+    setFlipState((previous) =>
+      previous.map((element) =>
+        element.id === id ? { ...element, flipped: flip } : element
+      )
+    );
+  }, []);
+
+  const forceFlipPercentage = useCallback((percentToFlip: number) => {
+    setFlipState((previous) => {
+      const sumChars = previous.reduce(
+        (cumSum, { nChars }) => cumSum + nChars,
+        0
+      );
+
+      let cumSum = 0;
+      const newState = previous.map((element) => {
+        const { nChars } = element;
+        cumSum += nChars;
+        const shouldBeFlipped = cumSum <= percentToFlip * sumChars;
+        return { ...element, flipped: shouldBeFlipped };
+      });
+
+      return newState;
+    });
+  }, []);
+
+  // Our way to finding whether this is a touchscreen, using the same media
+  // query as CSS to avoid discrepancies
+  const isPointerCoarse = useIsPointerCoarse();
+
+  // Reset flip state when switching between desktop and touch screen. This is
+  // especially useful for development
   useEffect(() => {
-    if (isPointerCoarse) {
-      const handleScroll = () => {
-        setScrollPercentage(
-          window.scrollY /
-            (document.documentElement.scrollHeight -
-              document.documentElement.clientHeight)
-        );
-      };
-      window.addEventListener('scroll', handleScroll, { passive: true });
-
-      // This is just for development when switching between touch and non-touch
-      // capabilities
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-
-        // Reset scroll since we'll remove the fake long scroll div
-        setScrollPercentage(0);
-      };
-    }
+    setFlipState((previous) =>
+      previous.map((element) => ({ ...element, flipped: false }))
+    );
   }, [isPointerCoarse]);
-
-  if (nTotalCharacters < 0) {
-    console.error(
-      `Total number of characters should never be negative (here ${nTotalCharacters}). Something went wrong.`
-    );
-  }
-  if (nFlippedCharacters < 0) {
-    console.error(
-      `Total number of flipped characters should never be negative (here ${nFlippedCharacters}). Something went wrong.`
-    );
-  }
-
-  let percentFlipped = 0;
-  if (nTotalCharacters === 0) {
-    // do nothing at the start
-  } else if (isPointerCoarse) {
-    // on touch screens characters are flipped based on scroll
-    percentFlipped = scrollPercentage;
-  } else {
-    // On desktop characters are flipped manually based on hover
-    percentFlipped = nFlippedCharacters / nTotalCharacters;
-  }
 
   return (
     <CharacterCountContext.Provider
       value={{
-        addFlippableCharacters: (newChars) =>
-          setNTotalCharacters((previous) => previous + newChars),
-        addFlippedCharacters: (newChars) =>
-          setNFlippedCharacters((previous) => previous + newChars),
-        percentFlipped,
+        addFlippableElement,
+        removeFlippableElement,
+        forceFlip,
+        flipState,
         isPointerCoarse,
+        forceFlipPercentage,
       }}
     >
       {children}

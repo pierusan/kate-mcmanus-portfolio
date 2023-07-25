@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useId } from 'react';
 import type { ReactNode } from 'react';
 import { CharacterCountContext } from './CharacterCountContext';
 
@@ -15,29 +15,34 @@ export function FlippableSpan({
   classNameOnceFlipped: string;
   childrenOnceFlipped?: ReactNode;
 }) {
-  const [wasEverHovered, setWasEverHovered] = useState(false);
-  const { addFlippableCharacters, addFlippedCharacters, isPointerCoarse } =
-    useContext(CharacterCountContext);
+  const spanId = useId();
+
+  const {
+    addFlippableElement,
+    removeFlippableElement,
+    forceFlip,
+    isPointerCoarse,
+    flipState,
+  } = useContext(CharacterCountContext);
 
   // Sync number of characters in the <span> with the context keeping track of
   // all flippable characters in the app
   useEffect(() => {
-    addFlippableCharacters(charactersInReactNode(children));
+    addFlippableElement(spanId, charactersInReactNode(children));
     return () => {
-      addFlippableCharacters(charactersInReactNode(children) * -1);
-      // TODO: Use React Experimental's useEffectEvent to remove the number of
-      // characters hovered
+      removeFlippableElement(spanId);
     };
-  }, [children, addFlippableCharacters]);
+  }, [children, addFlippableElement, removeFlippableElement, spanId]);
 
   // Use mousemove instead of mouseover to change the style only when the user
   // moves the mouse around, regardless of where the mouse started on page load∑
   const onMove = useCallback(() => {
-    setWasEverHovered(true);
-    addFlippedCharacters(charactersInReactNode(children));
-  }, [children, addFlippedCharacters]);
+    forceFlip(spanId, true);
+  }, [forceFlip, spanId]);
 
-  return wasEverHovered ? (
+  const isFlipped = flipState.find(({ id }) => id === spanId)?.flipped ?? false;
+
+  return isFlipped ? (
     <span className={classNameOnceFlipped}>
       {childrenOnceFlipped ?? children}
     </span>

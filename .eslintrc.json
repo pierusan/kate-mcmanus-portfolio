@@ -31,7 +31,18 @@
       }}
     ],
     "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "unicorn/no-null": "off"
+    "unicorn/no-null": "off",
+    // Allow some abbreviations to accelerate reading time
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "replacements": {
+          "fn": {
+            "function": false
+          }
+        }
+      }
+    ]
   },
   "overrides": [
     {
