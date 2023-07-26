@@ -11,6 +11,7 @@
     "deploy:production": "vercel --production"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.0.1",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
@@ -19,7 +20,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "eslint-plugin-unicorn": "^47.0.0",
-    "next": "13.4.7",
+    "next": "^13.4.10",
     "postcss": "8.4.24",
     "postcss-nesting": "^12.0.0",
     "postcss-preset-env": "^9.0.0",

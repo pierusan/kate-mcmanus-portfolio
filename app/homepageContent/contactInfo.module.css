@@ -1,9 +1,0 @@
-.contactInfoItem {
-  & > a:hover {
-    text-decoration: underline;
-  }
-
-  &:not(:first-child)::before {
-    content: ', ';
-  }
-}

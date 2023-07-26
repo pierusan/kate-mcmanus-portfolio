@@ -5,7 +5,26 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    future: {
+      // TODO: Dive into this a bit more
+      hoverOnlyWhenSupported: true,
+    },
+    screens: {
+      md: '768px',
+      lg: '1100px',
+      '2xl': '2000px',
+      coarse: { raw: '(pointer: coarse)' },
+    },
+    extend: {
+      colors: {
+        'border-action-subtle': '#d7d7d7',
+        'bg-surface': '#f5f5f5',
+      },
+      fontFamily: {
+        sans: ['var(--font-manrope)'],
+        mono: ['var(--font-major-mono-display)'],
+      },
+    },
   },
   plugins: [],
 };

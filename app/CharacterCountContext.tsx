@@ -1,13 +1,32 @@
 import { createContext } from 'react';
 
+export type FlipID = string;
+export type FlipState = {
+  id: FlipID;
+  nChars: number;
+  flipped: boolean;
+}[];
+
 export const CharacterCountContext = createContext<{
-  addTotalCharacters: (previousCount: number) => void;
-  addHoveredCharacters: (previousCount: number) => void;
+  addFlippableElement: (id: FlipID, nChars: number) => void;
+  removeFlippableElement: (id: FlipID) => void;
+  forceFlip: (id: FlipID, flip: boolean) => void;
+  forceFlipPercentage: (percentToFlip: number) => void;
+  flipState: FlipState;
+  isPointerCoarse: boolean;
 }>({
-  addTotalCharacters: () => {
+  addFlippableElement: () => {
     throw 'Should be implemented';
   },
-  addHoveredCharacters: () => {
+  removeFlippableElement: () => {
     throw 'Should be implemented';
   },
+  forceFlip: () => {
+    throw 'Should be implemented';
+  },
+  forceFlipPercentage: () => {
+    throw 'Should be implemented';
+  },
+  flipState: [],
+  isPointerCoarse: false,
 });

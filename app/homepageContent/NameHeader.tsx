@@ -1,53 +1,55 @@
-import { HoverableSpan } from '../HoverableSpan';
-import {
-  majorMonoDisplay,
-  monoton,
-  parisienne,
-  pirataOne,
-  staatliches,
-} from '../fontSubsets';
+'use client';
 
-export function NameHeader() {
+import { type CSSProperties } from 'react';
+import { FlippableSpan } from '../FlippableSpan';
+import {
+  monotonHeaderStyle,
+  parisienneHeaderStyle,
+  pirataOneHeaderStyle,
+  staatlichesHeaderStyle,
+} from '../fontSubsets';
+import { usePercentCharactersFlipped } from '../usePercentCharactersFlipped';
+
+export function NameHeader({ className }: { className?: string }) {
+  // Control rotation on touch screen based on how many characters have been
+  // flipped
+  // TODO: Check if we really need a re-render when pointer is not coarse
+  const percentFlipped = usePercentCharactersFlipped();
+  const rotation = percentFlipped * 360;
+
   return (
-    <h1>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        K
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatliches.className}`}>
+    <h1
+      className={`leading-[1] coarse:origin-center coarse:rotate-[var(--rotation)] coarse:self-start ${className}`}
+      style={{ '--rotation': `${rotation}deg` } as CSSProperties}
+    >
+      <FlippableSpan classNameOnceFlipped={`font-mono`}>K</FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesHeaderStyle}`}>
         a
-      </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${majorMonoDisplay.className} uppercase`}
-      >
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`font-mono uppercase`}>
         t
-      </HoverableSpan>
-      <HoverableSpan
-        classNameOnceHovered={`${majorMonoDisplay.className} uppercase`}
-      >
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`font-mono uppercase`}>
         e
-      </HoverableSpan>
-      <br />
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        M
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${parisienne.className}`}>
+      </FlippableSpan>{' '}
+      <br className="md:hidden" />
+      <FlippableSpan classNameOnceFlipped={`font-mono`}>M</FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${parisienneHeaderStyle}`}>
         c
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneHeaderStyle}`}>
         M
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${monoton.className}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${monotonHeaderStyle}`}>
         a
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${staatliches.className}`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${staatlichesHeaderStyle}`}>
         n
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${majorMonoDisplay.className}`}>
-        u
-      </HoverableSpan>
-      <HoverableSpan classNameOnceHovered={`${pirataOne.className} uppercase`}>
+      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`font-mono`}>u</FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${pirataOneHeaderStyle} uppercase`}>
         s
-      </HoverableSpan>
+      </FlippableSpan>
     </h1>
   );
 }
