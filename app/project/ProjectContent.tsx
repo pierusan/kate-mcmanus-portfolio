@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from 'react';
 import { lektonStyle, parisienneStyle, pirataOneStyle } from '../fontSubsets';
+import { cn } from '../helpers';
 
 export function ProjectTitle({ children }: { children: ReactNode }) {
   return <h1 className="text-[2.25rem]">{children}</h1>;
@@ -16,12 +17,12 @@ export function ProjectTagsSection({
 }) {
   return (
     <ol
-      className={
-        'mb-2.5 flex ' +
-        '[&>li:not(:last-child)]:after:content-["|"] ' +
-        '[&>li:not(:last-child)]:after:px-2 [&>li:not(:last-child)]:after:text-base ' +
+      className={cn(
+        'mb-2.5 flex ',
+        '[&>li:not(:last-child)]:after:content-["|"] ',
+        '[&>li:not(:last-child)]:after:px-2 [&>li:not(:last-child)]:after:text-base ',
         '[&>li:not(:last-child)]:after:font-sans [&>li:not(:last-child)]:after:font-extralight'
-      }
+      )}
     >
       {/* Add extra padding because Parisienne has a tendency to overflow */}
       {/* TODO: Check if the padding only should be added for certain letters */}

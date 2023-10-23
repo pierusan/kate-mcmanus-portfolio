@@ -5,6 +5,7 @@ import {
   staatlichesStyle,
   vT323Style,
 } from './fontSubsets';
+import { cn } from './helpers';
 
 const contactItems = [
   {
@@ -38,13 +39,13 @@ const contactItems = [
 export function ContactInfoDesktop({ className }: { className?: string }) {
   return (
     <address
-      className={
-        'absolute right-5 top-5 z-50 ' +
-        'text-4xl font-bold not-italic ' +
+      className={cn(
+        'absolute right-5 top-5 z-50 ',
+        'text-4xl font-bold not-italic ',
         // Rotate vertically
-        '[transform-origin:left_top] [transform:translateX(100%)_rotate(90deg)] ' +
-        `${className}`
-      }
+        '[transform-origin:left_top] [transform:translateX(100%)_rotate(90deg)] ',
+        className
+      )}
     >
       <ul className="flex gap-5">
         {contactItems.map(({ name, url, width, classNameOnceFlipped }) => (
@@ -53,11 +54,11 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
               target="_blank"
               rel="noreferrer"
               href={url}
-              className={
-                'border border-black py-5 text-center ' +
+              className={cn(
+                'border border-black py-5 text-center ',
                 // Reveal border on hover
                 'border-opacity-0 hover:border-opacity-100'
-              }
+              )}
               style={{ width }}
             >
               {/* eslint-disable-next-line unicorn/prefer-spread */}

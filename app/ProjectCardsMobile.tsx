@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import { cn } from './helpers';
 
 export function ProjectCardsMobile({ className }: { className?: string }) {
   return (
-    <ul className={`flex flex-col gap-8  bg-bg-surface ${className}`}>
+    <ul className={cn('flex flex-col gap-8 bg-bg-surface', className)}>
       <li>
         <Link
           href="/project/journey-finder"

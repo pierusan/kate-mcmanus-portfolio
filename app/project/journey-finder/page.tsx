@@ -18,6 +18,7 @@ import {
   ImageRight1,
   MainImage,
 } from './Images';
+import { cn } from '@/app/helpers';
 import { NavMobile } from '@/app/NavMobile';
 
 export default function JourneyFinderPage() {
@@ -25,12 +26,12 @@ export default function JourneyFinderPage() {
     <>
       {/* PAGE LARGE */}
       <div
-        className={
-          'hidden lg:grid ' +
-          'fixed inset-0 min-h-screen ' +
-          'grid-cols-1 grid-rows-[auto_minmax(0,1fr)] ' +
+        className={cn(
+          'hidden lg:grid ',
+          'fixed inset-0 min-h-screen ',
+          'grid-cols-1 grid-rows-[auto_minmax(0,1fr)] ',
           'mx-auto max-w-screen-2xl items-center p-5'
-        }
+        )}
       >
         <ProjectHeader />
         <main className="flex flex-col px-5 text-sm leading-[1.375rem]">
@@ -53,11 +54,11 @@ export default function JourneyFinderPage() {
         </main>
       </div>
       <div
-        className={
-          'hidden lg:grid ' +
-          'pointer-events-none relative w-full ' +
+        className={cn(
+          'hidden lg:grid ',
+          'pointer-events-none relative w-full ',
           'grid-cols-3 gap-10 px-10 pb-5 pt-[4.8125rem]'
-        }
+        )}
       >
         <MainImage />
         <ImageRight1 />
@@ -71,14 +72,14 @@ export default function JourneyFinderPage() {
 
       {/* PAGE MOBILE */}
       <main
-        className={
-          'grid lg:hidden ' +
-          'p-5 md:p-10 ' +
+        className={cn(
+          'grid lg:hidden ',
+          'p-5 md:p-10 ',
           // Add bottom margin on small screens to reveal Next/Prev buttons
           // above fixed bottom nav
-          'mb-20 md:mb-0 ' +
+          'mb-20 md:mb-0 ',
           'grid-cols-2 gap-x-6 gap-y-10'
-        }
+        )}
       >
         <ProjectHeader />
         <MainImage />

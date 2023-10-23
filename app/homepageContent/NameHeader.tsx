@@ -9,6 +9,7 @@ import {
   staatlichesHeaderStyle,
 } from '../fontSubsets';
 import { usePercentCharactersFlipped } from '../usePercentCharactersFlipped';
+import { cn } from '../helpers';
 
 export function NameHeader({ className }: { className?: string }) {
   // Control rotation on touch screen based on how many characters have been
@@ -19,7 +20,10 @@ export function NameHeader({ className }: { className?: string }) {
 
   return (
     <h1
-      className={`leading-[1] coarse:origin-center coarse:rotate-[var(--rotation)] coarse:self-start ${className}`}
+      className={cn(
+        'leading-[1] coarse:origin-center coarse:rotate-[var(--rotation)] coarse:self-start',
+        className
+      )}
       style={{ '--rotation': `${rotation}deg` } as CSSProperties}
     >
       <FlippableSpan classNameOnceFlipped={`font-mono`}>K</FlippableSpan>

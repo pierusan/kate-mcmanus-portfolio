@@ -1,17 +1,19 @@
 {
-    "cSpell.words": [
-        "Flippable",
-        "glyphhanger",
-        "Lekton",
-        "mcmanus",
-        "Meie",
-        "Monoton",
-        "Parisienne",
-        "Pirata",
-        "Qwigley",
-        "ruleset",
-        "Staatliches",
-        "svgr"
-    ],
-    "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": [
+    "clsx",
+    "extralight",
+    "Flippable",
+    "glyphhanger",
+    "Lekton",
+    "mcmanus",
+    "Meie",
+    "Monoton",
+    "Parisienne",
+    "Pirata",
+    "Qwigley",
+    "ruleset",
+    "Staatliches",
+    "svgr"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

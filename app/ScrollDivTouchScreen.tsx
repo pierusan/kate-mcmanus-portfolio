@@ -2,6 +2,7 @@
 
 import { useContext, useEffect, useRef } from 'react';
 import { CharacterCountContext } from './CharacterCountContext';
+import { cn } from './helpers';
 
 // Add a empty long scroll div on mobile which will control the characters
 // flipped and the background color
@@ -42,16 +43,16 @@ export function ScrollDivTouchScreen() {
   return (
     <div
       ref={scrollDivReference}
-      className={
-        'hidden coarse:block ' +
+      className={cn(
+        'hidden coarse:block ',
         // Fixed full screen scroll container
-        'fixed inset-0 overflow-y-scroll ' +
+        'fixed inset-0 overflow-y-scroll ',
         // We add a small gap to the top of the page to prevent the address bar
         // from collapsing on mobile which has a bit of a jarring effect
-        'top-[1px] ' +
+        'top-[1px] ',
         // Hide scrollbar to keep the surprise, and for a cleaner look
         'coarse:[-ms-overflow-style:none] coarse:[&::-webkit-scrollbar]:hidden'
-      }
+      )}
     >
       <div className="h-[1000dvh]" />
     </div>
