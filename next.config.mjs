@@ -3,6 +3,9 @@ const nextConfig = {
   // It should have been enabled by default by Next.js but it doesn't seem to be
   // the case. Enabling it to follow the best practices from React 18
   reactStrictMode: true,
+  experimental: {
+    typedRoutes: true,
+  },
   webpack(config) {
     // Configures webpack to handle SVG files with SVGR. SVGR optimizes and transforms SVG files
     // into React components. See https://react-svgr.com/docs/next/
@@ -35,4 +38,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

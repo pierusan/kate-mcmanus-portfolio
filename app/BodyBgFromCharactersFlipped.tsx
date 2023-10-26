@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { usePercentCharactersFlipped } from './usePercentCharactersFlipped';
 
 type ColorHex = `#${string}`;
@@ -65,9 +66,9 @@ export function BodyBgFromCharactersFlipped() {
     document.body.style.backgroundColor = `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
   }
 
-  if (typeof window !== undefined) {
+  useEffect(() => {
     didRenderInBrowserOnce = true;
-  }
+  }, []);
 
   return <></>;
 }
