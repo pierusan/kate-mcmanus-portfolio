@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import resolveConfig from 'tailwindcss/resolveConfig';
 import { cn } from './helpers';
 import { UlAwareOfWindowWidth } from './UlAwareOfWindowWidth';
 import { ProjectIllustration } from './ProjectIllustration';
@@ -6,6 +7,13 @@ import { ProjectIllustrationClickArea } from './ProjectIllustrationClickArea';
 import { projectCardsInfo } from './projectCardsInfo';
 import checkersPatternSvg from './projectCardSvgs/CheckersBackground.svg?url';
 import cloudsImg from '@/public/clouds.png';
+import tailwindConfig from '@/tailwind.config';
+
+const screens = resolveConfig(tailwindConfig).theme?.screens as Record<
+  string,
+  string
+>;
+const mdBreakpoint = screens.md;
 
 export function ProjectCardsDesktop({ className }: { className?: string }) {
   return (
@@ -96,6 +104,7 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
           alt="clouds"
           placeholder="blur"
           className="object-cover"
+          sizes={`(max-width: ${mdBreakpoint}) 0px, 100vw`}
         />
       </div>
       <div
