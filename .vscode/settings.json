@@ -4,6 +4,8 @@
     "extralight",
     "Flippable",
     "glyphhanger",
+    "hoverable",
+    "Interactives",
     "Lekton",
     "mcmanus",
     "Meie",
@@ -13,7 +15,9 @@
     "Qwigley",
     "ruleset",
     "Staatliches",
-    "svgr"
+    "svgr",
+    "Svgs",
+    "Vijks"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
