@@ -53,6 +53,12 @@
       "rules": {
         "unicorn/filename-case": ["off"]
       }
+    },
+    {
+      "files": ["*.config.js"],
+      "rules": {
+        "unicorn/prefer-module": ["off"]
+      }
     }
   ],
   "plugins": ["@typescript-eslint"]
