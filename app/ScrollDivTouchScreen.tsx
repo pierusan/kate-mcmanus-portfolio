@@ -6,7 +6,7 @@ import { cn } from './helpers';
 
 // Add a empty long scroll div on mobile which will control the characters
 // flipped and the background color
-export function ScrollDivTouchScreen() {
+export function ScrollDivTouchScreen({ className }: { className?: string }) {
   const scrollDivReference = useRef<HTMLDivElement>(null);
 
   const { forceFlipPercentage, isPointerCoarse } = useContext(
@@ -44,14 +44,14 @@ export function ScrollDivTouchScreen() {
     <div
       ref={scrollDivReference}
       className={cn(
-        'hidden coarse:block ',
         // Fixed full screen scroll container
         'fixed inset-0 overflow-y-scroll ',
         // We add a small gap to the top of the page to prevent the address bar
         // from collapsing on mobile which has a bit of a jarring effect
         'top-[1px] ',
         // Hide scrollbar to keep the surprise, and for a cleaner look
-        'coarse:[-ms-overflow-style:none] coarse:[&::-webkit-scrollbar]:hidden'
+        '[-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden',
+        className
       )}
     >
       <div className="h-[1000dvh]" />

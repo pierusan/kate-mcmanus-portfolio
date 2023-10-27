@@ -19,7 +19,7 @@ import {
   MainImage,
 } from './Images';
 import { cn } from '@/app/helpers';
-import { NavMobile } from '@/app/NavMobile';
+import { NavMobileOrTouchScreen } from '@/app/NavMobileOrTouchScreen';
 
 export default function JourneyFinderPage() {
   return (
@@ -105,8 +105,8 @@ export default function JourneyFinderPage() {
         <ImageLeft1 />
         <ProjectFooter />
       </main>
-      {/* Only show bottom nav on small screens like for the homepage */}
-      <NavMobile className="md:hidden" />
+      {/* Only show bottom nav on small or touch screens like for the homepage */}
+      <NavMobileOrTouchScreen className="md-and-fine:hidden" />
     </>
   );
 }

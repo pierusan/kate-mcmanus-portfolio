@@ -6,7 +6,7 @@ import { RelocationParagraph } from './homepageContent/RelocationParagraph';
 import { CharacterCountProvider } from './CharacterCountProvider';
 import { BodyBgFromCharactersFlipped } from './BodyBgFromCharactersFlipped';
 import { NavDesktop } from './NavDesktop';
-import { NavMobile } from './NavMobile';
+import { NavMobileOrTouchScreen } from './NavMobileOrTouchScreen';
 import { ScrollDivTouchScreen } from './ScrollDivTouchScreen';
 import { cn } from './helpers';
 
@@ -57,9 +57,9 @@ export default function HomePage() {
           <EducationParagraph />
           <RelocationParagraph />
         </main>
-        <NavDesktop className="hidden [grid-area:projects] md:[display:unset]" />
-        <ScrollDivTouchScreen />
-        <NavMobile className="md:hidden" />
+        <NavDesktop className="hidden [grid-area:projects] md-and-fine:[display:unset]" />
+        <ScrollDivTouchScreen className="hidden coarse:block" />
+        <NavMobileOrTouchScreen className="md-and-fine:hidden" />
         <BodyBgFromCharactersFlipped />
       </CharacterCountProvider>
     </body>

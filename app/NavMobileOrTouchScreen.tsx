@@ -7,7 +7,7 @@ import { NavMobileMenu } from './NavMobileMenu';
 import { NavMobileHeader } from './NavMobileHeader';
 import { cn } from './helpers';
 
-export function NavMobile({ className }: { className?: string }) {
+export function NavMobileOrTouchScreen({ className }: { className?: string }) {
   const dialogReference = useRef<HTMLDialogElement>(null);
   const [showProjectsTab, setShowProjectsTab] = useState(true);
 
@@ -52,7 +52,7 @@ export function NavMobile({ className }: { className?: string }) {
         />
       </dialog>
       <NavMobileMenu
-        className="fixed inset-x-5 bottom-5 md:hidden"
+        className="fixed inset-x-5 bottom-5"
         tabs={[
           {
             name: 'Projects',

@@ -14,6 +14,7 @@ module.exports = {
       lg: '1100px',
       '2xl': '2000px',
       coarse: { raw: '(pointer: coarse)' },
+      'md-and-fine': { raw: '(min-width: 768px) and (pointer: fine)' },
     },
     extend: {
       colors: {
