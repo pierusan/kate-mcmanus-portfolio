@@ -9,6 +9,7 @@ import { NavDesktop } from './NavDesktop';
 import { NavMobileOrTouchScreen } from './NavMobileOrTouchScreen';
 import { ScrollDivTouchScreen } from './ScrollDivTouchScreen';
 import { cn } from './helpers';
+import { RotateMeDialogTouchScreen } from './RotateMeDialogTouchScreen';
 
 export default function HomePage() {
   return (
@@ -19,13 +20,13 @@ export default function HomePage() {
         // thanks to overflow-scroll on html tag
         'overflow-hidden',
         'py-5 pl-5 md:py-10 md:pl-10 ',
-        // Grid layout at different screen sizes
+        // Grid layout at different screen sizes (for desktops with mouse)
         'grid grid-cols-[1fr] grid-rows-[1fr] ',
-        'md:grid-cols-[1fr] md:grid-rows-[auto_69.5rem] ',
-        'lg:grid-cols-[37.5rem_1fr] lg:grid-rows-[auto] ',
+        'fine:md:grid-cols-[1fr] fine:md:grid-rows-[auto_69.5rem] ',
+        'fine:lg:grid-cols-[37.5rem_1fr] fine:lg:grid-rows-[auto] ',
         '[grid-template-areas:"description"] ',
-        'md:[grid-template-areas:"description"_"projects"] ',
-        'lg:[grid-template-areas:"description_projects"] ',
+        'fine:md:[grid-template-areas:"description"_"projects"] ',
+        'fine:lg:[grid-template-areas:"description_projects"] ',
         // Add side margins on very wide screens
         'relative max-w-screen-2xl 2xl:mx-auto'
       )}
@@ -57,9 +58,15 @@ export default function HomePage() {
           <EducationParagraph />
           <RelocationParagraph />
         </main>
-        <NavDesktop className="hidden [grid-area:projects] md-and-fine:[display:unset]" />
-        <ScrollDivTouchScreen className="hidden coarse:block" />
-        <NavMobileOrTouchScreen className="md-and-fine:hidden" />
+        <NavDesktop
+          className={cn(
+            '[grid-area:projects]',
+            'hidden fine:md:[display:unset]'
+          )}
+        />
+        <ScrollDivTouchScreen className="z-20 fine:hidden" />
+        <RotateMeDialogTouchScreen className="z-50 fine:hidden" />
+        <NavMobileOrTouchScreen className="z-10 fine:md:hidden" />
         <BodyBgFromCharactersFlipped />
       </CharacterCountProvider>
     </body>

@@ -45,7 +45,7 @@ export function ScrollDivTouchScreen({ className }: { className?: string }) {
       ref={scrollDivReference}
       className={cn(
         // Fixed full screen scroll container
-        'fixed inset-0 overflow-y-scroll ',
+        'fixed inset-0 overflow-y-scroll',
         // We add a small gap to the top of the page to prevent the address bar
         // from collapsing on mobile which has a bit of a jarring effect
         'top-[1px] ',
@@ -54,7 +54,14 @@ export function ScrollDivTouchScreen({ className }: { className?: string }) {
         className
       )}
     >
-      <div className="h-[1000dvh]" />
+      <div
+        className={cn(
+          // Specify height for portrait AND landscape to avoid a scroll event
+          // trigger when the user rotates their device, which would mess up the
+          // amount of letters flipped and the color of the background
+          'portrait:h-[1000dvh] landscape:h-[1000dvw]'
+        )}
+      />
     </div>
   );
 }

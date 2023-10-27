@@ -13,8 +13,8 @@ module.exports = {
       md: '768px',
       lg: '1100px',
       '2xl': '2000px',
+      fine: { raw: '(pointer: fine)' },
       coarse: { raw: '(pointer: coarse)' },
-      'md-and-fine': { raw: '(min-width: 768px) and (pointer: fine)' },
     },
     extend: {
       colors: {
