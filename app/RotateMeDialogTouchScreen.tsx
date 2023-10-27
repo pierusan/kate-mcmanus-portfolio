@@ -57,7 +57,7 @@ export function RotateMeDialogTouchScreen({
   return (
     <dialog
       className={cn(
-        'hidden open:grid',
+        'hidden coarse:open:grid',
         'fixed inset-0 h-screen w-screen',
         'place-items-center',
         className
