@@ -37,4 +37,5 @@ next-env.d.ts
 # large files
 /public/*.png
 /public/*.jpeg
+/public/*.svg
 /app/project/**/images

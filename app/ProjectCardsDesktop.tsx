@@ -6,7 +6,8 @@ import { ProjectIllustration } from './ProjectIllustration';
 import { ProjectIllustrationClickArea } from './ProjectIllustrationClickArea';
 import { projectCardsInfo } from './projectCardsInfo';
 import checkersPatternSvg from './projectCardSvgs/CheckersBackground.svg?url';
-import cloudsImg from '@/public/clouds.png';
+import cloudsImg from '@/public/nasa_sky_image.png';
+import skyGlitter from '@/public/nasa_sky_glitter.svg?url';
 import tailwindConfig from '@/tailwind.config';
 
 const screens = resolveConfig(tailwindConfig).theme?.screens as Record<
@@ -38,8 +39,8 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
         // Move the hovered project card to the foreground
         '[&:has(.card-click-area:hover)>li:has(.card-click-area:hover)]:z-20',
         // Special Backgrounds to reveal on hover
-        '[&:has(.show-clouds:hover)>.clouds-background]:block',
-        '[&:has(.show-checkers:hover)>.checkers-background]:flex',
+        '[&:has(.show-clouds:hover)>.clouds-background]:opacity-100',
+        '[&:has(.show-checkers:hover)>.checkers-background]:opacity-100',
         className
       )}
     >
@@ -93,7 +94,7 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
       {/* Special Backgrounds to reveal on hover */}
       <div
         className={cn(
-          'clouds-background hidden',
+          'clouds-background pointer-events-none opacity-0',
           'fixed left-0 top-0 -z-10 h-screen w-screen'
         )}
       >
@@ -101,7 +102,7 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
           priority // Only image of the page, so load it first
           fill
           src={cloudsImg}
-          alt="clouds"
+          alt="clouds in the sky"
           placeholder="blur"
           className="object-cover"
           sizes={`(max-width: ${mdBreakpoint}) 0px, 100vw`}
@@ -109,9 +110,24 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
       </div>
       <div
         className={cn(
-          'checkers-background hidden',
+          'clouds-background pointer-events-none opacity-0',
+          'fixed left-0 top-0 z-20 w-screen',
+          'flex justify-center'
+        )}
+      >
+        <Image
+          src={skyGlitter}
+          alt="illustrated 'glitter' red stars"
+          placeholder="empty" // no blur. It's ok if it shows up later
+          sizes={`(max-width: ${mdBreakpoint}) 0px, 100vw`}
+          className="max-w-[unset] shrink-0"
+        />
+      </div>
+      <div
+        className={cn(
+          'checkers-background pointer-events-none opacity-0',
           'fixed left-0 top-0 z-10 h-screen w-screen',
-          'flex-col justify-between'
+          'flex flex-col justify-between'
         )}
       >
         <div
