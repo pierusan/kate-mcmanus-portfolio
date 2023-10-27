@@ -32,7 +32,7 @@ const contactItems = [
     width: '245px',
     classNameOnceFlipped: `${parisienneStyle}`,
   },
-];
+] as const;
 
 export function ContactInfoDesktop({ className }: { className?: string }) {
   return (
@@ -67,6 +67,7 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
                 <FlippableSpan
                   key={index}
                   classNameOnceFlipped={classNameOnceFlipped}
+                  flickerOnStartOnDesktop={(name==='Linkedin' && index===3) || (name==='Instagram' && index===0)}
                 >
                   {char}
                 </FlippableSpan>

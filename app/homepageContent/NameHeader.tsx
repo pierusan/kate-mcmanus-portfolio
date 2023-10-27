@@ -33,7 +33,7 @@ export function NameHeader({ className }: { className?: string }) {
       <FlippableSpan classNameOnceFlipped={`font-mono uppercase`}>
         t
       </FlippableSpan>
-      <FlippableSpan classNameOnceFlipped={`font-mono uppercase`}>
+      <FlippableSpan flickerOnStartOnDesktop classNameOnceFlipped={`font-mono uppercase`}>
         e
       </FlippableSpan>{' '}
       <br className="md:hidden" />

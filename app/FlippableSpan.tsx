@@ -39,13 +39,13 @@ export function FlippableSpan({
     // Flip the text every 200ms during flicker
     const intervalID = setInterval(() => {
       setFlickerFlipped((wasFlipped) => !wasFlipped);
-    }, 200);
+    }, 150);
 
     // Stop the flickering after 10seconds
     const flickerTimeout = setTimeout(() => {
       setIsFlickering(false);
       clearInterval(intervalID);
-    }, 10_000);
+    }, 1200);
 
     return () => {
       clearTimeout(flickerTimeout);

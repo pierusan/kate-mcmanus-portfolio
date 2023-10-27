@@ -38,6 +38,7 @@ export function RolesParagraph() {
       <FlippableSpan
         classNameOnceFlipped={`font-mono`}
         childrenOnceFlipped="&&"
+        flickerOnStartOnDesktop
       >
         and
       </FlippableSpan>{' '}
@@ -101,7 +102,12 @@ export function RolesParagraph() {
       </FlippableSpan>
       ed
       <br />
-      <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>I</FlippableSpan>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${lektonStyle}`}
+      >
+        I
+      </FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>n</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>f</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>o</FlippableSpan>
@@ -114,7 +120,12 @@ export function RolesParagraph() {
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>
         n
       </FlippableSpan>{' '}
-      <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>D</FlippableSpan>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${lektonStyle}`}
+      >
+        D
+      </FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>e</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>s</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>i</FlippableSpan>

@@ -11,7 +11,11 @@ import {
 export function CareerParagraph() {
   return (
     <p>
-      F<FlippableSpan classNameOnceFlipped={`font-mono`}>o</FlippableSpan>r t
+      F
+      <FlippableSpan flickerOnStartOnDesktop classNameOnceFlipped={`font-mono`}>
+        o
+      </FlippableSpan>
+      r t
       <FlippableSpan classNameOnceFlipped={`${pirataOneStyle}`}>
         h
       </FlippableSpan>
@@ -99,7 +103,12 @@ export function CareerParagraph() {
       </FlippableSpan>
       n
       <FlippableSpan classNameOnceFlipped={`${tourneyStyle}`}> G</FlippableSpan>
-      <FlippableSpan classNameOnceFlipped={`${monotonStyle}`}>o</FlippableSpan>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${monotonStyle}`}
+      >
+        o
+      </FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${monotonStyle}`}>o</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${tourneyStyle}`}>g</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${tourneyStyle}`}>l</FlippableSpan>
