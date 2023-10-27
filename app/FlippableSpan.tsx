@@ -3,6 +3,7 @@
 import { useCallback, useContext, useEffect, useId } from 'react';
 import type { ReactNode } from 'react';
 import { CharacterCountContext } from './CharacterCountContext';
+import { cn } from './helpers';
 
 const charactersInReactNode = (node: ReactNode) => node?.toString().length ?? 0;
 
@@ -43,11 +44,18 @@ export function FlippableSpan({
   const isFlipped = flipState.find(({ id }) => id === spanId)?.flipped ?? false;
 
   return isFlipped ? (
-    <span className={classNameOnceFlipped}>
+    // Elevate the 'flippable' text above the project illustration so they can
+    // be flipped even when they overlap with the illustration
+    <span className={cn('relative z-[5]', classNameOnceFlipped)}>
       {childrenOnceFlipped ?? children}
     </span>
   ) : (
     // Only add mouse move event handler on desktop devices for performance
-    <span onMouseMove={isPointerCoarse ? undefined : onMove}>{children}</span>
+    <span
+      onMouseMove={isPointerCoarse ? undefined : onMove}
+      className={cn('relative z-[5]')}
+    >
+      {children}
+    </span>
   );
 }
