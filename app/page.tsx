@@ -64,10 +64,19 @@ export default function HomePage() {
             'hidden fine:md:[display:unset]'
           )}
         />
-        <ScrollDivTouchScreen className="z-20 fine:hidden" />
-        <RotateMeDialogTouchScreen className="z-50 fine:hidden" />
-        <NavMobileOrTouchScreen className="z-10 fine:md:hidden" />
         <BodyBgFromCharactersFlipped />
+        <div
+          className={cn(
+            // Create a new 'touch screen' stacking context above the flippable
+            // letters that we had to elevate a bit to be above the
+            // illustrations
+            'relative z-10'
+          )}
+        >
+          <ScrollDivTouchScreen className="fine:hidden" />
+          <NavMobileOrTouchScreen className="fine:md:hidden" />
+          <RotateMeDialogTouchScreen className="fine:hidden" />
+        </div>
       </CharacterCountProvider>
     </body>
   );

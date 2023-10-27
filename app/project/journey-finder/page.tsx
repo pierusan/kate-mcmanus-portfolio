@@ -106,7 +106,7 @@ export default function JourneyFinderPage() {
         <ProjectFooter />
       </main>
       {/* Only show bottom nav on small or touch screens like for the homepage */}
-      <NavMobileOrTouchScreen className="md-and-fine:hidden" />
+      <NavMobileOrTouchScreen className="md:fine:hidden" />
     </>
   );
 }
