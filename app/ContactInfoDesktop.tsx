@@ -9,29 +9,27 @@ import { cn } from './helpers';
 
 const contactItems = [
   {
-    name: 'Email',
-    // TODO: Update email treatment based on new designs
-    url: '#',
-    width: '140px',
-    classNameOnceFlipped: `${vT323Style}`,
-  },
-  {
     name: 'Resume',
-    // TODO: Self host instead
-    url: 'http://katestrykermcmanus.com/content/home/KateStrykerMcManusResume.pdf',
-    width: '182px',
+    url: 'https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2/Kate_Resume_2023_06_28.pdf',
+    width: '185px',
     classNameOnceFlipped: `${staatlichesStyle}`,
   },
   {
     name: 'Linkedin',
     url: 'https://www.linkedin.com/in/kate-mcmanus-9440944a/',
-    width: '202px',
+    width: '205px',
     classNameOnceFlipped: `${lektonStyle}`,
+  },
+  {
+    name: 'Dribble',
+    url: 'https://dribbble.com/katestrykermcm',
+    width: '200px',
+    classNameOnceFlipped: `${vT323Style}`,
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/katemcmanus.design/',
-    width: '221px',
+    width: '245px',
     classNameOnceFlipped: `${parisienneStyle}`,
   },
 ];
@@ -57,7 +55,10 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
               className={cn(
                 'border border-black py-5 text-center ',
                 // Reveal border on hover
-                'border-opacity-0 hover:border-opacity-100'
+                'border-opacity-0 hover:border-opacity-100',
+                // Set explicit line height to prevent layout shift when changing
+                // font on flip
+                '[line-height:1.8056em] [&>*]:[line-height:0]'
               )}
               style={{ width }}
             >
