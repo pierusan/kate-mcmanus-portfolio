@@ -57,9 +57,9 @@ export function RotateMeDialogTouchScreen({
   return (
     <dialog
       className={cn(
-        '[&:not([open])]:hidden',
+        'hidden open:grid',
         'fixed inset-0 h-screen w-screen',
-        'grid place-items-center',
+        'place-items-center',
         className
       )}
       style={{ backgroundColor: homeBgColor }}

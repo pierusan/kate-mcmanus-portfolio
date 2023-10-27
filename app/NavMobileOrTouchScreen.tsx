@@ -22,7 +22,8 @@ export function NavMobileOrTouchScreen({ className }: { className?: string }) {
         className={cn(
           'fixed inset-5 h-auto w-auto bg-bg-surface p-0 ',
           'rounded-md border border-border-action-subtle ',
-          'grid grid-cols-[1fr] grid-rows-[3rem_1fr_auto] [&:not([open])]:hidden'
+          'hidden open:grid',
+          'grid-cols-[1fr] grid-rows-[3rem_1fr_auto]'
         )}
       >
         <NavMobileHeader className="border-x-0 border-t-0 " />
