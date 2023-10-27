@@ -10,14 +10,11 @@ import cloudsImg from '@/public/nasa_sky_image.png';
 import skyGlitter from '@/public/nasa_sky_glitter.svg?url';
 import tailwindConfig from '@/tailwind.config';
 
-const screens = resolveConfig(tailwindConfig).theme?.screens as Record<
-  string,
-  string
->;
-const mdBreakpoint = screens.md;
+const mdBreakpoint = resolveConfig(tailwindConfig).theme?.screens.md;
 
 export function ProjectCardsDesktop({ className }: { className?: string }) {
   return (
+    // TODO: Could probably try and use tailwind's group or peer there maybe?
     <UlAwareOfWindowWidth
       windowWidthCSSCustomProperty="--window-width"
       className={cn(
