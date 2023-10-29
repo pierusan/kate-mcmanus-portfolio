@@ -1,3 +1,4 @@
+import { Route } from 'next';
 import JourneyFinderSvg, {
   SVGRComponent,
 } from './projectCardSvgs/1_JourneyFinder_Default.svg';
@@ -48,7 +49,7 @@ type ProjectIllustration = {
   svgHighlight: SVGRComponent;
   svgOutline: SVGRComponent;
   svgGuide: SVGRComponent;
-  linkRef: string;
+  linkRef: Route;
 };
 export const projectCardsInfo = {
   'journey-finder': [
@@ -151,4 +152,4 @@ export const projectCardsInfo = {
       linkRef: '/project/journey-finder',
     },
   ],
-} as const satisfies Record<string, readonly ProjectIllustration[]>;
+} satisfies Record<string, ProjectIllustration[]>;
