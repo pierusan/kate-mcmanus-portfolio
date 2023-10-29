@@ -6,8 +6,8 @@ import { ProjectIllustration } from './ProjectIllustration';
 import { ProjectIllustrationClickArea } from './ProjectIllustrationClickArea';
 import { projectCardsInfo } from './projectCardsInfo';
 import checkersPatternSvg from './projectCardSvgs/CheckersBackground.svg?url';
+import { RemoteImage } from './RemoteImage';
 import skyGlitter from './projectCardSvgs/nasa_sky_glitter.svg?url';
-import cloudsImg from '@/public/nasa_sky_image.png';
 import tailwindConfig from '@/tailwind.config';
 
 const mdBreakpoint = resolveConfig(tailwindConfig).theme?.screens.md;
@@ -95,14 +95,12 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
           'fixed left-0 top-0 -z-10 h-screen w-screen'
         )}
       >
-        <Image
+        <RemoteImage
           priority // Only image of the page, so load it first
           fill
-          src={cloudsImg}
-          alt="clouds in the sky"
-          placeholder="blur"
-          className="object-cover"
+          name="nasa_sky_image"
           sizes={`(max-width: ${mdBreakpoint}) 0px, 100vw`}
+          className="object-cover"
         />
       </div>
       <div

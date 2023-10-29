@@ -1,5 +1,6 @@
 import { ProjectFooter } from '../ProjectFooter';
 import { ProjectHeader } from '../ProjectHeader';
+import { ProjectImage } from '../ProjectImage';
 import {
   Context,
   Goal,
@@ -10,16 +11,44 @@ import {
   Team,
   Title,
 } from './Content';
-import {
-  ImageFull1,
-  ImageFull2,
-  ImageLeft1,
-  ImagePair1,
-  ImageRight1,
-  MainImage,
-} from './Images';
 import { cn } from '@/app/helpers';
 import { NavMobileOrTouchScreen } from '@/app/NavMobileOrTouchScreen';
+
+function MainImage() {
+  return <ProjectImage imageType="main" name="project_journey_finder_1_full" />;
+}
+
+function ImageSet1() {
+  return (
+    <>
+      <ProjectImage imageType="right" name="project_journey_finder_2_right" />
+      <ProjectImage imageType="full" name="project_journey_finder_3_full" />
+    </>
+  );
+}
+
+function ImageSet2() {
+  return (
+    <>
+      <ProjectImage
+        imageType="leftSmall"
+        name="project_journey_finder_4_leftSmall"
+      />
+      <ProjectImage
+        imageType="rightSmall"
+        name="project_journey_finder_4_rightSmall"
+      />
+      <ProjectImage imageType="full" name="project_journey_finder_5_full" />
+    </>
+  );
+}
+function ImageSet3() {
+  return (
+    <>
+      <ProjectImage imageType="left" name="project_journey_finder_6_left" />
+    </>
+  );
+}
 
 export default function JourneyFinderPage() {
   return (
@@ -61,11 +90,9 @@ export default function JourneyFinderPage() {
         )}
       >
         <MainImage />
-        <ImageRight1 />
-        <ImageFull1 />
-        <ImagePair1 />
-        <ImageFull2 />
-        <ImageLeft1 />
+        <ImageSet1 />
+        <ImageSet2 />
+        <ImageSet3 />
         <div className="col-start-1 h-screen" />
         <ProjectFooter />
       </div>
@@ -90,19 +117,17 @@ export default function JourneyFinderPage() {
           <Summary />
           <Team />
         </div>
-        <ImageRight1 />
-        <ImageFull1 />
+        <ImageSet1 />
         <div className="col-span-full max-w-[37.5rem]">
           <Context />
           <Goal />
         </div>
-        <ImagePair1 />
-        <ImageFull2 />
+        <ImageSet2 />
         <div className="col-span-full max-w-[37.5rem]">
           <Process />
           <Takeaways />
         </div>
-        <ImageLeft1 />
+        <ImageSet3 />
         <ProjectFooter />
       </main>
       {/* Only show bottom nav on small or touch screens like for the homepage */}

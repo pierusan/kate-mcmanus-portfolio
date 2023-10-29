@@ -1,0 +1,50 @@
+{
+  "nasa_sky_image": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fnasa_sky_image.png",
+    "width": 1800,
+    "height": 1024,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsElEQVR4nAGlAFr/AKDC2/9ZjKn/MXGN/xdlgP8APVr/ACE//wAPLP8AGDT/AGKXtP8zdpX/I22K/wBZdP8AO1r/AClH/wAbN/8AFTD/AF+UtP9cj63/XI+q/1iLov9CfZH/CWF4/wA7Vv8AI0H/AFyVsv+FrcH/gqq7/8XX3v+ivsj/b5qp/zRzh/8APVj/APT+///a6e3/lrnF/4Kqu/9xnK3/Z42c/2CFk/9Gbn//R4BcYFIG89UAAAAASUVORK5CYII="
+  },
+  "project_journey_finder_1_full": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_journey_finder_1_full.png",
+    "width": 1360,
+    "height": 966,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeElEQVR4nE2MsQrDMAxENfUv+qP+nwSnozN6tQtZvDpZHPCU4g9ItysnsKlAcNK9O0kpYVleyDmjz/e+EeIGeTwhBKy1CrTWdP9HQgjw3qtRax2Qcyv2/YDE+NaDTeUs2kRtjAHDo4HG9blGyzTPCkpP0OhLgH/qH8m8pdZAZBRCAAAAAElFTkSuQmCC"
+  },
+  "project_journey_finder_2_right": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_journey_finder_2_right.png",
+    "width": 894,
+    "height": 1645,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAYAAADeM14FAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nB2MwQ3CMBRD/xIIMQCIEUAskBVSznSGIpU73aIMEBplggApDQPQJaKywkOpL7ZsPYtzjsfzhfeeafoh682Wvh/Inks5lSUhBHb7A3F4I0opMlYUxxkVrfUcFssV1nZIXq5NgzGGcfwiVXXm3lna9jZ/SV1f+MRIVkqJPxPmWYLlvyzdAAAAAElFTkSuQmCC"
+  },
+  "project_journey_finder_3_full": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_journey_finder_3_full.png",
+    "width": 1360,
+    "height": 600,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR4nGP4TwAwgIiUlJT/np6euBU0NjaCMU4F9+7dA2NsCgC76XfU59bAXgAAAABJRU5ErkJggg=="
+  },
+  "project_journey_finder_4_leftSmall": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_journey_finder_4_leftSmall.png",
+    "width": 427,
+    "height": 878,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAYAAADeM14FAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAjklEQVR4nB3LMQqCYBxA8f858hZRaGt1jKB2oTtUILR8STRUi8ZnEBEYBnkPl9wURCo7QG4vbHq/5cluu8ddbxiNJ6yUi/QsC6NlMOgPuZzOyGI+Y2rbLB2HLMuR+B7jKoVpmniejxx1gD5o2p0ugdbI8/WmKEui6EqSJEjzpY+UPC/+lfpbU1UfwvBG4x8V9lxuKc36cgAAAABJRU5ErkJggg=="
+  },
+  "project_journey_finder_4_rightSmall": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_journey_finder_4_rightSmall.png",
+    "width": 427,
+    "height": 878,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAYAAADeM14FAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAcElEQVR4nEWLMQqAMBAE7zHxA6LiC8TCT4qNSkiljYHoAzRPiBL7NNqvXBoPlmWHOZLDiKaqkeYlFq1Bt/coshxCJOhHCVJKoW27GL1uoBACnHOw1saOgIcxBnzEg9/e5/0Bq2ywHcFx7JimGed54QMuVWX6LBbrWgAAAABJRU5ErkJggg=="
+  },
+  "project_journey_finder_5_full": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_journey_finder_5_full.png",
+    "width": 1360,
+    "height": 318,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAACCAYAAABllJ3tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAASUlEQVR4nGPo6+v/v2HD+v+urq7/q6ur/79+/fo/CIDo69ev/2dITUv7X1NT+3/Tpk3/9+3f9//IkSP/L166+F9GRvZ/VFT0fwAPOS4KfjuqJwAAAABJRU5ErkJggg=="
+  },
+  "project_journey_finder_6_left": {
+    "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_journey_finder_6_left.png",
+    "width": 894,
+    "height": 797,
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuklEQVR4nB3MQQqCUBAG4HeHCN2EQqcog9YGLcrqFkVXcFlkaW2CFiGt1U6g2aZQCoSW+Y7gBcL3x5uBfzH/fAyL41jIAKB43p72uv4JzrlgUXRFp2vg8cxwPJ0xtixouo4kuaGqKjBZtrQ2fP+C17uAbdswzQEdCaydA4xenxY5k+kMiqLCHI7oC4FGU0VZfglkeQ7XdeFsd+Ccg602HuaLJYSo6YsswzAkRKAoPqTvaUqFTBAEhCT4A5ltp644erexAAAAAElFTkSuQmCC"
+  }
+}

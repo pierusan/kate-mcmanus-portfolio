@@ -1,7 +1,6 @@
-import Image, { type StaticImageData } from 'next/image';
 import resolveConfig from 'tailwindcss/resolveConfig';
+import { RemoteImage, type RemoteImageName } from '../RemoteImage';
 import { cn } from '../helpers';
-
 import tailwindConfig from '@/tailwind.config';
 
 let smallImageSizes: string | undefined,
@@ -32,13 +31,11 @@ type ImageType =
   | 'leftSmall'
   | 'rightSmall';
 export function ProjectImage({
-  src,
-  alt,
+  name,
   imageType,
 }: {
+  name: RemoteImageName;
   imageType: ImageType;
-  src: StaticImageData;
-  alt: string;
 }) {
   let priority = false,
     className: string | undefined,
@@ -84,14 +81,11 @@ export function ProjectImage({
   }
 
   return (
-    <Image
-      src={src}
-      alt={alt}
+    <RemoteImage
+      name={name}
       className={cn('w-full', className)}
       priority={priority}
       sizes={sizes}
-      quality={100}
-      placeholder="blur"
     />
   );
 }
