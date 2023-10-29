@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss';
+
+export default {
   content: [
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,6 +14,7 @@ module.exports = {
       md: '768px',
       lg: '1100px',
       '2xl': '2000px',
+      fine: { raw: '(pointer: fine)' },
       coarse: { raw: '(pointer: coarse)' },
     },
     extend: {
@@ -27,4 +29,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+} satisfies Config;

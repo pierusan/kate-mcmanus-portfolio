@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+// eslint-disable-next-line no-restricted-imports
 import './globals.css';
 import { manrope, majorMonoDisplay } from './fonts';
 
@@ -11,7 +12,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${majorMonoDisplay.variable} text-base`}
+      // Body overflow is set hidden to avoid illustrations going out of bounds
+      // but we want users to be able to scroll the text
+      className={`${manrope.variable} ${majorMonoDisplay.variable} overflow-scroll text-base`}
     >
       {children}
     </html>

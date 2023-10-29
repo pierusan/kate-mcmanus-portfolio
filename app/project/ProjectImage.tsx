@@ -1,7 +1,8 @@
 import Image, { type StaticImageData } from 'next/image';
 import resolveConfig from 'tailwindcss/resolveConfig';
+import { cn } from '../helpers';
 
-import tailwindConfig from '@/tailwind.config.js';
+import tailwindConfig from '@/tailwind.config';
 
 let smallImageSizes: string | undefined,
   mediumImageSizes: string | undefined,
@@ -86,7 +87,7 @@ export function ProjectImage({
     <Image
       src={src}
       alt={alt}
-      className={`w-full ${className}`}
+      className={cn('w-full', className)}
       priority={priority}
       sizes={sizes}
       quality={100}

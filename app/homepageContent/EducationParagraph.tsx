@@ -26,11 +26,18 @@ export function EducationParagraph() {
       <FlippableSpan classNameOnceFlipped={`${pirataOneStyle}`}>
         a
       </FlippableSpan>{' '}
-      <FlippableSpan classNameOnceFlipped={`font-mono`}>M</FlippableSpan>
+      <FlippableSpan flickerOnStartOnDesktop classNameOnceFlipped={`font-mono`}>
+        M
+      </FlippableSpan>
       aster <FlippableSpan classNameOnceFlipped={`font-mono`}>o</FlippableSpan>
       f
       <br />
-      <FlippableSpan classNameOnceFlipped={`${tourneyStyle}`}>H</FlippableSpan>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${tourneyStyle}`}
+      >
+        H
+      </FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${vT323Style}`}>u</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${vT323Style}`}>m</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${vT323Style}`}>a</FlippableSpan>

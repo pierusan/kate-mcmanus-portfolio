@@ -19,7 +19,10 @@ export function RelocationParagraph() {
         r
       </FlippableSpan>
       elocatin
-      <FlippableSpan classNameOnceFlipped={`${qwigleyStyle}`}>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${qwigleyStyle}`}
+      >
         g
       </FlippableSpan>{' '}
       to{' '}
@@ -42,10 +45,16 @@ export function RelocationParagraph() {
         ,
       </FlippableSpan>
       <br />s
-      <FlippableSpan classNameOnceFlipped={`${meieScriptStyle}`}>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${meieScriptStyle}`}
+      >
         e
       </FlippableSpan>
-      <FlippableSpan classNameOnceFlipped={`${meieScriptStyle}`}>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${meieScriptStyle}`}
+      >
         e
       </FlippableSpan>
       ki
@@ -91,6 +100,7 @@ export function RelocationParagraph() {
       <FlippableSpan classNameOnceFlipped={`font-mono`}>m</FlippableSpan>
       en
       <FlippableSpan
+        flickerOnStartOnDesktop
         classNameOnceFlipped={`${harmattanStyle}`}
         childrenOnceFlipped="T!"
       >

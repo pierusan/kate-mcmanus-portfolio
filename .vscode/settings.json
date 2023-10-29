@@ -1,17 +1,25 @@
 {
-    "cSpell.words": [
-        "Flippable",
-        "glyphhanger",
-        "Lekton",
-        "mcmanus",
-        "Meie",
-        "Monoton",
-        "Parisienne",
-        "Pirata",
-        "Qwigley",
-        "ruleset",
-        "Staatliches",
-        "svgr"
-    ],
-    "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": [
+    "clsx",
+    "divs",
+    "extralight",
+    "Flippable",
+    "glyphhanger",
+    "hoverable",
+    "Interactives",
+    "Lekton",
+    "mcmanus",
+    "Meie",
+    "Monoton",
+    "oklab",
+    "Parisienne",
+    "Pirata",
+    "Qwigley",
+    "ruleset",
+    "Staatliches",
+    "svgr",
+    "Svgs",
+    "Vijks"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

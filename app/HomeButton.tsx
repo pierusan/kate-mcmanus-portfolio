@@ -5,12 +5,13 @@ import {
   pirataOneHeaderStyle,
   staatlichesHeaderStyle,
 } from './fontSubsets';
+import { cn } from './helpers';
 
 export function HomeButton({ className }: { className?: string }) {
   return (
     // TODO: When already on homepage, clicking the home button would ideally
     // close the dialog
-    <Link href="/" className={`text-[1.375rem] ${className}`}>
+    <Link href="/" className={cn('text-[1.375rem]', className)}>
       <span className={`font-mono`}>K</span>
       <span className={`${staatlichesHeaderStyle}`}>a</span>
       <span className={`font-mono`}>T</span>
