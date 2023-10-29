@@ -24,11 +24,12 @@
     }
   },
   "include": [
-    "svgr-types.d.ts",
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts", // Necessary because hidden folder
+    // Unnecessary but included for clarity
+    "svgr-types.d.ts",
+    "next-env.d.ts"
   ],
   "exclude": ["node_modules"]
 }

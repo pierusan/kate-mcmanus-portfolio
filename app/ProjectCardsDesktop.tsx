@@ -6,8 +6,8 @@ import { ProjectIllustration } from './ProjectIllustration';
 import { ProjectIllustrationClickArea } from './ProjectIllustrationClickArea';
 import { projectCardsInfo } from './projectCardsInfo';
 import checkersPatternSvg from './projectCardSvgs/CheckersBackground.svg?url';
+import skyGlitter from './projectCardSvgs/nasa_sky_glitter.svg?url';
 import cloudsImg from '@/public/nasa_sky_image.png';
-import skyGlitter from '@/public/nasa_sky_glitter.svg?url';
 import tailwindConfig from '@/tailwind.config';
 
 const mdBreakpoint = resolveConfig(tailwindConfig).theme?.screens.md;

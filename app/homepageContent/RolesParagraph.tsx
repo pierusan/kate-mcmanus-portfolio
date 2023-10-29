@@ -120,12 +120,7 @@ export function RolesParagraph() {
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>
         n
       </FlippableSpan>{' '}
-      <FlippableSpan
-        flickerOnStartOnDesktop
-        classNameOnceFlipped={`${lektonStyle}`}
-      >
-        D
-      </FlippableSpan>
+      <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>D</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>e</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>s</FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${lektonStyle}`}>i</FlippableSpan>
@@ -174,7 +169,10 @@ export function RolesParagraph() {
       <FlippableSpan classNameOnceFlipped={`${parisienneStyle}`}>
         l
       </FlippableSpan>{' '}
-      <FlippableSpan classNameOnceFlipped={`${parisienneStyle}`}>
+      <FlippableSpan
+        flickerOnStartOnDesktop
+        classNameOnceFlipped={`${parisienneStyle}`}
+      >
         D
       </FlippableSpan>
       <FlippableSpan classNameOnceFlipped={`${parisienneStyle}`}>
