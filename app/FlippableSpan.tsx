@@ -70,7 +70,8 @@ export function FlippableSpan({
 
   const isFlipped = flipState.find(({ id }) => id === spanId)?.flipped ?? false;
 
-  const showFlippedSpan = isFlickering ? flickerFlipped : isFlipped;
+  const showFlippedSpan =
+    isFlickering && !isPointerCoarse ? flickerFlipped : isFlipped;
 
   return showFlippedSpan ? (
     // Elevate the 'flippable' text above the project illustration so they can
