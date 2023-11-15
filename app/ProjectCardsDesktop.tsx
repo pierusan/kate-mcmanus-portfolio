@@ -78,7 +78,7 @@ export function ProjectCardsDesktop({ className }: { className?: string }) {
               <illustration.svgHighlight className="project-card-highlight" />
               <illustration.svgOutline className="project-card-outline" />
               <ProjectIllustrationClickArea
-                linkRef={illustration.linkRef}
+                linkRef={`/${illustration.projectLinkId}`}
                 clickAreaClassName="card-click-area"
                 clickAreasContainerClassName="project-card-click-area"
               >

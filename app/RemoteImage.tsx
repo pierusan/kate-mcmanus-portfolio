@@ -5,7 +5,7 @@ import remoteImages from './remoteImages.json';
 type NextImageProperties = ComponentProps<typeof Image>;
 type AnyRemoteImageName = keyof typeof remoteImages;
 
-const remoteImageAltTexts = {
+export const remoteImageAltTexts = {
   nasa_sky_image: 'A sky full of clouds',
   project_interactives_01_full_hero:
     'Landing pages from 4 different interactive articles and tools',

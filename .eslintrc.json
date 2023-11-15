@@ -43,6 +43,9 @@
         "replacements": {
           "fn": {
             "function": false
+          },
+          "params": {
+            "parameters": false
           }
         }
       }

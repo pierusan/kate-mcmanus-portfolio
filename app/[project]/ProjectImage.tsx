@@ -1,5 +1,9 @@
 import resolveConfig from 'tailwindcss/resolveConfig';
-import { RemoteImage, type RemoteImageName } from '../RemoteImage';
+import {
+  RemoteImage,
+  remoteImageAltTexts,
+  type RemoteImageName,
+} from '../RemoteImage';
 import { cn } from '../helpers';
 import tailwindConfig from '@/tailwind.config';
 
@@ -23,32 +27,23 @@ if (
   console.error('Could not retrieve breakpoints from tailwind config');
 }
 
-type ImageType =
-  | 'main'
-  | 'full'
-  | 'left'
-  | 'right'
-  | 'leftSmall'
-  | 'rightSmall';
+export type ImageType = 'full' | 'left' | 'right' | 'sideA' | 'sideB';
+
 export function ProjectImage({
   name,
   imageType,
+  priority,
+  useAltTextAsCaption = true,
 }: {
   name: RemoteImageName;
   imageType: ImageType;
+  priority?: boolean;
+  useAltTextAsCaption?: boolean;
 }) {
-  let priority = false,
-    className: string | undefined,
-    sizes: string | undefined;
+  let className: string | undefined, sizes: string | undefined;
 
   // Make these work for both large 3 column layout and small 2 column layouts
   switch (imageType) {
-    case 'main': {
-      sizes = largeImageSizes;
-      className = 'col-span-full';
-      priority = true;
-      break;
-    }
     case 'full': {
       sizes = largeImageSizes;
       className = 'col-span-full';
@@ -64,12 +59,12 @@ export function ProjectImage({
       className = 'col-span-2 col-end-[-1]';
       break;
     }
-    case 'leftSmall': {
+    case 'sideA': {
       sizes = smallImageSizes;
       className = 'col-span-1 col-start-1';
       break;
     }
-    case 'rightSmall': {
+    case 'sideB': {
       sizes = smallImageSizes;
       className = 'col-span-1 col-end-[-1]';
       break;
@@ -81,11 +76,13 @@ export function ProjectImage({
   }
 
   return (
-    <RemoteImage
-      name={name}
-      className={cn('w-full', className)}
-      priority={priority}
-      sizes={sizes}
-    />
+    <figure className={cn('w-full', className)}>
+      <RemoteImage name={name} priority={priority} sizes={sizes} />
+      {useAltTextAsCaption && (
+        <figcaption className="border border-black bg-white p-3 text-xs font-bold">
+          {remoteImageAltTexts[name]}
+        </figcaption>
+      )}
+    </figure>
   );
 }

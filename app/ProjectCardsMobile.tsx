@@ -6,25 +6,25 @@ export function ProjectCardsMobile({ className }: { className?: string }) {
     <ul className={cn('flex flex-col gap-8 bg-bg-surface', className)}>
       <li>
         <Link
-          href="/project/journey-finder"
+          href="/vijks"
           className="block h-[20rem] w-full rounded-md bg-red-200"
         />
       </li>
       <li>
         <Link
-          href="/project/journey-finder"
+          href="/vijks"
           className="block h-[20rem] w-full rounded-md bg-red-200"
         />
       </li>
       <li>
         <Link
-          href="/project/journey-finder"
+          href="/vijks"
           className="block h-[20rem] w-full rounded-md bg-red-200"
         />
       </li>
       <li>
         <Link
-          href="/project/journey-finder"
+          href="/vijks"
           className="block h-[20rem] w-full rounded-md bg-red-200"
         />
       </li>
