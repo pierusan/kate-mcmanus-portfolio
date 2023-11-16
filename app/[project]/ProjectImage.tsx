@@ -27,23 +27,13 @@ if (
   console.error('Could not retrieve breakpoints from tailwind config');
 }
 
-export type ImageType = 'full' | 'left' | 'right' | 'sideA' | 'sideB';
+export type ImageAlignment = 'full' | 'left' | 'right' | 'sideA' | 'sideB';
 
-export function ProjectImage({
-  name,
-  imageType,
-  priority,
-  useAltTextAsCaption = true,
-}: {
-  name: RemoteImageName;
-  imageType: ImageType;
-  priority?: boolean;
-  useAltTextAsCaption?: boolean;
-}) {
+export function imageAlignmentProps(alignment: ImageAlignment) {
   let className: string | undefined, sizes: string | undefined;
 
   // Make these work for both large 3 column layout and small 2 column layouts
-  switch (imageType) {
+  switch (alignment) {
     case 'full': {
       sizes = largeImageSizes;
       className = 'col-span-full';
@@ -71,12 +61,39 @@ export function ProjectImage({
     }
     default: {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const _exhaustiveCheck: never = imageType;
+      const _exhaustiveCheck: never = alignment;
     }
   }
+  return { className, sizes };
+}
+
+export function ProjectImage({
+  name,
+  alignment,
+  priority,
+  useAltTextAsCaption = true,
+  className,
+}: {
+  name: RemoteImageName;
+  alignment: ImageAlignment;
+  priority?: boolean;
+  useAltTextAsCaption?: boolean;
+  className?: string;
+}) {
+  const { className: alignmentClassName, sizes } =
+    imageAlignmentProps(alignment);
 
   return (
-    <figure className={cn('w-full', className)}>
+    <figure
+      className={cn(
+        // Add pointer events to allow right-clicking on the image or
+        // highlighting caption. It was awkward to be able to highlight the text
+        // below the images
+        'pointer-events-auto w-full',
+        alignmentClassName,
+        className
+      )}
+    >
       <RemoteImage name={name} priority={priority} sizes={sizes} />
       {useAltTextAsCaption && (
         <figcaption className="border border-black bg-white p-3 text-xs font-bold">

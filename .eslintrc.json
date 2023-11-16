@@ -46,6 +46,9 @@
           },
           "params": {
             "parameters": false
+          },
+          "props": {
+            "properties": false
           }
         }
       }

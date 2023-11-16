@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { type ComponentProps, type ReactElement } from 'react';
 import { ProjectImage } from './ProjectImage';
+import { ProjectVideo } from './ProjectVideo';
 
 export type ProjectSection = {
   heading: string;
@@ -19,17 +20,23 @@ type ProjectContents = {
   leftColumn: ProjectSection[];
   middleColumn: ProjectSection[];
   rightColumn: ProjectSection[];
-  imageHero: ComponentProps<typeof ProjectImage> & {
-    imageType: 'full';
+  mediumHero: ComponentProps<typeof ProjectImage | typeof ProjectVideo> & {
+    alignment: 'full';
   };
-  imagesLeftColumn: (ComponentProps<typeof ProjectImage> & {
-    imageType: 'right' | 'full';
+  mediaLeftColumn: (ComponentProps<
+    typeof ProjectImage | typeof ProjectVideo
+  > & {
+    alignment: 'right' | 'full';
   })[];
-  imagesMiddleColumn: (ComponentProps<typeof ProjectImage> & {
-    imageType: 'sideA' | 'sideB' | 'full';
+  mediaMiddleColumn: (ComponentProps<
+    typeof ProjectImage | typeof ProjectVideo
+  > & {
+    alignment: 'sideA' | 'sideB' | 'full';
   })[];
-  imagesRightColumn: (ComponentProps<typeof ProjectImage> & {
-    imageType: 'left' | 'full';
+  mediaRightColumn: (ComponentProps<
+    typeof ProjectImage | typeof ProjectVideo
+  > & {
+    alignment: 'left' | 'full';
   })[];
 };
 
@@ -186,65 +193,68 @@ export const projectContents = {
         ],
       },
     ],
-    imageHero: { name: 'project_vijks_14_full_strip_many', imageType: 'full' },
-    imagesLeftColumn: [
-      { name: 'project_vijks_02_right_ieee', imageType: 'right' },
-      { name: 'project_vijks_03_full_ieee', imageType: 'full' },
+    mediumHero: { name: 'project_vijks_01_full_all', alignment: 'full' },
+    mediaLeftColumn: [
+      { name: 'project_vijks_02_right_ieee', alignment: 'right' },
+      { name: 'project_vijks_03_full_ieee', alignment: 'full' },
     ],
-    imagesMiddleColumn: [
+    mediaMiddleColumn: [
       {
         name: 'project_vijks_04_sideA_dripping',
-        imageType: 'sideA',
+        alignment: 'sideA',
         useAltTextAsCaption: false,
       },
       {
         name: 'project_vijks_04_sideB_dripping',
-        imageType: 'sideB',
+        alignment: 'sideB',
         useAltTextAsCaption: false,
       },
-      { name: 'project_vijks_05_full_query', imageType: 'full' },
+      { name: 'project_vijks_05_full_query', alignment: 'full' },
       {
         name: 'project_vijks_06_sideA_sketch',
-        imageType: 'sideA',
+        alignment: 'sideA',
         useAltTextAsCaption: false,
       },
       {
         name: 'project_vijks_06_sideB_draft',
-        imageType: 'sideB',
+        alignment: 'sideB',
         useAltTextAsCaption: false,
       },
-      { name: 'project_vijks_07_full_beyond', imageType: 'full' },
+      { name: 'project_vijks_07_full_beyond', alignment: 'full' },
       {
         name: 'project_vijks_08_sideA_faces',
-        imageType: 'sideA',
+        alignment: 'sideA',
         useAltTextAsCaption: false,
       },
       {
         name: 'project_vijks_08_sideB_faces',
-        imageType: 'sideB',
+        alignment: 'sideB',
         useAltTextAsCaption: false,
       },
-      { name: 'project_vijks_09_full_recognition', imageType: 'full' },
-      { name: 'project_vijks_10_full_kairos', imageType: 'full' },
+      { name: 'project_vijks_09_full_recognition', alignment: 'full' },
+      { name: 'project_vijks_10_full_kairos', alignment: 'full' },
+      { name: 'project_vijks_11_exhibit_faces', alignment: 'full' },
     ],
-    imagesRightColumn: [
+    mediaRightColumn: [
       {
         name: 'project_vijks_12_left_vg_pixels',
-        imageType: 'left',
+        alignment: 'left',
         useAltTextAsCaption: false,
       },
-      { name: 'project_vijks_13_full_strip_one', imageType: 'full' },
-      { name: 'project_vijks_14_full_strip_many', imageType: 'full' },
-      { name: 'project_vijks_15_left_dim_sketch', imageType: 'left' },
-      { name: 'project_vijks_16_full_dim_opacity', imageType: 'full' },
-      { name: 'project_vijks_17_full_dim_final', imageType: 'full' },
-      { name: 'project_vijks_18_full_dim_final_multiples', imageType: 'full' },
+      { name: 'project_vijks_13_full_strip_one', alignment: 'full' },
+      { name: 'project_vijks_14_full_strip_many', alignment: 'full' },
+      { name: 'project_vijks_15_left_dim_sketch', alignment: 'left' },
+      { name: 'project_vijks_16_full_dim_opacity', alignment: 'full' },
+      { name: 'project_vijks_17_full_dim_final', alignment: 'full' },
+      { name: 'project_vijks_18_full_dim_final_multiples', alignment: 'full' },
+      { name: 'project_vijks_19_exhibit_hague', alignment: 'full' },
       {
         name: 'project_vijks_20_full_masterpieces_map',
-        imageType: 'full',
+        alignment: 'left', // Was mislabeled
         useAltTextAsCaption: false,
       },
-      { name: 'project_vijks_21_full_masterpieces_focus', imageType: 'full' },
+      { name: 'project_vijks_21_full_masterpieces_focus', alignment: 'full' },
+      { name: 'project_vijks_22_exhibit_masterpieces', alignment: 'full' },
     ],
   },
 } satisfies Record<string, ProjectContents>;

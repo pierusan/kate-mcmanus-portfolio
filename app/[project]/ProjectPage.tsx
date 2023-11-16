@@ -7,7 +7,7 @@ import {
   ProjectSection,
   ProjectFooter,
 } from './ProjectElements';
-import { ProjectImage } from './ProjectImage';
+import { ProjectMedia } from './ProjectMedia';
 import { type WrittenProject, projectContents } from './projectContents';
 
 export function generateStaticParams() {
@@ -76,13 +76,13 @@ export function ProjectPage({
           'grid-cols-3 gap-10 px-10 pb-5 pt-[4.8125rem]'
         )}
       >
-        <ProjectImage priority={true} {...content.imageHero} />
+        <ProjectMedia priority={true} {...content.mediumHero} />
         {[
-          ...content.imagesLeftColumn,
-          ...content.imagesMiddleColumn,
-          ...content.imagesRightColumn,
-        ].map((image) => {
-          return <ProjectImage key={image.name} {...image} />;
+          ...content.mediaLeftColumn,
+          ...content.mediaMiddleColumn,
+          ...content.mediaRightColumn,
+        ].map((media) => {
+          return <ProjectMedia key={media.name} {...media} />;
         })}
         <div className="col-start-1 h-screen" />
         <ProjectFooter
@@ -103,7 +103,7 @@ export function ProjectPage({
         )}
       >
         <ProjectHeader />
-        <ProjectImage priority={true} {...content.imageHero} />
+        <ProjectMedia priority={true} {...content.mediumHero} />
         <div className="col-span-full max-w-[37.5rem]">
           <ProjectTitle>{content.title}</ProjectTitle>
           <ProjectSubtitle {...content.subtitle} />
@@ -111,24 +111,24 @@ export function ProjectPage({
             <ProjectSection key={index} {...columnSection} />
           ))}
         </div>
-        {content.imagesLeftColumn.map((image) => {
-          return <ProjectImage key={image.name} {...image} />;
+        {content.mediaLeftColumn.map((image) => {
+          return <ProjectMedia key={image.name} {...image} />;
         })}
         <div className="col-span-full max-w-[37.5rem]">
           {content.middleColumn.map((columnSection, index) => (
             <ProjectSection key={index} {...columnSection} />
           ))}
         </div>
-        {content.imagesMiddleColumn.map((image) => {
-          return <ProjectImage key={image.name} {...image} />;
+        {content.mediaMiddleColumn.map((image) => {
+          return <ProjectMedia key={image.name} {...image} />;
         })}
         <div className="col-span-full max-w-[37.5rem]">
           {content.rightColumn.map((columnSection, index) => (
             <ProjectSection key={index} {...columnSection} />
           ))}
         </div>
-        {content.imagesRightColumn.map((image) => {
-          return <ProjectImage key={image.name} {...image} />;
+        {content.mediaRightColumn.map((image) => {
+          return <ProjectMedia key={image.name} {...image} />;
         })}
         <ProjectFooter
           nextProject={nextProject(params.project)}
