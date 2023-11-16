@@ -150,6 +150,150 @@
       "height": 2425,
       "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAACXBIWXMAACE4AAAhOAFFljFgAAAAcElEQVR4nGWMoREFIQxEkZSBoA4awGBiaQRNHXSCRqGjUGngLCJ7A+LE/+JNspvMM8ysv4iIrrXubkQEpRSEEJBSQs755t47zu08KBGptVadc+q9v7O1dk0GAGqtnyHGCCICM2PvDTPnfA5jjD9O/wJN8HMBoar91QAAAABJRU5ErkJggg=="
     },
+    "project_nasa_01_full_hero": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_01_full_hero.png",
+      "width": 3400,
+      "height": 1709,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAACXBIWXMAABuvAAAbrwFeGpEcAAAAj0lEQVR4nAGEAHv/AA8KB/8bEw//JhgQ/zIbDf8pGhH/FQ0I/wsFBP8CAQD/ABcQDP4hFQz+dVlH/sWgh/5QNSP+Fg4K/hAMCP4gFAv+ACwcE/+YeVz/68Wh///61v+QaEP/TDQc/7SASP+ZYi7/AFEzCvXLlEz1tINI9Y1ZH/W7iEP1ypBD9cSFNPV1Shj1OLU7apXDSCYAAAAASUVORK5CYII="
+    },
+    "project_nasa_02_full_parts": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_02_full_parts.png",
+      "width": 3400,
+      "height": 2062,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAACXBIWXMAABuvAAAbrwFeGpEcAAAAqUlEQVR4nDXKsQoBYQDA8e8JlDeQ1QtYb1AeQrHIZLNQTJKNwXBl8ACU3F0MUpdkMNJ3dHTLbZ90zpXx+4vyr9/2F4D+eieJdl1XD4ZDXS5X9MKytVJKizAMsW2H6Pmi3WpSLBhMZ3NM00SpO0IpxW5/oNOokUkJJuMR/vWGJ49sNyvEI4qpV0tk0wLfO/JvvbQw8jmElBLHsfCDgNP5QhzHv+HsSfq9Lh9zgX2YP1fiTAAAAABJRU5ErkJggg=="
+    },
+    "project_nasa_03_right_ksc": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_03_right_ksc.png",
+      "width": 2235,
+      "height": 2981,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAACXBIWXMAABuvAAAbrwFeGpEcAAAA00lEQVR4nAHIADf/AAQEAv4uKCH+WlJG/jQxKv5GQj3+WVZY/gBcU0T/T0c7/zw1K/9hW1X/PD1B/yQoMv8AOTUq/15WR/9iXEv/h4F2/2hnZv80Nz//AD06Mf9bVUb/REI2/1FQSf8PFRr/OD1L/wBOST3/T01H/0tLSP9ubWz/bGlp/5KLh/8AYFdH/2NdUP9VUET/WFhQ/6qlk//r2L7/AIZ/af9tZlb/dnFp/4F+c//Rx7v//Pbq/wCViW//Uk9C/1FPRv+DgHz/0cjF///9+/9ik2ZHxwaXEQAAAABJRU5ErkJggg=="
+    },
+    "project_nasa_04_right_jsc": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_04_right_jsc.png",
+      "width": 2235,
+      "height": 1678,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAABuvAAAbrwFeGpEcAAAA0UlEQVR4nAHGADn/AFdidv2yrqf9RUFB/U9ITP3Rr7b9tKKf/UhMSP1lWFv9AJ6fnP///d//oouK/5+Ei//uwMf/z7eu/5mah/+njYP/AMOxjv+lknP/knly/5B8ef9YTkf/TUg+/15dUv+YmIv/AE5IO/8/OSz/c3Js/8XAuf+BhHr/j5OK/x8jJ/8gIyX/AC8yMf9ybGP/q6eX/4mDdv92cWb/sa2b/zIxK/8KCAf/AFNKPP+xnHv/V049/ycmHv8HBAD/IhcN/xYPBf8SDwr/1dNs6FwC/owAAAAASUVORK5CYII="
+    },
+    "project_nasa_05_right_msfc": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_05_right_msfc.png",
+      "width": 2235,
+      "height": 1677,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAABuvAAAbrwFeGpEcAAAA0UlEQVR4nAHGADn/ALW2vP54eoD+xc/d/t7t/f7d6/3+6vH2/picn/5zd33+AJeXmf9wcHH/4+vv//P////4////8PX1/4CEiP+AhI3/AKOkpP9VVVP/1tvb/9DJw/+voJT/3eTm/3F3ff9zeoP/AH9/ef9VVlP/3+js/2RcVf8tIBf/29zY/8zW2/9sc3j/AEtIO/9fWE3/x8fA/5aQgP9QRjv/tLar/0tPTv8BAwD/ADQwIf9FQCz/Y1lB/5CBav9+cV3/aV9M/ywnGf8YGRD/iFB/pAXNRdwAAAAASUVORK5CYII="
+    },
+    "project_nasa_06_sideA_diagrams": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_06_sideA_diagrams.png",
+      "width": 1281,
+      "height": 3669,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAICAYAAAA870V8AAAACXBIWXMAACE4AAAhOAFFljFgAAAAc0lEQVR4nAFoAJf/AOLi5f3a3N/92trb/QC0s7L/t7K0/8vJyv8AHhcJ/xEAAP+Lgnb/AD02J/9cVkf/KiMY/wCknpv/iYeF/0VHRv8A+fj5/+fm6v/29/j/APf3+P/9/v//5+jq/wD9/P3/9vX4/+7t7/+gF0gUF2XMagAAAABJRU5ErkJggg=="
+    },
+    "project_nasa_06_sideB_diagrams": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_06_sideB_diagrams.png",
+      "width": 1281,
+      "height": 3860,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAICAYAAAA870V8AAAACXBIWXMAACE4AAAhOAFFljFgAAAAc0lEQVR4nAFoAJf/APr6+v37+/v98/T0/QD19PT/8vHx/+/w8P8A+fj5/+zt7v/p6er/AGhfUf9pXEz/iX1w/wAjFAD/KhsA/3dnVf8AFwIA/1BDM/++s6n/AKqmo/++uLP/2NTQ/wD9/f3///////X29v94q0k+OQE8jwAAAABJRU5ErkJggg=="
+    },
+    "project_nasa_07_full_diagram": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_07_full_diagram.png",
+      "width": 3400,
+      "height": 1728,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAACXBIWXMAABuvAAAbrwFeGpEcAAAAeklEQVR4nB2NsQ2DMAAEvQBStvAGKB0ZwnNAFWyJdMGC2kWaEDyHJ/AA4Ak8gSe4CJf/f6cXpRTm+U0Ige+28RxHlFLEGMk5I1JKSClr+eg6bk3D0PdVujYBoLXGWstrmri3LeuyYIzBe484z4N9/9VwGR/nKuycqzd/GHRWqznL7/0AAAAASUVORK5CYII="
+    },
+    "project_nasa_08_full_consolidated": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_08_full_consolidated.png",
+      "width": 4080,
+      "height": 2176,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAACXBIWXMAACE4AAAhOAFFljFgAAAAhElEQVR4nGOYPHnK/9Lyqv/Jadn/o2ITwXR9Y9P/efMX/QfJMYiJif3Pzsn7r6ej99/ExPK/n28gmJ2ZXfBfkI//P0OEX8D/a5cu/a+tqPi/eNHi/7t37/0/e+bs/9ev3/5/5vjx/wz5GZn/z509+//g/v3/79y69f/3nz//Hzx89B8GAE8NVON2UQCfAAAAAElFTkSuQmCC"
+    },
+    "project_nasa_09_sideA_affinity": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_09_sideA_affinity.png",
+      "width": 1281,
+      "height": 1924,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAACE4AAAhOAFFljFgAAAAs0lEQVR4nAGoAFf/AAIGAP4aGRH+IyEb/iknIf4lIRz+AFQpJf9hN0L/f1NM/3dSSv9tVUf/ALl9Vf/Kma//7cCu/9Kyq/+yn23/AKVxXf+2sqL///3Q/829wv+KiVz/AHhhSP+bgEn/1sKZ/6KWX/9RSzr/AFdAQP6lhWL+gJBx/se/Vf5GOjj+ADMqKP9fVU3/PTo1/1xTM/8kHBf/ABUPBfMXEQvzHBYQ8xcOEPNIPjTzVnFUQoJdwjsAAAAASUVORK5CYII="
+    },
+    "project_nasa_09_sideB_affinity": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_09_sideB_affinity.png",
+      "width": 1281,
+      "height": 1924,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAICAYAAAAx8TU7AAAACXBIWXMAACE4AAAhOAFFljFgAAAAs0lEQVR4nAGoAFf/ACkjH/4UEg7+Dw0L/gcHBf4FBgL+AFpZS/8xKCT/ExEM/yAYEv8nHBz/AJFpdv+uaX//l2Bq/5NWXP+LVm//AN+Rg//FYYH/yml5/61Ybf+EXXb/AOzVrP//+e7//8q8/7vIt/+RrMT/AFNbZf6UoY/+wrm7/q/C0/5ve4v+ACcgHv93bnf/Ul1n/3qHg/9LT1H/ADIsKPNjZmzzMCwu8yYkIfMlIyDz9PdXDykfhFkAAAAASUVORK5CYII="
+    },
+    "project_nasa_10_sideA_insights": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_10_sideA_insights.png",
+      "width": 1281,
+      "height": 4555,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAICAYAAADTLS5CAAAACXBIWXMAACE4AAAhOAFFljFgAAAAU0lEQVR4nAFIALf/ACEZWf8AAAD/ANvH//8ZElH/AP/0//9fUJT/AKiW4P8oHV7/AOvX//9NPoP/AJqH0P4SDUr+AIJxuf8FAD//APPg//NAMnPzO+UmTSCzc/0AAAAASUVORK5CYII="
+    },
+    "project_nasa_10_sideB_recs": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_10_sideB_recs.png",
+      "width": 1281,
+      "height": 4555,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAAICAYAAADTLS5CAAAACXBIWXMAACE4AAAhOAFFljFgAAAAU0lEQVR4nAFIALf/AJeEzv8jF1n/ALWi7v9qWJ//AJOByP9GNnn/AJeEzv87LXH/AP/y//9xX6f/AHZlq/4wJGX+AOTR//9jUZr/AEM1ePMDADnzsKUnYAjri5EAAAAASUVORK5CYII="
+    },
+    "project_nasa_11_left_risks": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_11_left_risks.png",
+      "width": 2235,
+      "height": 1371,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAACXBIWXMAABuvAAAbrwFeGpEcAAAAsElEQVR4nAGlAFr/AB8QAP9SRDP/bWNO/4qBaf+tpYj/wrKb/9TCrP/e1sD/AEApHv9qWEf/gXZi/5yUgP/Jwqj/1cu5/9bHt//u6d3/ADkiHf5TQjn+ZlhS/oKAdv6kpJj+ysu+/svSzv719e7+ADkjJP9XSUX/dWhr/4eEhP+ko6D/zc7S/93f5f/8//7/ABYAAe8mHx7vMCos71VTWO9wdXzvgoSU76mjuu/Jzd/vsz1mi7VHNIAAAAAASUVORK5CYII="
+    },
+    "project_nasa_12_left_prototype1": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_12_left_prototype1.png",
+      "width": 2235,
+      "height": 1736,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAABuvAAAbrwFeGpEcAAAAzElEQVR4nC3FMUsCUQDA8Tf3DVz7Cq1tzQ5N2aAtcliQHIaTuDQICs/0LAjEQVROoYLCDBEPPThEGhwcbtQ+wGt8RPn4B4fDj584PDomYdnkb8vR51YOK1cgeZ3n5CyNEAcxUhkbWWvQ6fUZjsaRp9c3KvdNRN91KVbqnKZt4heXyGaXzssHTstltvhE3FWryMYj2WKJ1NUND+0B71Of5+GE5WqNcByHIAjwph5f2w27v19+tI5orRFSSjOf+8ab+SYMQ6OUMkp97ynzDyKeiqovodwDAAAAAElFTkSuQmCC"
+    },
+    "project_nasa_13_left_prototype2": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_13_left_prototype2.png",
+      "width": 2235,
+      "height": 1531,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAACXBIWXMAABuvAAAbrwFeGpEcAAAArUlEQVR4nGNgYOf77+Yb9N83NOp/XGrW/+Kaxv85JVX/M4vK/+cUV/5nMDI2/W9uafO/b9KU/9mF5f/Xbd7x/8ate/9DQsP/u7p7/Wewc3D5r6Fl8L934rT/xrbu/2NS8/7vPXzyv7qW/n9xKVmwgj86BiZ/Jk2Z+cfGze+Po3fon87+qX+c3bz+mFrY/GEoLSv/n5ya+f/CxUv/u6fM+3/iwpX/INDS2v4fJAcAcBBaIryEIcQAAAAASUVORK5CYII="
+    },
+    "project_nasa_14_left_prototype3": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_14_left_prototype3.png",
+      "width": 2235,
+      "height": 2231,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAABuvAAAbrwFeGpEcAAAA2ElEQVR4nB2NsWrDMBRF3xS6J3O/oFO/LWuHZHQNboibISZNwDjFQx2CJ1PwlsWrFk1qBi0yRSB4nQy6RRoOXO59h0dEhEea4emB8LyY47Oq0LYtmqZBXdeg5fIFWZIiz7LI6XhCURToug5CCNDl8oXd+w6HjyO2eY70NY2UZYlhGED7fRGNJEnQ9z3Wq1V8EXopJej+c4dSKhrW2ngUhtAZY0DGjF5K6TdvG6+1jjkghPDM7In5D1prnKszmDnmYAamaQIppdztNrjr9duN46+z1kaY2QFw/5g2x9BMOOqxAAAAAElFTkSuQmCC"
+    },
+    "project_nasa_15_full_draft": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_15_full_draft.png",
+      "width": 2720,
+      "height": 1425,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAECAYAAACzzX7wAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAj0lEQVR4nAGEAHv/AOTY0P/Eu7L/29HB///53v/NwrL/h392/2pgUv/HrpD/ANXIwf/Hvbf/18vC/+nbx/+xqJv/e3Rq/2tiV/+NemX/ALKqo/+poZv/oJOO/5CHfP+LhHn/WVNM/1JKQP9VSzz/AIF6cP5WR0b+PR4d/josJf5yaWD+Tkg9/i8oIf4HAQD+ucxRa+lUygIAAAAASUVORK5CYII="
+    },
+    "project_nasa_16_left_workflow1": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_16_left_workflow1.png",
+      "width": 2682,
+      "height": 2071,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAACE4AAAhOAFFljFgAAAAj0lEQVR4nE1NIQ4DIRDkGW1twfIg1DVoRBV/4BNoPFeJRhOukqvFI7lMA8k1nWR2ZzczGWKthXMOrTUM9ONASglPpeafaK0hhICUEowxXC83KKXw3jZ470HGCCEgxjgT46aU4U4plscCYoxBznkaxi6l4LWuOKvJf/9ArRX7/vlpEkLoJ2OMnXM+ObRzrn8BDs+O4l/H77UAAAAASUVORK5CYII="
+    },
+    "project_nasa_17_left_workflow2": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_17_left_workflow2.png",
+      "width": 2682,
+      "height": 2071,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAACE4AAAhOAFFljFgAAAAh0lEQVR4nHVNuwnDMBR8eziTxChgkkJOrTE0gBbQAg+n1gJaQODUmkCDqIgrxxfegzSBHNwVx30ohIAYI3rv2F4bBKUUTOYCZgZZayEhYwycc0gpodaK57oi5wwSaa2pKY3rbdLwPN/VI++9Tn4pC49lwTCccB5HkLTk/xfH8dZludj/kZn3D2cgi8JNJv+2AAAAAElFTkSuQmCC"
+    },
+    "project_nasa_18_left_workflow3": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_18_left_workflow3.png",
+      "width": 2682,
+      "height": 2071,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAACE4AAAhOAFFljFgAAAAh0lEQVR4nFWOsQ1DIQxE2YBBGIURvsggUegZgNTuqfMZwPppGYAB6PMpg3SRLSVSiue7wuezSSkh54w5p/JeC8/jwGXbQEQwIQQw849a6583MiQ5xkDvXfU8X6qtNZgYo1Y452Cthfce11vUdCkFRnpk+3tB0jnfNaA/1FqXwMyK+H1/LCJSPmZ1kmWXJbYqAAAAAElFTkSuQmCC"
+    },
+    "project_nasa_19_left_workflow4": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_19_left_workflow4.png",
+      "width": 2682,
+      "height": 2071,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAACE4AAAhOAFFljFgAAAAmklEQVR4nDWOMQ6DMAxFcwt6irYHoCdAHXKHVrQDolvm3IG1ZCvK7jnqGIkVOmZnZwz6lS1h6Vlftvy/lXMO3nus6yrkbcM4jnjc7jJXTdNgmibEGAXWv3kWQghQ3FJKWJZFeLUttNaw1sqB6roOxhg86xrn0xHXqsJnGHApS/BOEZFYHYoCff+WP/ZiR47IDBHlEL6id7z3+Q//gJIDA+HXagAAAABJRU5ErkJggg=="
+    },
+    "project_nasa_20_left_workflow5": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_20_left_workflow5.png",
+      "width": 2682,
+      "height": 2071,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAYAAAD+Bd/7AAAACXBIWXMAACE4AAAhOAFFljFgAAAAjUlEQVR4nD1OuwkDMQz1DIZLe1nE7eHsYveeQ3XAC/jSGy61J/AETtK7juAdEiSCp//Tk0kpgYgw51R8mfE8Dty2TfvGe4/WGmqtKKUoJP/VRlzvHSEEjWOMP4RoRMI5h+u64rIssNbqsgxzzjCiI8zP+4Wc79j3h/4iJldEggW1Vo4xsnOOW2vaIyI+Aa5EjGjtvhxEAAAAAElFTkSuQmCC"
+    },
+    "project_nasa_21_left_me": {
+      "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_nasa_21_left_me.png",
+      "width": 2235,
+      "height": 2981,
+      "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAICAYAAADaxo44AAAACXBIWXMAABuvAAAbrwFeGpEcAAAA00lEQVR4nAHIADf/AIeUtP9BSV//OTpA/zAwM/+FeW7/XEs//wCQl6r/bXWK/0NHTv8nNEz/Oj9V/2hUQP8Ay9DY/2RvhP9tdX3/XFxq/0Q7Qf9oVTv/ANTOyP+6qYX/p6OG/9y9nP+2lHT/dW1b/wDn5N3/va2K/5F+X///+ND///fU/2dcUv8A1trf/pqUhv5qVkH+tJ+G/rqhjv4oIBj+ALCvpP+RjXf/Lysj/zwzKv88KyX/JCQg/wBtZ1jzOzYq8xkWEvMIBALzLCor8zw8PfOXUm6ysZd/XQAAAABJRU5ErkJggg=="
+    },
     "project_vijks_02_right_ieee": {
       "src": "https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2%2Fproject_vijks_02_right_ieee.png",
       "width": 1788,

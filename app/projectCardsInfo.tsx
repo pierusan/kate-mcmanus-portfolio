@@ -62,7 +62,7 @@ export const projectCardsInfo = {
       svgHighlight: JourneyFinderSvgHighlight,
       svgOutline: JourneyFinderSvgOutline,
       svgGuide: JourneyFinderSvgGuide,
-      projectLinkId: 'vijks',
+      projectLinkId: 'journey-finder',
     },
   ],
   vijks: [
@@ -112,7 +112,7 @@ export const projectCardsInfo = {
       svgHighlight: NasaSvgHighlight,
       svgOutline: NasaSvgOutline,
       svgGuide: NasaSvgGuide,
-      projectLinkId: 'vijks',
+      projectLinkId: 'nasa',
     },
   ],
   interactives: [
@@ -125,7 +125,7 @@ export const projectCardsInfo = {
       svgHighlight: InteractivesPt1SvgHighlight,
       svgOutline: InteractivesPt1SvgOutline,
       svgGuide: InteractivesPt1SvgGuide,
-      projectLinkId: 'vijks',
+      projectLinkId: 'interactives',
     },
     {
       '769px': [-22, 566, -5],
@@ -136,7 +136,7 @@ export const projectCardsInfo = {
       svgHighlight: InteractivesPt2SvgHighlight,
       svgOutline: InteractivesPt2SvgOutline,
       svgGuide: InteractivesPt2SvgGuide,
-      projectLinkId: 'vijks',
+      projectLinkId: 'interactives',
     },
   ],
   'visual-stories': [
@@ -149,7 +149,7 @@ export const projectCardsInfo = {
       svgHighlight: VisualStoriesSvgHighlight,
       svgOutline: VisualStoriesSvgOutline,
       svgGuide: VisualStoriesSvgGuide,
-      projectLinkId: 'vijks',
+      projectLinkId: 'visual-stories',
     },
   ],
 } satisfies Record<string, ProjectIllustration[]>;

@@ -5,6 +5,7 @@ import {
   type RemoteImageName,
 } from '../RemoteImage';
 import { cn } from '../helpers';
+import { ProjectFigure } from './ProjectFigure';
 import tailwindConfig from '@/tailwind.config';
 
 let smallImageSizes: string | undefined,
@@ -84,7 +85,7 @@ export function ProjectImage({
     imageAlignmentProps(alignment);
 
   return (
-    <figure
+    <ProjectFigure
       className={cn(
         // Add pointer events to allow right-clicking on the image or
         // highlighting caption. It was awkward to be able to highlight the text
@@ -93,13 +94,9 @@ export function ProjectImage({
         alignmentClassName,
         className
       )}
+      caption={useAltTextAsCaption ? remoteImageAltTexts[name] : undefined}
     >
       <RemoteImage name={name} priority={priority} sizes={sizes} />
-      {useAltTextAsCaption && (
-        <figcaption className="border border-black bg-white p-3 text-xs font-bold">
-          {remoteImageAltTexts[name]}
-        </figcaption>
-      )}
-    </figure>
+    </ProjectFigure>
   );
 }

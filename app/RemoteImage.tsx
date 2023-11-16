@@ -57,6 +57,49 @@ export const remoteImageAltTexts = {
     'The customer journey data was organized by industry vertical. These industry verticals broke down into vertical subcategories, and again into further subcategories.',
   project_journeyfinder_12_full_quote:
     'An email from a happy user on a Google Analytical Team',
+  project_nasa_01_full_hero:
+    'Orion Spacecraft and Space Launch System (SLS) lift off from a Launch Complex at Kennedy Space Center on Nov. 16, 2022. (Photo by Joel Kowsky, nasa.gov.)',
+  project_nasa_02_full_parts:
+    'This diagram shows the core rocket parts that form Artemis I. The first integrated flight of SLS and Orion, it stands taller than the Statue of Liberty. (nasa.gov.)',
+  project_nasa_03_right_ksc:
+    'Rocket parts are assembled in the Vehicle Assembly Building (VAB) before launch. (Visit to Kennedy Space Center, Merritt Island, Florida)',
+  project_nasa_04_right_jsc:
+    "Orion Spacecraft, formerly referred to as Orion Multi-Purpose Crew Vehicle, is the partially reusable crewed spacecraft used in NASA's Artemis program. (Visit to Johnson Space Center, Houston, Texas)",
+  project_nasa_05_right_msfc:
+    'On display at the U.S. Space & Rocket Center, an External Tank (ET) test article and 2 Solid Rocket Booster (SRB) models form a complete Space Shuttle stack, like those used during Shuttle missions. (Visit to Marshall Space Flight Center, Huntsville, Alabama)',
+  project_nasa_06_sideA_diagrams:
+    'After each contextual interview with subject-matter experts, we sketched workflow diagrams to document our understanding of the existing process.',
+  project_nasa_06_sideB_diagrams:
+    'More workflow diagrams sketched after our sessions',
+  project_nasa_07_full_diagram: 'The first of 2 consolidated workflow models',
+  project_nasa_08_full_consolidated:
+    'We integrated all of our drawings into a consolidated workflow model. Pain points are listed in red.',
+  project_nasa_09_sideA_affinity:
+    'The affinity diagram categorized our notes from contextual interviews. (1 of 2 images)',
+  project_nasa_09_sideB_affinity:
+    'The affinity diagram revealed more meaningful, human patterns and themes. (2 of 2 images)',
+  project_nasa_10_sideA_insights:
+    "A list of 6 user insights, for example: #1 Elements don't know what the LSAIB is or why it is important.",
+  project_nasa_10_sideB_recs:
+    'A list of 6 design recommendations, for example: #1 Make it as easy as possible for elements to complete their part of the process.',
+  project_nasa_11_left_risks:
+    "MAS's ability to facilitate complex processes and robust versioning and permission capabilities led us to hypothesize that it would be a strong platform on which to build LSAIB. To ensure our decisions were user-driven, we identified our assumptions and rated them according to risk level. Applying Lean UX, we configured prototypes in MAS to quickly test our highest risk assumptions with users. We iteratively refined designs based on feedback and findings.",
+  project_nasa_12_left_prototype1:
+    'During sessions with Elements, we usability tested designs to enter and associate data.',
+  project_nasa_13_left_prototype2:
+    'We were also concerned that MAS reports were not a good fit, so we usability tested and iterated different ways to views reports.',
+  project_nasa_14_left_prototype3:
+    'We made a variety of email summary designs and asked users to pick their favorite. We tested the winner during a live review cycle.',
+  project_nasa_15_full_draft:
+    'Drafting the proposed LSAIB workflow, facilitated by the new LSAIB tool.',
+  project_nasa_16_left_workflow1:
+    'Here is the first page of the new LSAIB workflow. This informational document was emailed to users on release, distributed as a hard-copy and explained during training sessions, and available in the “Help” section of the LSAIB tool. (Page 1 of 5)',
+  project_nasa_17_left_workflow2: 'The new LSAIB workflow (Page 2 of 5)',
+  project_nasa_18_left_workflow3: 'The new LSAIB workflow, (Page 3 of 5)',
+  project_nasa_19_left_workflow4: 'The new LSAIB workflow, (Page 4 of 5)',
+  project_nasa_20_left_workflow5: 'The new LSAIB workflow, (Page 5 of 5)',
+  project_nasa_21_left_me:
+    'Me at Kennedy Space Center in the Vehicle Assembly Building :)',
   project_vs_01_full_tiled:
     'A collection of colorful, varied pages from different Visual Stories laid out in a patchwork formation',
   project_vs_03_right_og_board:
