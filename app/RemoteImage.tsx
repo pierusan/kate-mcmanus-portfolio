@@ -9,6 +9,7 @@ type AnyRemoteImageName = keyof typeof remoteImages;
 
 export const remoteImageAltTexts = {
   nasa_sky_image: 'A sky full of clouds',
+  project_branding_00_right_wrong_material: 'Book cover: Wrong Material',
   project_interactives_01_full_hero:
     'Landing pages from 4 different interactive articles and tools',
   project_interactives_02_right_charts:

@@ -99,7 +99,7 @@ export const projectCardsInfo = {
       svgHighlight: BrandingSvgHighlight,
       svgOutline: BrandingSvgOutline,
       svgGuide: BrandingSvgGuide,
-      projectLinkId: 'vijks',
+      projectLinkId: 'branding',
     },
   ],
   nasa: [

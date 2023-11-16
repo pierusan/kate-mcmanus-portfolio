@@ -876,6 +876,53 @@ export const projectContents = {
       },
     ],
   },
+  branding: {
+    title: 'Brand Identity Projects',
+    subtitle: {
+      company: 'Freelance',
+      type: 'Visual Design',
+      date: '2022-23',
+    },
+    leftColumn: [
+      {
+        heading: 'Coming Soon',
+        paragraphs: [
+          <p key="branding-left-1">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </p>,
+        ],
+      },
+    ],
+    middleColumn: [],
+    rightColumn: [],
+    mediumHero: {
+      name: 'project_branding_00_right_wrong_material',
+      alignment: 'right',
+    },
+    mediaLeftColumn: [],
+    mediaMiddleColumn: [],
+    mediaRightColumn: [],
+  },
   vijks: {
     title: 'Visualizing the Rijksmuseum',
     subtitle: {

@@ -96,7 +96,12 @@ export function ProjectImage({
       )}
       caption={useAltTextAsCaption ? remoteImageAltTexts[name] : undefined}
     >
-      <RemoteImage name={name} priority={priority} sizes={sizes} />
+      <RemoteImage
+        className={cn('w-full')}
+        name={name}
+        priority={priority}
+        sizes={sizes}
+      />
     </ProjectFigure>
   );
 }
