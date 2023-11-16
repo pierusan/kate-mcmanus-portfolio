@@ -834,7 +834,6 @@ export const projectContents = {
     mediaLeftColumn: [
       { name: 'project_journeyfinder_02_right_screenB', alignment: 'right' },
       { name: 'project_journeyfinder_03_right_screenC', alignment: 'right' },
-      { name: 'project_journeyfinder_03_right_screenC', alignment: 'right' },
       {
         name: 'project_journeyfinder_04_right_cuj',
         alignment: 'right',
