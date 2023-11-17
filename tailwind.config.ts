@@ -44,6 +44,9 @@ export default {
           },
         ],
       },
+      boxShadow: {
+        drop: '4px 10px 10px 0px rgba(0, 0, 0, 0.25)',
+      },
     },
   },
   plugins: [],

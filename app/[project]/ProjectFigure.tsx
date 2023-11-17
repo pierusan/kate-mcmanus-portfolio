@@ -11,7 +11,7 @@ export function ProjectFigure({
   children: ReactNode;
 }) {
   return (
-    <figure className={cn(className)}>
+    <figure className={cn('lg:shadow-drop', className)}>
       {children}
       {caption && (
         <figcaption
