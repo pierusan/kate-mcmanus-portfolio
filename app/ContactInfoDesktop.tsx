@@ -7,30 +7,34 @@ import {
 } from './fontSubsets';
 import { cn } from './helpers';
 
-const contactItems = [
+export const contactItems = [
   {
     name: 'Resume',
     url: 'https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2/Kate_Resume_2023_06_28.pdf',
     width: '185px',
     classNameOnceFlipped: `${staatlichesStyle}`,
+    mobileFontSizeClassName: 'text-[1.375rem]',
   },
   {
-    name: 'Linkedin',
+    name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/kate-mcmanus-9440944a/',
     width: '205px',
     classNameOnceFlipped: `${lektonStyle}`,
+    mobileFontSizeClassName: 'text-[1.5rem]',
   },
   {
-    name: 'Dribble',
+    name: 'Dribbble',
     url: 'https://dribbble.com/katestrykermcm',
     width: '200px',
     classNameOnceFlipped: `${vT323Style}`,
+    mobileFontSizeClassName: 'text-[1.625rem]',
   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/katemcmanus.design/',
     width: '245px',
     classNameOnceFlipped: `${parisienneStyle}`,
+    mobileFontSizeClassName: 'text-[1.625rem]',
   },
 ] as const;
 
@@ -67,7 +71,10 @@ export function ContactInfoDesktop({ className }: { className?: string }) {
                 <FlippableSpan
                   key={index}
                   classNameOnceFlipped={classNameOnceFlipped}
-                  flickerOnStartOnDesktop={(name==='Linkedin' && index===3) || (name==='Instagram' && index===0)}
+                  flickerOnStartOnDesktop={
+                    (name === 'LinkedIn' && index === 3) ||
+                    (name === 'Instagram' && index === 0)
+                  }
                 >
                   {char}
                 </FlippableSpan>

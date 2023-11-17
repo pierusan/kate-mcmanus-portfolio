@@ -10,7 +10,7 @@ function ScrollCTA({ className }: { className?: string }) {
     <div
       className={cn(
         'h-[5.75rem] w-[5.75rem] rounded-full pt-[1.375rem]',
-        'border border-border-action-subtle bg-white',
+        'border border-action-subtle bg-white',
         'flex flex-col items-center gap-[0.375rem]',
         className
       )}

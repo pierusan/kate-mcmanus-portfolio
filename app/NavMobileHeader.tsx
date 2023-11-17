@@ -6,7 +6,7 @@ export function NavMobileHeader({ className }: { className?: string }) {
   return (
     <header
       className={cn(
-        'border border-border-action-subtle bg-white ',
+        'border border-action-subtle bg-white ',
         // Stack home button and cross on the same grid area for easier centering
         // and alignment
         'grid grid-cols-1 grid-rows-1 [grid-template-areas:"header"]',

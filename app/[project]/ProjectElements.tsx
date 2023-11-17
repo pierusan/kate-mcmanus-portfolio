@@ -28,7 +28,7 @@ export function ProjectTitle({
   return <h1 className={cn('text-[1.75rem]', className)}>{children}</h1>;
 }
 
-export function ProjectSubtitle({ company, type, date }: ProjectSubtitle) {
+export function ProjectSubtitle({ company, tags, date }: ProjectSubtitle) {
   return (
     <ol
       className={cn(
@@ -39,7 +39,7 @@ export function ProjectSubtitle({ company, type, date }: ProjectSubtitle) {
       )}
     >
       <li className={`${parisienneStyle} text-[1.5rem]`}>{company}</li>
-      <li className={`${pirataOneStyle} text-[1.125rem]`}>{type}</li>
+      <li className={`${pirataOneStyle} text-[1.125rem]`}>{tags}</li>
       <li className={`${lektonStyle} text-[1.125rem]`}>{date}</li>
     </ol>
   );
@@ -53,11 +53,18 @@ export function ProjectSection({
   return (
     <section
       className={cn(
-        '[&:not(:last-child)]:mb-5 [&>p:not(:last-child)]:mb-2',
+        '[&:not(:last-child)]:mb-5 [&>p:not(:last-child)]:mb-2 [&_p]:text-body',
         className
       )}
     >
-      <h2 className={cn({ 'mb-1': heading === 'Team' })}>{heading}</h2>
+      <h2
+        className={cn(
+          'mb-2.5 font-mono text-base lowercase tracking-[0.125rem]',
+          { 'mb-1': heading === 'Team' }
+        )}
+      >
+        {heading}
+      </h2>
       {paragraphs}
     </section>
   );

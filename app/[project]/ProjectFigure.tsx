@@ -14,7 +14,11 @@ export function ProjectFigure({
     <figure className={cn(className)}>
       {children}
       {caption && (
-        <figcaption className="border border-black bg-white p-3 text-xs font-bold">
+        <figcaption
+          className={cn(
+            'border border-black bg-white p-3 text-caption font-bold'
+          )}
+        >
           {caption}
         </figcaption>
       )}

@@ -10,12 +10,14 @@ export type ProjectSection = {
 
 export type ProjectSubtitle = {
   company: string;
-  type: string;
+  tags: string;
+  tagsMobileNav?: string; // If different than title
   date: string;
 };
 
 type ProjectContents = {
   title: string;
+  titleMobileNav?: string; // If different than title
   subtitle: ProjectSubtitle;
   leftColumn: ProjectSection[];
   middleColumn: ProjectSection[];
@@ -45,7 +47,8 @@ export const projectContents = {
     title: 'Interactive Articles',
     subtitle: {
       company: 'Google',
-      type: 'UX Design, DataViz',
+      tags: 'UX Design, DataViz',
+      tagsMobileNav: 'UX Design, Data Visualization',
       date: '2019',
     },
     leftColumn: [
@@ -238,9 +241,10 @@ export const projectContents = {
   },
   nasa: {
     title: 'LSAIB',
+    titleMobileNav: 'Launch Site Assembly and Integration Baseline (LSAIB)',
     subtitle: {
       company: 'Nasa',
-      type: 'UX Research, UX Design',
+      tags: 'UX Research, UX Design',
       date: '2019',
     },
     leftColumn: [
@@ -490,7 +494,7 @@ export const projectContents = {
     title: 'Visual Stories',
     subtitle: {
       company: 'Google',
-      type: 'UX/UI Design',
+      tags: 'UX/UI Design',
       date: '2020',
     },
     leftColumn: [
@@ -684,7 +688,7 @@ export const projectContents = {
     title: 'JourneyFinder',
     subtitle: {
       company: 'Google',
-      type: 'UX Design',
+      tags: 'UX Design',
       date: '2021',
     },
     leftColumn: [
@@ -879,7 +883,7 @@ export const projectContents = {
     title: 'Brand Identity Projects',
     subtitle: {
       company: 'Freelance',
-      type: 'Visual Design',
+      tags: 'Visual Design',
       date: '2022-23',
     },
     leftColumn: [
@@ -926,7 +930,8 @@ export const projectContents = {
     title: 'Visualizing the Rijksmuseum',
     subtitle: {
       company: 'Class Project',
-      type: 'Data Viz, Code',
+      tags: 'Data Viz, Code',
+      tagsMobileNav: 'Data Visualization, Code',
       date: '2017',
     },
     leftColumn: [

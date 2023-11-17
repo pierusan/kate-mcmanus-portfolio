@@ -47,7 +47,7 @@ export function ProjectPage({
         )}
       >
         <ProjectHeader />
-        <main className="flex flex-col px-5 text-sm leading-[1.375rem]">
+        <main className="flex flex-col px-5">
           <ProjectTitle className={cn('mb-1')}>{content.title}</ProjectTitle>
           <ProjectSubtitle {...content.subtitle} />
           <div className="grid grid-cols-3 gap-10">
