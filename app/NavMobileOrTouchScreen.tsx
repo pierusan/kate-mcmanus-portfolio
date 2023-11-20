@@ -86,6 +86,7 @@ export function NavMobileOrTouchScreen({ className }: { className?: string }) {
           ]}
         />
       </dialog>
+      {/* TODO: Add animations for the dialog in and out */}
       <NavMobileMenu
         className="fixed inset-x-5 bottom-5"
         tabs={[
