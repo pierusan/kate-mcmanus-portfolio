@@ -1,3 +1,4 @@
+import { useIsPointerCoarse } from './useIsPointerCoarse';
 import { usePercentCharactersFlipped } from './usePercentCharactersFlipped';
 
 type ColorHex = `#${string}`;
@@ -7,12 +8,29 @@ interface ColorMix {
   percentageMix: number;
 }
 
-const gradientStops: ColorHex[] = [
+const touchGradientStops: ColorHex[] = [
   '#FFF',
   '#FFE5EC',
   '#FFD600',
   '#ADFF00',
   '#00FF85',
+];
+
+// On desktop, revealing letters one by one takes time, so to avoid users
+// getting bored before they see cool colors, we add more stops
+const desktopGradientStops: ColorHex[] = [
+  '#FFF',
+  '#FFE5EC',
+  '#00FF85',
+  '#ADFF00',
+  '#A7CAFF',
+  '#CF9EFF',
+  '#FFD600',
+  '#FF8ED8',
+  '#FF005C',
+  '#3FE8FF',
+  '#85BDFF',
+  '#FAFF00',
 ];
 
 // TODO: Add tests for this
@@ -48,11 +66,12 @@ function getProgressColorInfo(
 }
 
 export function useHomeBgColor() {
+  const isPointerCoarse = useIsPointerCoarse();
   const percentFlipped = usePercentCharactersFlipped();
 
   const { color1, color2, percentageMix } = getProgressColorInfo(
     percentFlipped,
-    gradientStops
+    isPointerCoarse ? touchGradientStops : desktopGradientStops
   );
 
   return `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
