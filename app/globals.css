@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  /* TODO: Remove. Bad practice to have tags linked to styles. Margin is also wrong for mobile */
   h1 {
     @apply text-[3.5rem];
     @apply font-bold;
@@ -10,11 +11,11 @@
     @apply leading-[1.375];
   }
 
-  h2 {
-    @apply text-base;
-    @apply font-mono;
-    @apply lowercase;
-    @apply mb-2.5;
-    @apply tracking-[0.125em];
+  /* Modal dialogs prevent interacting with the page below, but not scrolling
+     it. This is awkward so we fix add the behavior here.
+     https://web.dev/articles/building/a-dialog-component#scroll_containment
+  */
+  html:has(dialog[open]:modal) {
+    overflow: hidden;
   }
 }

@@ -29,7 +29,8 @@
         "cases": {
           "camelCase": true, // Regular TS
           "pascalCase": true // Components
-        }
+        },
+        "ignore": [".d.ts$"]
       }
     ],
     "no-console": ["warn", { "allow": ["warn", "error"] }],
@@ -42,6 +43,12 @@
         "replacements": {
           "fn": {
             "function": false
+          },
+          "params": {
+            "parameters": false
+          },
+          "props": {
+            "properties": false
           }
         }
       }
@@ -59,12 +66,6 @@
     ]
   },
   "overrides": [
-    {
-      "files": ["*.d.ts"],
-      "rules": {
-        "unicorn/filename-case": ["off"]
-      }
-    },
     {
       "files": ["*.config.js"],
       "rules": {

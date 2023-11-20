@@ -1,7 +1,11 @@
-import Image, { type StaticImageData } from 'next/image';
 import resolveConfig from 'tailwindcss/resolveConfig';
+import {
+  RemoteImage,
+  remoteImageAltTexts,
+  type RemoteImageName,
+} from '../RemoteImage';
 import { cn } from '../helpers';
-
+import { ProjectFigure } from './ProjectFigure';
 import tailwindConfig from '@/tailwind.config';
 
 let smallImageSizes: string | undefined,
@@ -24,34 +28,13 @@ if (
   console.error('Could not retrieve breakpoints from tailwind config');
 }
 
-type ImageType =
-  | 'main'
-  | 'full'
-  | 'left'
-  | 'right'
-  | 'leftSmall'
-  | 'rightSmall';
-export function ProjectImage({
-  src,
-  alt,
-  imageType,
-}: {
-  imageType: ImageType;
-  src: StaticImageData;
-  alt: string;
-}) {
-  let priority = false,
-    className: string | undefined,
-    sizes: string | undefined;
+export type ImageAlignment = 'full' | 'left' | 'right' | 'sideA' | 'sideB';
+
+export function imageAlignmentProps(alignment: ImageAlignment) {
+  let className: string | undefined, sizes: string | undefined;
 
   // Make these work for both large 3 column layout and small 2 column layouts
-  switch (imageType) {
-    case 'main': {
-      sizes = largeImageSizes;
-      className = 'col-span-full';
-      priority = true;
-      break;
-    }
+  switch (alignment) {
     case 'full': {
       sizes = largeImageSizes;
       className = 'col-span-full';
@@ -67,31 +50,58 @@ export function ProjectImage({
       className = 'col-span-2 col-end-[-1]';
       break;
     }
-    case 'leftSmall': {
+    case 'sideA': {
       sizes = smallImageSizes;
       className = 'col-span-1 col-start-1';
       break;
     }
-    case 'rightSmall': {
+    case 'sideB': {
       sizes = smallImageSizes;
       className = 'col-span-1 col-end-[-1]';
       break;
     }
     default: {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const _exhaustiveCheck: never = imageType;
+      const _exhaustiveCheck: never = alignment;
     }
   }
+  return { className, sizes };
+}
+
+export function ProjectImage({
+  name,
+  alignment,
+  priority,
+  useAltTextAsCaption = true,
+  className,
+}: {
+  name: RemoteImageName;
+  alignment: ImageAlignment;
+  priority?: boolean;
+  useAltTextAsCaption?: boolean;
+  className?: string;
+}) {
+  const { className: alignmentClassName, sizes } =
+    imageAlignmentProps(alignment);
 
   return (
-    <Image
-      src={src}
-      alt={alt}
-      className={cn('w-full', className)}
-      priority={priority}
-      sizes={sizes}
-      quality={100}
-      placeholder="blur"
-    />
+    <ProjectFigure
+      className={cn(
+        // Add pointer events to allow right-clicking on the image or
+        // highlighting caption. It was awkward to be able to highlight the text
+        // below the images
+        'pointer-events-auto w-full',
+        alignmentClassName,
+        className
+      )}
+      caption={useAltTextAsCaption ? remoteImageAltTexts[name] : undefined}
+    >
+      <RemoteImage
+        className={cn('w-full')}
+        name={name}
+        priority={priority}
+        sizes={sizes}
+      />
+    </ProjectFigure>
   );
 }

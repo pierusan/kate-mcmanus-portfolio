@@ -33,6 +33,7 @@ import VisualStoriesSvg from './projectCardSvgs/6_VisualStories_Default.svg';
 import VisualStoriesSvgHighlight from './projectCardSvgs/6_VisualStories_Hover.svg';
 import VisualStoriesSvgOutline from './projectCardSvgs/6_VisualStories_Outline.svg';
 import VisualStoriesSvgGuide from './projectCardSvgs/6_VisualStories_Guide.svg';
+import { WrittenProject } from './[project]/projectContents';
 
 type X = number;
 type Y = number;
@@ -48,7 +49,7 @@ type ProjectIllustration = {
   svgHighlight: SVGRComponent;
   svgOutline: SVGRComponent;
   svgGuide: SVGRComponent;
-  linkRef: string;
+  projectLinkId: WrittenProject;
 };
 export const projectCardsInfo = {
   'journey-finder': [
@@ -61,7 +62,7 @@ export const projectCardsInfo = {
       svgHighlight: JourneyFinderSvgHighlight,
       svgOutline: JourneyFinderSvgOutline,
       svgGuide: JourneyFinderSvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'journey-finder',
     },
   ],
   vijks: [
@@ -74,7 +75,7 @@ export const projectCardsInfo = {
       svgHighlight: VijksPt1SvgHighlight,
       svgOutline: VijksPt1SvgOutline,
       svgGuide: VijksPt1SvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'vijks',
     },
     {
       '769px': [560, 64, 0],
@@ -85,7 +86,7 @@ export const projectCardsInfo = {
       svgHighlight: VijksPt2SvgHighlight,
       svgOutline: VijksPt2SvgOutline,
       svgGuide: VijksPt2SvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'vijks',
     },
   ],
   branding: [
@@ -98,7 +99,7 @@ export const projectCardsInfo = {
       svgHighlight: BrandingSvgHighlight,
       svgOutline: BrandingSvgOutline,
       svgGuide: BrandingSvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'branding',
     },
   ],
   nasa: [
@@ -111,7 +112,7 @@ export const projectCardsInfo = {
       svgHighlight: NasaSvgHighlight,
       svgOutline: NasaSvgOutline,
       svgGuide: NasaSvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'nasa',
     },
   ],
   interactives: [
@@ -124,7 +125,7 @@ export const projectCardsInfo = {
       svgHighlight: InteractivesPt1SvgHighlight,
       svgOutline: InteractivesPt1SvgOutline,
       svgGuide: InteractivesPt1SvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'interactives',
     },
     {
       '769px': [-22, 566, -5],
@@ -135,7 +136,7 @@ export const projectCardsInfo = {
       svgHighlight: InteractivesPt2SvgHighlight,
       svgOutline: InteractivesPt2SvgOutline,
       svgGuide: InteractivesPt2SvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'interactives',
     },
   ],
   'visual-stories': [
@@ -148,7 +149,7 @@ export const projectCardsInfo = {
       svgHighlight: VisualStoriesSvgHighlight,
       svgOutline: VisualStoriesSvgOutline,
       svgGuide: VisualStoriesSvgGuide,
-      linkRef: '/project/journey-finder',
+      projectLinkId: 'visual-stories',
     },
   ],
-} as const satisfies Record<string, readonly ProjectIllustration[]>;
+} satisfies Record<string, ProjectIllustration[]>;

@@ -15,3 +15,7 @@ const customTwMerge = extendTailwindMerge({
 export function cn(...inputs: ClassValue[]) {
   return customTwMerge(clsx(inputs));
 }
+
+export function positiveModulo(n: number, m: number): number {
+  return ((n % m) + m) % m;
+}

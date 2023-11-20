@@ -18,13 +18,34 @@ export default {
       coarse: { raw: '(pointer: coarse)' },
     },
     extend: {
-      colors: {
-        'border-action-subtle': '#d7d7d7',
-        'bg-surface': '#f5f5f5',
+      borderColor: {
+        'action-subtle': '#d7d7d7',
+      },
+      backgroundColor: {
+        surface: '#f5f5f5',
       },
       fontFamily: {
         sans: ['var(--font-manrope)'],
         mono: ['var(--font-major-mono-display)'],
+      },
+      fontSize: {
+        // Per Figma, for Manrope
+        body: [
+          '0.78125rem', // 12.5px
+          {
+            lineHeight: '1.125rem', // 18px
+            letterSpacing: '0.0125rem', // 0.2px
+          },
+        ],
+        caption: [
+          '0.75rem', // 12px
+          {
+            lineHeight: '1.125rem', // 18px
+          },
+        ],
+      },
+      boxShadow: {
+        drop: '4px 10px 10px 0px rgba(0, 0, 0, 0.25)',
       },
     },
   },

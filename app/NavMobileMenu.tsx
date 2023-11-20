@@ -13,7 +13,7 @@ function NavMobileMenuButton({
       className={cn(
         // Add right border except for last button
         '[&:not(:last-child)]:border [&:not(:last-child)]:border-y-0 ',
-        '[&:not(:last-child)]:border-l-0 [&:not(:last-child)]:border-r-border-action-subtle '
+        '[&:not(:last-child)]:border-l-0 [&:not(:last-child)]:border-r-action-subtle '
       )}
     >
       <button
@@ -38,7 +38,7 @@ export function NavMobileMenu({
       className={cn(
         // TODO: Check if the default tailwind md shadow is fine or if should
         // tweak based on designs
-        'rounded-md border border-border-action-subtle bg-white shadow-md ',
+        'rounded-md border border-action-subtle bg-white shadow-md ',
         'grid grid-cols-2  [&_button]:w-full',
         className
       )}
