@@ -7,11 +7,19 @@ import {
 } from './fontSubsets';
 import { cn } from './helpers';
 
-export function HomeButton({ className }: { className?: string }) {
+export function HomeButton({
+  onClick,
+  className,
+}: {
+  onClick?: () => void;
+  className?: string;
+}) {
   return (
-    // TODO: When already on homepage, clicking the home button would ideally
-    // close the dialog
-    <Link href="/" className={cn('text-[1.375rem]', className)}>
+    <Link
+      onClick={onClick}
+      href="/"
+      className={cn('text-[1.375rem]', className)}
+    >
       <span className={`font-mono`}>K</span>
       <span className={`${staatlichesHeaderStyle}`}>a</span>
       <span className={`font-mono`}>T</span>

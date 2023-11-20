@@ -1,8 +1,16 @@
+'use client';
+
 import { HomeButton } from './HomeButton';
 import { cn } from './helpers';
 import CrossSvg from './icons/cross.svg';
 
-export function NavMobileHeader({ className }: { className?: string }) {
+export function NavMobileHeader({
+  className,
+  onHomeButtonClick,
+}: {
+  onHomeButtonClick?: () => void;
+  className?: string;
+}) {
   return (
     <header
       className={cn(
@@ -13,7 +21,10 @@ export function NavMobileHeader({ className }: { className?: string }) {
         className
       )}
     >
-      <HomeButton className="self-center justify-self-center [grid-area:header]" />
+      <HomeButton
+        onClick={onHomeButtonClick}
+        className="self-center justify-self-center [grid-area:header]"
+      />
       {/* Use a form with dialog method to avoid the need for javascript to close the dialog */}
       <form
         method="dialog"

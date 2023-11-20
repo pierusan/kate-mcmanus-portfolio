@@ -10,4 +10,12 @@
     @apply mb-[1.875rem];
     @apply leading-[1.375];
   }
+
+  /* Modal dialogs prevent interacting with the page below, but not scrolling
+     it. This is awkward so we fix add the behavior here.
+     https://web.dev/articles/building/a-dialog-component#scroll_containment
+  */
+  html:has(dialog[open]:modal) {
+    overflow: hidden;
+  }
 }
