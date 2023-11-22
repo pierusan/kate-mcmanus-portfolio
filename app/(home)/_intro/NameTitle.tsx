@@ -21,7 +21,7 @@ export function NameTitle({ className }: { className?: string }) {
   return (
     <h1
       className={cn(
-        'leading-[1] coarse:origin-center coarse:rotate-[var(--rotation)] coarse:self-start',
+        'font-bold coarse:origin-center coarse:rotate-[var(--rotation)] coarse:self-start',
         className
       )}
       style={{ '--rotation': `${rotation}deg` } as CSSProperties}

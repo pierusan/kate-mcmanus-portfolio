@@ -25,7 +25,16 @@ export function ProjectTitle({
   className?: string;
   children: ReactNode;
 }) {
-  return <h1 className={cn('text-[1.75rem]', className)}>{children}</h1>;
+  return (
+    <h1
+      className={cn(
+        'mb-[1.875rem] text-[1.75rem] font-bold leading-[1.375]',
+        className
+      )}
+    >
+      {children}
+    </h1>
+  );
 }
 
 export function ProjectSubtitle({ company, tags, date }: ProjectSubtitle) {
