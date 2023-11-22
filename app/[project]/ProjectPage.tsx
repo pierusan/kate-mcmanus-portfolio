@@ -1,5 +1,3 @@
-import { NavMobileOrTouchScreen } from '../NavMobileOrTouchScreen';
-import { cn, positiveModulo } from '../helpers';
 import {
   ProjectHeader,
   ProjectTitle,
@@ -8,7 +6,9 @@ import {
   ProjectFooter,
 } from './ProjectElements';
 import { ProjectMedia } from './ProjectMedia';
-import { type WrittenProject, projectContents } from './projectContents';
+import { NavMobileOrTouchScreen } from '@/components/NavMobileOrTouchScreen';
+import { type WrittenProject, projectContents } from '@/projectContents';
+import { cn, positiveModulo } from '@/helpers';
 
 export function generateStaticParams() {
   return Object.keys(projectContents);

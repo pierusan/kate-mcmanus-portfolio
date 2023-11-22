@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
-import { remoteImageAltTexts } from '../RemoteImage';
 import { ProjectImage } from './ProjectImage';
 import { ProjectVideo } from './ProjectVideo';
+import { remoteImageAltTexts } from '@/components/RemoteImage';
 
 function isImage(
   props: ComponentProps<typeof ProjectImage | typeof ProjectVideo> & {

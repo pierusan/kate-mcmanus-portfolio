@@ -1,14 +1,14 @@
 import { type ReactNode } from 'react';
 import { type Route } from 'next';
 import Link from 'next/link';
-import { lektonStyle, parisienneStyle, pirataOneStyle } from '../fontSubsets';
-import { cn } from '../helpers';
-import { HomeButton } from '../HomeButton';
+import { lektonStyle, parisienneStyle, pirataOneStyle } from '@/fontSubsets';
+import { HomeButton } from '@/components/HomeButton';
 import {
   type ProjectSubtitle,
   type ProjectSection,
   type WrittenProject,
-} from './projectContents';
+} from '@/projectContents';
+import { cn } from '@/helpers';
 
 export function ProjectHeader() {
   return (
@@ -25,7 +25,16 @@ export function ProjectTitle({
   className?: string;
   children: ReactNode;
 }) {
-  return <h1 className={cn('text-[1.75rem]', className)}>{children}</h1>;
+  return (
+    <h1
+      className={cn(
+        'mb-[1.875rem] text-[1.75rem] font-bold leading-[1.375]',
+        className
+      )}
+    >
+      {children}
+    </h1>
+  );
 }
 
 export function ProjectSubtitle({ company, tags, date }: ProjectSubtitle) {

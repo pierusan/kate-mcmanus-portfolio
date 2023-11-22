@@ -1,12 +1,12 @@
 import resolveConfig from 'tailwindcss/resolveConfig';
+import { ProjectFigure } from './ProjectFigure';
 import {
   RemoteImage,
   remoteImageAltTexts,
   type RemoteImageName,
-} from '../RemoteImage';
-import { cn } from '../helpers';
-import { ProjectFigure } from './ProjectFigure';
-import tailwindConfig from '@/tailwind.config';
+} from '@/components/RemoteImage';
+import { cn } from '@/helpers';
+import tailwindConfig from '@configs/tailwind.config';
 
 let smallImageSizes: string | undefined,
   mediumImageSizes: string | undefined,
