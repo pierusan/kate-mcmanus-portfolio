@@ -4,7 +4,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { lektonStyle, parisienneStyle, pirataOneStyle } from '@/fontSubsets';
 import { cn } from '@/helpers';
 import CherriesRotatedSvg from '@/icons/cherriesRotated.svg';
-import { useHomeBgColor } from '@configs/app/useHomeBgColor';
+import { useHomeBgColor } from './useHomeBgColor';
 
 export function RotateMeDialogTouchScreen({
   className,

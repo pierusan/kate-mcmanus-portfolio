@@ -2,7 +2,7 @@
 
 import { useContext, useEffect, useRef, useState } from 'react';
 import styles from './scrollCTAAnimation.module.css';
-import { characterCountContext } from '@configs/app/characterCountContext';
+import { characterCountContext } from './characterCountContext';
 import { cn } from '@/helpers';
 
 function ScrollCTA({ className }: { className?: string }) {

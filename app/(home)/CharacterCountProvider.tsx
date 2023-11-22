@@ -1,11 +1,11 @@
 'use client';
 import { useState, useCallback, useEffect, type ReactNode } from 'react';
-import { useIsPointerCoarse } from '@/hooks/useIsPointerCoarse';
 import {
   type FlipState,
   type FlipID,
   characterCountContext,
-} from '@configs/app/characterCountContext';
+} from './characterCountContext';
+import { useIsPointerCoarse } from '@/hooks/useIsPointerCoarse';
 
 export function CharacterCountProvider({ children }: { children: ReactNode }) {
   const [flipState, setFlipState] = useState<FlipState>([]);

@@ -1,8 +1,8 @@
-import { HomeNameTitle } from './homepageContent/HomeNameTitle';
-import { RolesParagraph } from './homepageContent/RolesParagraph';
-import { CareerParagraph } from './homepageContent/CareerParagraph';
-import { EducationParagraph } from './homepageContent/EducationParagraph';
-import { RelocationParagraph } from './homepageContent/RelocationParagraph';
+import { NameTitle } from './_intro/NameTitle';
+import { RolesParagraph } from './_intro/RolesParagraph';
+import { CareerParagraph } from './_intro/CareerParagraph';
+import { EducationParagraph } from './_intro/EducationParagraph';
+import { RelocationParagraph } from './_intro/RelocationParagraph';
 import { CharacterCountProvider } from './CharacterCountProvider';
 import { BodyBgFromCharactersFlipped } from './BodyBgFromCharactersFlipped';
 import { HomeNavDesktop } from './HomeNavDesktop';
@@ -52,7 +52,7 @@ export default function HomePage() {
             'md:[&>h1]:mb-[calc(-6em/56)] md:[&>h1]:[line-height:1.357em]'
           )}
         >
-          <HomeNameTitle />
+          <NameTitle />
           <RolesParagraph />
           <CareerParagraph />
           <EducationParagraph />

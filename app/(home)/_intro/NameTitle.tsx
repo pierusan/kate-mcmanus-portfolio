@@ -2,16 +2,16 @@
 
 import { type CSSProperties } from 'react';
 import { FlippableSpan } from '../FlippableSpan';
+import { usePercentCharactersFlipped } from '../usePercentCharactersFlipped';
 import {
   monotonHeaderStyle,
   parisienneHeaderStyle,
   pirataOneHeaderStyle,
   staatlichesHeaderStyle,
 } from '@/fontSubsets';
-import { usePercentCharactersFlipped } from '@configs/app/usePercentCharactersFlipped';
 import { cn } from '@/helpers';
 
-export function HomeNameTitle({ className }: { className?: string }) {
+export function NameTitle({ className }: { className?: string }) {
   // Control rotation on touch screen based on how many characters have been
   // flipped
   // TODO: Check if we really need a re-render when pointer is not coarse

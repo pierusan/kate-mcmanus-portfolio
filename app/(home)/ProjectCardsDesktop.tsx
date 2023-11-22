@@ -4,9 +4,9 @@ import { UlAwareOfWindowWidth } from './UlAwareOfWindowWidth';
 import { ProjectIllustration } from './ProjectIllustration';
 import { ProjectIllustrationClickArea } from './ProjectIllustrationClickArea';
 import { projectCardsInfo } from './projectCardsInfo';
-import checkersPatternSvg from './projectCardSvgs/CheckersBackground.svg?url';
-import { RemoteImage } from './_common/components/RemoteImage';
-import skyGlitter from './projectCardSvgs/nasa_sky_glitter.svg?url';
+import checkersPatternSvg from './_projectCardSvgs/CheckersBackground.svg?url';
+import skyGlitter from './_projectCardSvgs/nasa_sky_glitter.svg?url';
+import { RemoteImage } from '@/components/RemoteImage';
 import { cn } from '@/helpers';
 import tailwindConfig from '@configs/tailwind.config';
 

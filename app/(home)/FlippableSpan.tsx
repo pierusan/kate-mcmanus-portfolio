@@ -2,7 +2,7 @@
 
 import { useCallback, useContext, useEffect, useId, useState } from 'react';
 import type { ReactNode } from 'react';
-import { characterCountContext } from '@configs/app/characterCountContext';
+import { characterCountContext } from './characterCountContext';
 import { cn } from '@/helpers';
 
 const charactersInReactNode = (node: ReactNode) => node?.toString().length ?? 0;

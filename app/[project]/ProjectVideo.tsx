@@ -1,10 +1,10 @@
+import { ProjectFigure } from './ProjectFigure';
+import { ImageAlignment, imageAlignmentProps } from './ProjectImage';
 import {
   RemoteVideo,
   remoteVideoCaptions,
   type RemoteVideoName,
-} from '../_common/components/RemoteVideo';
-import { ProjectFigure } from './ProjectFigure';
-import { ImageAlignment, imageAlignmentProps } from './ProjectImage';
+} from '@/components/RemoteVideo';
 import { cn } from '@/helpers';
 
 export function ProjectVideo({

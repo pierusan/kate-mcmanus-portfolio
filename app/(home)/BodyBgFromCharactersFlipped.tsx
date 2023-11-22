@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useHomeBgColor } from '@configs/app/useHomeBgColor';
+import { useHomeBgColor } from './useHomeBgColor';
 
 let didRenderInBrowserOnce = false;
 

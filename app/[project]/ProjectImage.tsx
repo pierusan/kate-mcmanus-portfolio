@@ -1,10 +1,10 @@
 import resolveConfig from 'tailwindcss/resolveConfig';
+import { ProjectFigure } from './ProjectFigure';
 import {
   RemoteImage,
   remoteImageAltTexts,
   type RemoteImageName,
-} from '../_common/components/RemoteImage';
-import { ProjectFigure } from './ProjectFigure';
+} from '@/components/RemoteImage';
 import { cn } from '@/helpers';
 import tailwindConfig from '@configs/tailwind.config';
 
