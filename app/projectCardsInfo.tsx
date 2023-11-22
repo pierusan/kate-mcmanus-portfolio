@@ -33,7 +33,7 @@ import VisualStoriesSvg from './projectCardSvgs/6_VisualStories_Default.svg';
 import VisualStoriesSvgHighlight from './projectCardSvgs/6_VisualStories_Hover.svg';
 import VisualStoriesSvgOutline from './projectCardSvgs/6_VisualStories_Outline.svg';
 import VisualStoriesSvgGuide from './projectCardSvgs/6_VisualStories_Guide.svg';
-import { WrittenProject } from './[project]/projectContents';
+import { WrittenProject } from '@/projectContents';
 
 type X = number;
 type Y = number;

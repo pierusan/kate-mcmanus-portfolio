@@ -2,8 +2,8 @@
 
 import { useCallback, useContext, useEffect, useId, useState } from 'react';
 import type { ReactNode } from 'react';
-import { CharacterCountContext } from './CharacterCountContext';
-import { cn } from './helpers';
+import { characterCountContext } from '@configs/app/characterCountContext';
+import { cn } from '@/helpers';
 
 const charactersInReactNode = (node: ReactNode) => node?.toString().length ?? 0;
 
@@ -26,7 +26,7 @@ export function FlippableSpan({
     forceFlip,
     isPointerCoarse,
     flipState,
-  } = useContext(CharacterCountContext);
+  } = useContext(characterCountContext);
 
   // Have some of the text flip back and forth (aka flicker) on page load for
   // desktop screens

@@ -1,4 +1,4 @@
-import { useIsPointerCoarse } from './useIsPointerCoarse';
+import { useIsPointerCoarse } from './_common/hooks/useIsPointerCoarse';
 import { usePercentCharactersFlipped } from './usePercentCharactersFlipped';
 
 type ColorHex = `#${string}`;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useLayoutEffect, type ReactNode, useRef, useState } from 'react';
-import { cn } from './helpers';
+import { cn } from '@/helpers';
 
 /**
  * To interpolate project card rotation degree values based on the width, we

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { type ComponentProps } from 'react';
-import remoteMedia from './remoteMedia.json';
+import remoteMedia from '../remoteMedia.json';
 
 const remoteImages = remoteMedia.images;
 

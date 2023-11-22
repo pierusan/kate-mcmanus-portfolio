@@ -6,7 +6,7 @@ import {
   pirataOneStyle,
   qwigleyStyle,
   staatlichesStyle,
-} from '../fontSubsets';
+} from '@/fontSubsets';
 
 export function RelocationParagraph() {
   return (

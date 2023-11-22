@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 import { type ComponentProps, type ReactElement } from 'react';
-import { ProjectImage } from './ProjectImage';
-import { ProjectVideo } from './ProjectVideo';
+import { ProjectImage } from '../[project]/ProjectImage';
+import { ProjectVideo } from '../[project]/ProjectVideo';
 
 export type ProjectSection = {
   heading: string;
@@ -15,6 +15,10 @@ export type ProjectSubtitle = {
   date: string;
 };
 
+type ProjectMediaProps = ComponentProps<
+  typeof ProjectImage | typeof ProjectVideo
+>;
+
 type ProjectContents = {
   title: string;
   titleMobileNav?: string; // If different than title
@@ -22,24 +26,12 @@ type ProjectContents = {
   leftColumn: ProjectSection[];
   middleColumn: ProjectSection[];
   rightColumn: ProjectSection[];
-  mediumHero: ComponentProps<typeof ProjectImage | typeof ProjectVideo> & {
-    alignment: 'right' | 'full';
-  };
-  mediaLeftColumn: (ComponentProps<
-    typeof ProjectImage | typeof ProjectVideo
-  > & {
-    alignment: 'right' | 'full';
-  })[];
-  mediaMiddleColumn: (ComponentProps<
-    typeof ProjectImage | typeof ProjectVideo
-  > & {
+  mediumHero: ProjectMediaProps & { alignment: 'right' | 'full' };
+  mediaLeftColumn: (ProjectMediaProps & { alignment: 'right' | 'full' })[];
+  mediaMiddleColumn: (ProjectMediaProps & {
     alignment: 'sideA' | 'sideB' | 'full';
   })[];
-  mediaRightColumn: (ComponentProps<
-    typeof ProjectImage | typeof ProjectVideo
-  > & {
-    alignment: 'left' | 'full';
-  })[];
+  mediaRightColumn: (ProjectMediaProps & { alignment: 'left' | 'full' })[];
 };
 
 export const projectContents = {

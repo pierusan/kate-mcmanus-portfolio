@@ -1,14 +1,14 @@
 import { type ReactNode } from 'react';
 import { type Route } from 'next';
 import Link from 'next/link';
-import { lektonStyle, parisienneStyle, pirataOneStyle } from '../fontSubsets';
-import { cn } from '../helpers';
-import { HomeButton } from '../HomeButton';
+import { lektonStyle, parisienneStyle, pirataOneStyle } from '@/fontSubsets';
+import { HomeButton } from '@/components/HomeButton';
 import {
   type ProjectSubtitle,
   type ProjectSection,
   type WrittenProject,
-} from './projectContents';
+} from '@/projectContents';
+import { cn } from '@/helpers';
 
 export function ProjectHeader() {
   return (

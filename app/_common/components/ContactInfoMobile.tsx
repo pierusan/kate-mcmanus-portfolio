@@ -1,5 +1,5 @@
-import { contactItems } from './ContactInfoDesktop';
-import { cn } from './helpers';
+import { contactItems } from '../contactItems';
+import { cn } from '@/helpers';
 
 const orderedMobileContactItems: (typeof contactItems)[number]['name'][] = [
   'Dribbble',

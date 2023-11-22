@@ -7,9 +7,9 @@ import {
   parisienneHeaderStyle,
   pirataOneHeaderStyle,
   staatlichesHeaderStyle,
-} from '../fontSubsets';
-import { usePercentCharactersFlipped } from '../usePercentCharactersFlipped';
-import { cn } from '../helpers';
+} from '@/fontSubsets';
+import { usePercentCharactersFlipped } from '@configs/app/usePercentCharactersFlipped';
+import { cn } from '@/helpers';
 
 export function NameHeader({ className }: { className?: string }) {
   // Control rotation on touch screen based on how many characters have been

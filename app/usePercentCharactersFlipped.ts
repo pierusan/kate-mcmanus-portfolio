@@ -1,10 +1,10 @@
 'use client';
 import { useContext } from 'react';
-import { CharacterCountContext } from './CharacterCountContext';
+import { characterCountContext } from './characterCountContext';
 
 // Store "selector" which computers the percentage of characters flipped
 export function usePercentCharactersFlipped() {
-  const { flipState } = useContext(CharacterCountContext);
+  const { flipState } = useContext(characterCountContext);
 
   const nTotalCharacters = flipState.reduce(
     (cumSum, { nChars }) => cumSum + nChars,

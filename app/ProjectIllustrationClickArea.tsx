@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 
 import { useRef, useLayoutEffect, useEffect, type ReactElement } from 'react';
 import type { Route } from 'next';
-import { cn } from './helpers';
-import { WrittenProject } from './[project]/projectContents';
+import { cn } from '@/helpers';
+import { WrittenProject } from '@/projectContents';
 
 /**
  *  Make all the shapes inside an svg hoverable and clickable. Turn them into

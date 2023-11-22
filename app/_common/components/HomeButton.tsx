@@ -4,8 +4,8 @@ import {
   parisienneHeaderStyle,
   pirataOneHeaderStyle,
   staatlichesHeaderStyle,
-} from './fontSubsets';
-import { cn } from './helpers';
+} from '@/fontSubsets';
+import { cn } from '@/helpers';
 
 export function HomeButton({
   onClick,

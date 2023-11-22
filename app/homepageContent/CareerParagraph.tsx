@@ -6,7 +6,7 @@ import {
   pirataOneStyle,
   rubikMonoOneStyle,
   tourneyStyle,
-} from '../fontSubsets';
+} from '@/fontSubsets';
 
 export function CareerParagraph() {
   return (

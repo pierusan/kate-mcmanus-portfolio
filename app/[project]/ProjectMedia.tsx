@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react';
-import { remoteImageAltTexts } from '../RemoteImage';
+import { remoteImageAltTexts } from '../_common/components/RemoteImage';
 import { ProjectImage } from './ProjectImage';
 import { ProjectVideo } from './ProjectVideo';
 

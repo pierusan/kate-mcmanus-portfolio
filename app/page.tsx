@@ -5,11 +5,11 @@ import { EducationParagraph } from './homepageContent/EducationParagraph';
 import { RelocationParagraph } from './homepageContent/RelocationParagraph';
 import { CharacterCountProvider } from './CharacterCountProvider';
 import { BodyBgFromCharactersFlipped } from './BodyBgFromCharactersFlipped';
-import { NavDesktop } from './NavDesktop';
-import { NavMobileOrTouchScreen } from './NavMobileOrTouchScreen';
+import { HomeNavDesktop } from './HomeNavDesktop';
 import { ScrollDivTouchScreen } from './ScrollDivTouchScreen';
-import { cn } from './helpers';
 import { RotateMeDialogTouchScreen } from './RotateMeDialogTouchScreen';
+import { NavMobileOrTouchScreen } from '@/components/NavMobileOrTouchScreen';
+import { cn } from '@/helpers';
 
 export default function HomePage() {
   return (
@@ -58,7 +58,7 @@ export default function HomePage() {
           <EducationParagraph />
           <RelocationParagraph />
         </main>
-        <NavDesktop
+        <HomeNavDesktop
           className={cn(
             '[grid-area:projects]',
             'hidden fine:md:[display:unset]'

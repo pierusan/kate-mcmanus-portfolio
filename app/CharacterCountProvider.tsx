@@ -1,11 +1,11 @@
 'use client';
 import { useState, useCallback, useEffect, type ReactNode } from 'react';
-import { useIsPointerCoarse } from './useIsPointerCoarse';
+import { useIsPointerCoarse } from '@/hooks/useIsPointerCoarse';
 import {
   type FlipState,
   type FlipID,
-  CharacterCountContext,
-} from './CharacterCountContext';
+  characterCountContext,
+} from '@configs/app/characterCountContext';
 
 export function CharacterCountProvider({ children }: { children: ReactNode }) {
   const [flipState, setFlipState] = useState<FlipState>([]);
@@ -60,7 +60,7 @@ export function CharacterCountProvider({ children }: { children: ReactNode }) {
   }, [isPointerCoarse]);
 
   return (
-    <CharacterCountContext.Provider
+    <characterCountContext.Provider
       value={{
         addFlippableElement,
         removeFlippableElement,
@@ -71,6 +71,6 @@ export function CharacterCountProvider({ children }: { children: ReactNode }) {
       }}
     >
       {children}
-    </CharacterCountContext.Provider>
+    </characterCountContext.Provider>
   );
 }

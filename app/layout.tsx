@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 // eslint-disable-next-line no-restricted-imports
 import './globals.css';
-import { manrope, majorMonoDisplay } from './fonts';
+import { manrope, majorMonoDisplay } from '@/fonts';
 
 export const metadata = {
   title: 'Kate McManus',

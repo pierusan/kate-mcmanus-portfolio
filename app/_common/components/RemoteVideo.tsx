@@ -1,5 +1,5 @@
 import { type VideoHTMLAttributes } from 'react';
-import remoteMedia from './remoteMedia.json';
+import remoteMedia from '../remoteMedia.json';
 
 export const remoteVideos = remoteMedia.videos;
 

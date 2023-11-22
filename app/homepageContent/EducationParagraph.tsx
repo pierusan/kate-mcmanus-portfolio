@@ -6,7 +6,7 @@ import {
   pirataOneStyle,
   tourneyStyle,
   vT323Style,
-} from '../fontSubsets';
+} from '@/fontSubsets';
 
 export function EducationParagraph() {
   return (

@@ -1,8 +1,8 @@
 'use client';
 
 import { HomeButton } from './HomeButton';
-import { cn } from './helpers';
-import CrossSvg from './icons/cross.svg';
+import CrossSvg from '@/icons/cross.svg';
+import { cn } from '@/helpers';
 
 export function NavMobileHeader({
   className,

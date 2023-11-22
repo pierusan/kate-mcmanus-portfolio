@@ -1,15 +1,12 @@
 import Link from 'next/link';
-import { cn } from './helpers';
-import {
-  type WrittenProject,
-  projectContents,
-} from './[project]/projectContents';
+import { type WrittenProject, projectContents } from '../projectContents';
 import {
   lektonStyle,
   parisienneStyle,
   pirataOneStyle,
   tourneyStyle,
-} from './fontSubsets';
+} from '../fontSubsets';
+import { cn } from '@/helpers';
 
 const projectMobileNavDescriptions = {
   interactives:

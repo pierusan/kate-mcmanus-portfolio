@@ -1,9 +1,9 @@
 'use client';
 
 import { useContext, useEffect, useRef, useState } from 'react';
-import { CharacterCountContext } from './CharacterCountContext';
-import { cn } from './helpers';
 import styles from './scrollCTAAnimation.module.css';
+import { characterCountContext } from '@configs/app/characterCountContext';
+import { cn } from '@/helpers';
 
 function ScrollCTA({ className }: { className?: string }) {
   return (
@@ -66,7 +66,7 @@ export function ScrollDivTouchScreen({ className }: { className?: string }) {
   }, [hasScrolled]);
 
   const { forceFlipPercentage, isPointerCoarse } = useContext(
-    CharacterCountContext
+    characterCountContext
   );
 
   // Sync scroll state with react when touch screen

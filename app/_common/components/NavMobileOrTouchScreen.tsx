@@ -6,7 +6,7 @@ import { ProjectCardsMobile } from './ProjectCardsMobile';
 import { ContactInfoMobile } from './ContactInfoMobile';
 import { NavMobileMenu } from './NavMobileMenu';
 import { NavMobileHeader } from './NavMobileHeader';
-import { cn } from './helpers';
+import { cn } from '@/helpers';
 
 export function NavMobileOrTouchScreen({ className }: { className?: string }) {
   const dialogReference = useRef<HTMLDialogElement>(null);

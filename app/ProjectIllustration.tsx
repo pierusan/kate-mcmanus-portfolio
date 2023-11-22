@@ -1,5 +1,5 @@
 import { CSSProperties, type ReactElement } from 'react';
-import { cn } from './helpers';
+import { cn } from '@/helpers';
 
 /**
  * Different versions of a same illustration for a project: default, highlight,

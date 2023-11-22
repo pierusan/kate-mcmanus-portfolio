@@ -7,7 +7,7 @@ export type FlipState = {
   flipped: boolean;
 }[];
 
-export const CharacterCountContext = createContext<{
+export const characterCountContext = createContext<{
   addFlippableElement: (id: FlipID, nChars: number) => void;
   removeFlippableElement: (id: FlipID) => void;
   forceFlip: (id: FlipID, flip: boolean) => void;

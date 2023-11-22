@@ -5,7 +5,7 @@ import {
   parisienneStyle,
   pirataOneStyle,
   staatlichesStyle,
-} from '../fontSubsets';
+} from '@/fontSubsets';
 
 export function RolesParagraph() {
   return (
