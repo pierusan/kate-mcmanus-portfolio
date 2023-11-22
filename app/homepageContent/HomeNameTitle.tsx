@@ -11,7 +11,7 @@ import {
 import { usePercentCharactersFlipped } from '@configs/app/usePercentCharactersFlipped';
 import { cn } from '@/helpers';
 
-export function NameHeader({ className }: { className?: string }) {
+export function HomeNameTitle({ className }: { className?: string }) {
   // Control rotation on touch screen based on how many characters have been
   // flipped
   // TODO: Check if we really need a re-render when pointer is not coarse

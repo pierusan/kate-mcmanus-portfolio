@@ -1,4 +1,4 @@
-import { NameHeader } from './homepageContent/NameHeader';
+import { HomeNameTitle } from './homepageContent/HomeNameTitle';
 import { RolesParagraph } from './homepageContent/RolesParagraph';
 import { CareerParagraph } from './homepageContent/CareerParagraph';
 import { EducationParagraph } from './homepageContent/EducationParagraph';
@@ -52,7 +52,7 @@ export default function HomePage() {
             'md:[&>h1]:mb-[calc(-6em/56)] md:[&>h1]:[line-height:1.357em]'
           )}
         >
-          <NameHeader />
+          <HomeNameTitle />
           <RolesParagraph />
           <CareerParagraph />
           <EducationParagraph />
