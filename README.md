@@ -1,8 +1,9 @@
 # kate-mcmanus-portfolio
 
-Portfolio website for Kate Stryker McManus
+Portfolio website for Kate McManus
 
 ## TODO
 
-- Set up Husky, testing, CI
-- Use MDX for project posts?
+- Fix weird patches of background color on Safari desktop
+- Fix background color change when changing the orientation of the device on old
+  iOS, especially on old devices
