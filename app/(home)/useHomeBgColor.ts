@@ -1,3 +1,6 @@
+/* eslint-disable unicorn/number-literal-case */
+/* eslint-disable unicorn/prefer-string-replace-all */
+import { useEffect, useState } from 'react';
 import { usePercentCharactersFlipped } from './usePercentCharactersFlipped';
 import { useIsPointerCoarse } from '@/hooks/useIsPointerCoarse';
 
@@ -9,7 +12,7 @@ interface ColorMix {
 }
 
 const touchGradientStops: ColorHex[] = [
-  '#FFF',
+  '#FFFFFF',
   '#FFE5EC',
   '#FFD600',
   '#ADFF00',
@@ -19,7 +22,7 @@ const touchGradientStops: ColorHex[] = [
 // On desktop, revealing letters one by one takes time, so to avoid users
 // getting bored before they see cool colors, we add more stops
 const desktopGradientStops: ColorHex[] = [
-  '#FFF',
+  '#FFFFFF',
   '#FFE5EC',
   '#00FF85',
   '#ADFF00',
@@ -32,6 +35,29 @@ const desktopGradientStops: ColorHex[] = [
   '#85BDFF',
   '#FAFF00',
 ];
+
+// For older browsers that don't support color-mix, we linearly interpolate
+// https://gist.github.com/rosszurowski/67f04465c424a9bc0dae
+function linearlyInterpolateHexColor(a: string, b: string, amount: number) {
+  const ah = Number.parseInt(a.replaceAll(/#/g, ''), 16),
+    ar = ah >> 16,
+    ag = (ah >> 8) & 0xff,
+    ab = ah & 0xff,
+    bh = Number.parseInt(b.replaceAll(/#/g, ''), 16),
+    br = bh >> 16,
+    bg = (bh >> 8) & 0xff,
+    bb = bh & 0xff,
+    rr = ar + amount * (br - ar),
+    rg = ag + amount * (bg - ag),
+    rb = ab + amount * (bb - ab);
+
+  return (
+    '#' +
+    Math.trunc((1 << 24) + (rr << 16) + (rg << 8) + rb)
+      .toString(16)
+      .slice(1)
+  );
+}
 
 // TODO: Add tests for this
 /**
@@ -66,6 +92,8 @@ function getProgressColorInfo(
 }
 
 export function useHomeBgColor() {
+  const [supportsColorMix, setSupportsColorMix] = useState(true);
+
   const isPointerCoarse = useIsPointerCoarse();
   const percentFlipped = usePercentCharactersFlipped();
 
@@ -73,6 +101,20 @@ export function useHomeBgColor() {
     percentFlipped,
     isPointerCoarse ? touchGradientStops : desktopGradientStops
   );
+
+  useEffect(() => {
+    if (!CSS.supports('background-color: color-mix(in oklab, red, blue 50%)')) {
+      setSupportsColorMix(false);
+    }
+  }, []);
+
+  if (!supportsColorMix) {
+    return `${linearlyInterpolateHexColor(
+      color1,
+      color2,
+      percentageMix / 100
+    )}`;
+  }
 
   return `color-mix(in oklab, ${color1}, ${color2} ${percentageMix}%)`;
 }
