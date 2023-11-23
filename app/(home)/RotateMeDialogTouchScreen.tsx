@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { useHomeBgColor } from './useHomeBgColor';
 import { lektonStyle, parisienneStyle, pirataOneStyle } from '@/fontSubsets';
 import { cn } from '@/helpers';
@@ -17,19 +17,26 @@ export function RotateMeDialogTouchScreen({
 
   // Initialization in the client only and not in the server
   useLayoutEffect(() => {
-    setShowRotateMeDialog(!screen.orientation.type.includes('portrait'));
-  }, []);
+    // Safari on iOS only started to support screen.orientation recently so we
+    // use window orientation instead even if it's less precise
+    if (!screen.orientation) {
+      const mql = window.matchMedia('(orientation: landscape)');
+      setShowRotateMeDialog(mql.matches);
 
-  useLayoutEffect(() => {
-    if (showRotateMeDialog) {
-      dialogReference.current?.show();
-    } else {
-      dialogReference.current?.close();
+      const handleWindowOrientationChange = (event: MediaQueryListEvent) => {
+        setShowRotateMeDialog(event.matches);
+      };
+      mql.addEventListener('change', handleWindowOrientationChange);
+
+      return () => {
+        mql.removeEventListener('change', handleWindowOrientationChange);
+      };
     }
-  }, [showRotateMeDialog]);
 
-  useEffect(() => {
-    const handleOrientationChange = (
+    // Use screen.orientation if available
+    setShowRotateMeDialog(!screen.orientation.type.includes('portrait'));
+
+    const handleScreenOrientationChange = (
       event: ScreenOrientationEventMap['change']
     ) => {
       if (!event || !event.target) return;
@@ -51,8 +58,24 @@ export function RotateMeDialogTouchScreen({
       }
     };
 
-    screen.orientation.addEventListener('change', handleOrientationChange);
+    screen.orientation.addEventListener(
+      'change',
+      handleScreenOrientationChange
+    );
+    return () =>
+      screen.orientation.removeEventListener(
+        'change',
+        handleScreenOrientationChange
+      );
   }, []);
+
+  useLayoutEffect(() => {
+    if (showRotateMeDialog) {
+      dialogReference.current?.show();
+    } else {
+      dialogReference.current?.close();
+    }
+  }, [showRotateMeDialog]);
 
   return (
     <dialog
