@@ -30,7 +30,14 @@ export function ProjectVideo({
       )}
       caption={showCaption ? remoteVideoCaptions[name] : undefined}
     >
-      <RemoteVideo name={name} autoPlay controls muted loop />
+      <RemoteVideo
+        className={cn('w-full')}
+        name={name}
+        autoPlay
+        controls
+        muted
+        loop
+      />
     </ProjectFigure>
   );
 }
