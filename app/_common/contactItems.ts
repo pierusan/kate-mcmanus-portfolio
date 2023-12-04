@@ -29,7 +29,7 @@ export const contactItems = [
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/katemcmanus.design/',
+    url: 'https://www.instagram.com/katestrykermcm/',
     classNameOnceFlipped: `${parisienneStyle}`,
     homeDesktopWidth: '245px',
     mobileFontSizeClassName: 'text-[1.625rem]',
