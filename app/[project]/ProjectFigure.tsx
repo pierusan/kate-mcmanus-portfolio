@@ -11,7 +11,15 @@ export function ProjectFigure({
   children: ReactNode;
 }) {
   return (
-    <figure className={cn('lg:shadow-drop', className)}>
+    <figure
+      className={cn(
+        'lg:shadow-drop',
+        // There is sometimes a small gap between the image and the caption
+        // (likely due to the image aspect ratio)
+        'bg-black',
+        className
+      )}
+    >
       {children}
       {caption && (
         <figcaption
