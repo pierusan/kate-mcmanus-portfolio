@@ -43,7 +43,7 @@ export function ProjectPage({
           'hidden lg:grid ',
           'fixed inset-0 min-h-screen ',
           'grid-cols-1 grid-rows-[auto_minmax(0,1fr)] ',
-          'mx-auto max-w-screen-2xl items-center p-5'
+          'mx-auto max-w-screen-2xl items-center p-5 pt-[1.625rem]'
         )}
       >
         <ProjectHeader />

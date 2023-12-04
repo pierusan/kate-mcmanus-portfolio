@@ -12,8 +12,14 @@ import { cn } from '@/helpers';
 
 export function ProjectHeader() {
   return (
-    <header className="col-span-full mx-auto">
-      <HomeButton />
+    <header
+      className={cn(
+        // Fixed height to better deal with the different font line heights
+        'grid h-[1.5625rem] grid-cols-1 grid-rows-1 items-center',
+        'col-span-full mx-auto'
+      )}
+    >
+      <HomeButton variant="large" className="pt-[2px]" />
     </header>
   );
 }
