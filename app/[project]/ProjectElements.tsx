@@ -41,6 +41,9 @@ export function ProjectSubtitle({ company, tags, date }: ProjectSubtitle) {
   return (
     <ol
       className={cn(
+        // Parisienne bleeds a bit on the left margin for some letters
+        { 'ml-[2px]': company.startsWith('G') },
+        { 'ml-[1px]': company.startsWith('N') || company.startsWith('F') },
         'mb-5 flex',
         '[&>li:not(:last-child)]:after:content-["|"] ',
         '[&>li:not(:last-child)]:after:px-4 [&>li:not(:last-child)]:after:text-base ',
