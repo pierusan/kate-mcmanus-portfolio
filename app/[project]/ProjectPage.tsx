@@ -73,7 +73,10 @@ export function ProjectPage({
         className={cn(
           'hidden lg:grid',
           'pointer-events-none relative w-full',
-          'grid-cols-3 gap-10 px-10 pb-5 pt-[4.8125rem]'
+          'grid-cols-3 gap-10 px-10 pb-5 pt-[4.8125rem]',
+          // Sometimes the left and right images are not the same size. Prevent
+          // them to stretch in that case.
+          'items-start'
         )}
       >
         <ProjectMedia priority={true} {...content.mediumHero} />
