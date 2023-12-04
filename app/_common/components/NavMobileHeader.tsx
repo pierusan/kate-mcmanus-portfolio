@@ -24,6 +24,7 @@ export function NavMobileHeader({
       <HomeButton
         onClick={onHomeButtonClick}
         className="self-center justify-self-center [grid-area:header]"
+        variant="small"
       />
       {/* Use a form with dialog method to avoid the need for javascript to close the dialog */}
       <form

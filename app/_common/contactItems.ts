@@ -8,7 +8,7 @@ import {
 export const contactItems = [
   {
     name: 'Resume',
-    url: 'https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2/Kate_Resume_2023_06_28.pdf',
+    url: 'https://storage.googleapis.com/pierre-portfolio-assets/kate-portfolio-v2/KateMcManus_Resume.pdf',
     classNameOnceFlipped: `${staatlichesStyle}`,
     homeDesktopWidth: '185px',
     mobileFontSizeClassName: 'text-[1.375rem]',
@@ -29,7 +29,7 @@ export const contactItems = [
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/katemcmanus.design/',
+    url: 'https://www.instagram.com/katestrykermcm/',
     classNameOnceFlipped: `${parisienneStyle}`,
     homeDesktopWidth: '245px',
     mobileFontSizeClassName: 'text-[1.625rem]',

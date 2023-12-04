@@ -16,7 +16,8 @@ const projectMobileNavDescriptions = {
     'New visually-rich, mobile-first, tappable articles to address the increase of users accessing Think with Google from their phones and seeking more bite-sized content.',
   'journey-finder':
     "An internal tool used by Google's marketing and sales teams to search and navigate customer journey data (purchased from a third-party).",
-  branding: 'Coming soon!',
+  branding:
+    "I designed the brand identities for Beavr, a French startup on Station F's Top 40 list, and Purdy Marketing Co., a boutique American firm. ",
   vijks:
     "4 virtual “exhibits” exploring how users can experience the Rijksmuseum's art remotely and admitted to the IEEE Visualization Conference as a presentation, poster, and public art installation.",
 } satisfies Record<WrittenProject, string>;
@@ -38,17 +39,17 @@ export function ProjectCardsMobile({ className }: { className?: string }) {
             <li key={projectId}>
               <Link
                 className={cn(
-                  'flex flex-col items-start gap-[0.375rem] p-4',
+                  'flex flex-col items-start gap-[0.625rem] p-4',
                   'rounded-md border border-action-subtle bg-white'
                 )}
                 rel="bookmark"
                 href={`/${projectId}`}
               >
-                <p className={cn(tourneyStyle, 'text-[1.375rem]')}>
-                  {index + 1}
+                <p className={cn(tourneyStyle, 'text-2xl')}>{index + 1}</p>
+                <h2 className={cn('text-xl font-bold')}>{cardTitle}</h2>
+                <p className={cn('text-base tracking-[0.0125rem]')}>
+                  {description}
                 </p>
-                <h2 className={cn('text-lg font-bold')}>{cardTitle}</h2>
-                <p className={cn('text-body')}>{description}</p>
                 <div className={cn('flex items-center gap-[0.375rem]')}>
                   <p
                     className={cn(
@@ -57,9 +58,9 @@ export function ProjectCardsMobile({ className }: { className?: string }) {
                   >
                     {company}
                   </p>
-                  <p className={cn(`${lektonStyle} text-[0.875rem]`)}>{date}</p>
+                  <p className={cn(`${lektonStyle} text-base`)}>{date}</p>
                 </div>
-                <p className={cn(`${pirataOneStyle} text-[0.875rem]`)}>
+                <p className={cn(`${pirataOneStyle} text-base`)}>
                   {cardProjectTags}
                 </p>
               </Link>

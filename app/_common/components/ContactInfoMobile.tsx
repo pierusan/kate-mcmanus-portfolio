@@ -16,7 +16,7 @@ export function ContactInfoMobile({ className }: { className?: string }) {
         className
       )}
     >
-      <p className={cn('text-body')}>
+      <p className={cn('text-base tracking-[0.0125rem]')}>
         I&apos;d love to connect!
         <br />
         Send me an email at:

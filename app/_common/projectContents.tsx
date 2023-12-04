@@ -39,7 +39,7 @@ export const projectContents = {
     title: 'Interactive Articles',
     subtitle: {
       company: 'Google',
-      tags: 'UX Design, DataViz',
+      tags: 'UX Design, Data Viz',
       tagsMobileNav: 'UX Design, Data Visualization',
       date: '2019',
     },
@@ -171,7 +171,7 @@ export const projectContents = {
           <p key="interactives-right-3">
             <b>
               Product: Casey Fictum; Copy: Marianna Nash; Design: Tim McAuliffe;
-              Production: Jenny Maughan; Development: Grow (Agency), Mattie?
+              Production: Jenny Maughan; Development: Grow (Agency)
             </b>
           </p>,
         ],
@@ -487,7 +487,7 @@ export const projectContents = {
     subtitle: {
       company: 'Google',
       tags: 'UX/UI Design',
-      date: '2020',
+      date: '2020-2022',
     },
     leftColumn: [
       {
@@ -872,51 +872,136 @@ export const projectContents = {
     ],
   },
   branding: {
-    title: 'Brand Identity Projects',
+    title: 'Brand Identity',
     subtitle: {
       company: 'Freelance',
       tags: 'Visual Design',
-      date: '2022-23',
+      date: '2022-2023',
     },
     leftColumn: [
       {
-        heading: 'Coming Soon',
+        heading: 'Overview',
         paragraphs: [
           <p key="branding-left-1">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <b>
+              I designed the brand identities for Beavr, a French startup on
+              Station F&apos;s Top 40 list, and Purdy Marketing Co., a boutique
+              American firm.
+            </b>{' '}
+            Guided by their companies&apos; core principles, I produced unique
+            visual frameworks for consistent and memorable brands. Key elements
+            included a logo, color palette, typography, and imagery
+            (photography, illustration, and/or patterns).
+          </p>,
+        ],
+      },
+      {
+        heading: 'Beavr brand identity',
+        paragraphs: [
+          <p key="branding-left-2">
+            To begin, I led a remote brainstorming session with the founders to
+            define their company&apos;s core principles. This session was
+            critical for me to understand their vision and to get them aligned
+            and invested. From there, the principles guided the approach.
+          </p>,
+          <p key="branding-left-3">
+            The brand was also inspired by the company name. As beavers are
+            tireless builders who work in groups to create dams, we used simple
+            lines rearranged and stacked to represent their powerful output.
+          </p>,
+          <p key="branding-left-4">
+            At the project&apos;s conclusion, I delivered a Style Guide
+            outlining best practices and things to avoid. I also provided a
+            Figma file containing components corresponding to the Style Guide.
           </p>,
         ],
       },
     ],
-    middleColumn: [],
-    rightColumn: [],
+    middleColumn: [
+      {
+        heading: 'Beavr deck design',
+        paragraphs: [
+          <p key="branding-middle-1">
+            I like to understand where the brand will be used so I can use it as
+            a playground to test out and apply the guidelines, while producing
+            something of value. At the time, Beavr was just starting out, so
+            pitch decks were instrumental. I designed formatted templates for 3
+            decks.
+          </p>,
+        ],
+      },
+      {
+        heading: 'Purdy Marketing Co.',
+        paragraphs: [
+          <p key="branding-middle-2">
+            When Purdy Marketing Co. (PMC) approached me, they were looking to
+            rebrand. They&apos;d already established clear brand principles and
+            a general visual style. They needed help implementing their vision
+            into something polished, clear-cut, and repeatable.{' '}
+            <b>
+              This project is currently underway, to be completed by the end of
+              2023. Coming soon!
+            </b>
+          </p>,
+        ],
+      },
+    ],
+    rightColumn: [
+      {
+        heading: 'Other',
+        paragraphs: [
+          <p key="branding-right-1">
+            Lastly, I illustrated a book cover for a novel!
+          </p>,
+        ],
+      },
+    ],
     mediumHero: {
-      name: 'project_branding_00_right_wrong_material',
+      name: 'project_brand_01_right_hero',
       alignment: 'right',
     },
-    mediaLeftColumn: [],
-    mediaMiddleColumn: [],
-    mediaRightColumn: [],
+    mediaLeftColumn: [
+      { name: 'project_brand_02_right_logo', alignment: 'right' },
+      { name: 'project_brand_03_right_figjam', alignment: 'right' },
+      { name: 'project_brand_04_right_principles', alignment: 'right' },
+      {
+        name: 'project_brand_05_right_color',
+        alignment: 'right',
+        showCaption: false,
+      },
+      {
+        name: 'project_brand_06_right_photo',
+        alignment: 'right',
+        showCaption: false,
+      },
+      { name: 'project_brand_07_right_color_photos', alignment: 'right' },
+      {
+        name: 'project_brand_08_right_pattern',
+        alignment: 'right',
+        showCaption: false,
+      },
+      { name: 'project_brand_09_right_business_cards', alignment: 'right' },
+      { name: 'project_brand_10_right_figma_type', alignment: 'right' },
+    ],
+    mediaMiddleColumn: [
+      {
+        name: 'project_brand_11_sideA_deck',
+        alignment: 'sideA',
+        useAltTextAsCaption: false,
+      },
+      {
+        name: 'project_brand_11_sideB_deck',
+        alignment: 'sideB',
+        useAltTextAsCaption: false,
+      },
+    ],
+    mediaRightColumn: [
+      {
+        name: 'project_brand_12_left_book',
+        alignment: 'left',
+        useAltTextAsCaption: false,
+      },
+    ],
   },
   vijks: {
     title: 'Visualizing the Rijksmuseum',
