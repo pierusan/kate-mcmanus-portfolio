@@ -54,7 +54,8 @@ export function NavMobileOrTouchScreen({ className }: { className?: string }) {
           'fixed inset-5 h-auto w-auto bg-surface p-0 ',
           'rounded-md border border-action-subtle',
           'hidden open:grid',
-          'grid-cols-[1fr] grid-rows-[3rem_1fr_auto]'
+          'grid-cols-[1fr] grid-rows-[3rem_1fr_auto]',
+          'backdrop:bg-transparent'
         )}
       >
         <NavMobileHeader
