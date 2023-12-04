@@ -23,17 +23,17 @@ const touchGradientStops: ColorHex[] = [
 // getting bored before they see cool colors, we add more stops
 const desktopGradientStops: ColorHex[] = [
   '#FFFFFF',
-  '#FFE5EC',
-  '#00FF85',
-  '#ADFF00',
-  '#A7CAFF',
-  '#CF9EFF',
   '#FFD600',
-  '#FF8ED8',
-  '#FF005C',
+  '#FAFF00',
+  '#ADFF00',
+  '#00FF85',
   '#3FE8FF',
   '#85BDFF',
-  '#FAFF00',
+  '#A7CAFF',
+  '#CF9EFF',
+  '#FF005C',
+  '#FF8ED8',
+  '#FFE5EC',
 ];
 
 // For older browsers that don't support color-mix, we linearly interpolate
