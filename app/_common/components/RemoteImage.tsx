@@ -9,7 +9,20 @@ type AnyRemoteImageName = keyof typeof remoteImages;
 
 export const remoteImageAltTexts = {
   nasa_sky_image: 'A sky full of clouds',
-  project_branding_00_right_wrong_material: 'Book cover: Wrong Material',
+  project_brand_01_right_hero: "Excerpts from Beavr's Style Guide deck",
+  project_brand_03_right_figjam:
+    'The Figjam from our original brainstorming session',
+  project_brand_07_right_color_photos:
+    "Photography choices were informed by Beavr's color palette",
+  project_brand_09_right_business_cards: 'Business card designs',
+  project_brand_10_right_figma_type:
+    'The typography section of the Figma deliverable corresponds to the rules laid out in the Style Guide. Beavr’s font set and color palette are setup as local styles, so designers can easily create consistent content.',
+  project_brand_11_sideA_deck:
+    "A colorful deck template where Beavr's brand identity is applied",
+  project_brand_11_sideB_deck:
+    "A more simple deck template, using only Beavr's primary color palette",
+  project_brand_12_left_book:
+    'The book cover design of the novel Wrong Material, by Casey Fictum',
   project_interactives_01_full_hero:
     'Landing pages from 4 different interactive articles and tools',
   project_interactives_02_right_charts:

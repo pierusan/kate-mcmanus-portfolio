@@ -13,6 +13,7 @@
     "duplicative",
     "extralight",
     "Fictum",
+    "Figjam",
     "Flippable",
     "Frans",
     "Gabriël",
@@ -58,6 +59,7 @@
     "uncrewed",
     "Vijks",
     "wasn",
+    "wordmark",
     "Zeng"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"

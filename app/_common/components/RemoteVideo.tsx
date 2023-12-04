@@ -6,6 +6,15 @@ export const remoteVideos = remoteMedia.videos;
 export type RemoteVideoName = keyof typeof remoteVideos;
 
 export const remoteVideoCaptions = {
+  project_brand_02_right_logo:
+    "Beavr's symbol is the wordmark simplified, condensed, and rearranged.",
+  project_brand_04_right_principles:
+    "The Style Guide opens with Beavr's core principles, which informed all subsequent design decisions.",
+  project_brand_05_right_color: "The color section from Beavr's Style Guide",
+  project_brand_06_right_photo:
+    "The photography section from Beavr's Style Guide",
+  project_brand_08_right_pattern:
+    "The pattern section from Beavr's Style Guide",
   project_interactives_05_full_cmo_visuals:
     'Additional visuals for our interactive about CMOs that continue with the anonymity theme',
   project_interactives_09_full_story_yt:
